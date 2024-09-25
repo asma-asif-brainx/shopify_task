@@ -2,11 +2,45 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
+    "newsletter_XqkMnE": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_D7yhtp": {
+          "type": "heading",
+          "settings": {
+            "heading": "Join our newsletter and get updates on\u2028promotions and coupons.",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph_ULKHD7": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Get “$20 discount” for your first order<\/p>"
+          }
+        },
+        "email_form_t8wzdM": {
+          "type": "email_form",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "heading_D7yhtp",
+        "paragraph_ULKHD7",
+        "email_form_t8wzdM"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "footer": {
       "type": "footer",
       "settings": {
         "color_scheme": "scheme-1",
-        "newsletter_enable": true,
+        "newsletter_enable": false,
         "newsletter_heading": "Subscribe to our emails",
         "enable_follow_on_shop": true,
         "show_social": true,
@@ -21,6 +55,7 @@
     }
   },
   "order": [
+    "newsletter_XqkMnE",
     "footer"
   ]
 }
