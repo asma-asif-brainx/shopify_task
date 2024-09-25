@@ -1,6 +1,21 @@
 {{ 'component-slideshow.css' | asset_url | stylesheet_tag }}
 {{ 'component-slider.css' | asset_url | stylesheet_tag }}
 
+<!-- Custom styling for accessing dynamic settings  -->
+<style>
+  .announcement-bar__link{
+    color: {{ section.settings.link_text_color }};
+  }
+  .utility-bar{
+     background-color: {{ section.settings.announcement-bg-color }};
+}
+</style>
+
+<!--  Access custom stylesheet-->
+{% if section.settings.include-custom-style  %}
+<link rel="stylesheet" href="{{ 'announcement-bar-custom.css' | asset_url }}">
+{% endif %}
+
 {%- liquid
   assign social_icons = true
   if settings.social_facebook_link == blank and settings.social_instagram_link == blank and settings.social_youtube_link == blank and settings.social_tiktok_link == blank and settings.social_twitter_link == blank and settings.social_pinterest_link == blank and settings.social_snapchat_link == blank and settings.social_tumblr_link == blank and settings.social_vimeo_link == blank
@@ -33,22 +48,14 @@
         aria-label="{{ 'sections.header.announcement' | t }}"
         {{ block.shopify_attributes }}
       >
-        {%- if section.blocks.first.settings.text != blank -%}
-          {%- if section.blocks.first.settings.link != blank -%}
-            <a
-              href="{{ section.blocks.first.settings.link }}"
-              class="announcement-bar__link link link--text focus-inset animate-arrow"
-            >
-          {%- endif -%}
+        {%- if section.blocks.first.settings.text != blank -%}          
+                             
           <p class="announcement-bar__message h5">
-            <span>{{ section.blocks.first.settings.text | escape }}</span>
-            {%- if section.blocks.first.settings.link != blank -%}
-              {{- 'icon-arrow.svg' | inline_asset_content -}}
-            {%- endif -%}
+            <span class="announcement-message-span">{{ section.blocks.first.settings.text | escape }}
+            </span>
+              <a href="{{ blocks.settings.link }}" class="announcement-bar__link">{{section.blocks.first.settings.link_text }}</a>
           </p>
-          {%- if section.blocks.first.settings.link != blank -%}
-            </a>
-          {%- endif -%}
+         
         {%- endif -%}
       </div>
     {%- elsif section.blocks.size > 1 -%}
@@ -88,27 +95,23 @@
                 aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
                 tabindex="-1"
               >
+
                 <div
                   class="announcement-bar__announcement"
                   role="region"
                   aria-label="{{ 'sections.header.announcement' | t }}"
                   {{ block.shopify_attributes }}
                 >
-                  {%- if block.settings.text != blank -%}
+                 {%- if block.settings.text != blank -%}
+                    
+                 <p class="announcement-bar__message h5">
+                  <span class="announcement-message-span">{{ block.settings.text | escape }}</span>
+                  {%- if block.settings.link != blank and block.settings.link_text != blank -%}
+                    <a href="{{ block.settings.link }}" class="announcement-bar__link">{{ block.settings.link_text }}</a>
+                  {%- endif -%}
+                </p>
+                       
                     {%- if block.settings.link != blank -%}
-                      <a
-                        href="{{ block.settings.link }}"
-                        class="announcement-bar__link link link--text focus-inset animate-arrow"
-                      >
-                    {%- endif -%}
-                    <p class="announcement-bar__message h5">
-                      <span>{{ block.settings.text | escape }}</span>
-                      {%- if block.settings.link != blank -%}
-                        {{- 'icon-arrow.svg' | inline_asset_content -}}
-                      {%- endif -%}
-                    </p>
-                    {%- if block.settings.link != blank -%}
-                      </a>
                     {%- endif -%}
                   {%- endif -%}
                 </div>
@@ -181,6 +184,23 @@
     },
     {
       "type": "checkbox",
+      "id": "include-custom-style",
+      "label": "custom-style"
+    },
+    {
+      "type": "color",
+      "id": "link_text_color",
+      "label": "Announcement Link Text Color",
+      "default": "#EF4444"
+    },
+    {
+       "type": "color",
+      "id": "announcement-bg-color",
+      "label": "Announcement background color",
+      "default": "#D3D3D3"
+    },
+    {
+      "type": "checkbox",
       "id": "show_line_separator",
       "default": true,
       "label": "t:sections.header.settings.show_line_separator.label"
@@ -237,7 +257,8 @@
       "id": "enable_language_selector",
       "default": false,
       "label": "t:sections.announcement-bar.settings.enable_language_selector.label"
-    }
+    },
+    
   ],
   "blocks": [
     {
@@ -254,7 +275,12 @@
           "type": "url",
           "id": "link",
           "label": "t:sections.announcement-bar.blocks.announcement.settings.link.label"
-        }
+        },
+        {
+        "type": "text",
+        "id": "link_text",
+        "label": "Link Text"
+      },
       ]
     }
   ],
@@ -270,3 +296,4 @@
   ]
 }
 {% endschema %}
+

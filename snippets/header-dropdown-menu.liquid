@@ -5,10 +5,10 @@
   {% render 'header-dropdown-menu' %}
 {% endcomment %}
 
-<nav class="header__inline-menu">
-  <ul class="list-menu list-menu--inline" role="list">
+<nav class="header__inline-menu main-nav-header">
+  <ul class="list-menu list-menu--inline header-main-list" role="list">
     {%- for link in section.settings.menu.links -%}
-      <li>
+      <li >
         {%- if link.links != blank -%}
           <header-menu>
             <details id="Details-HeaderMenu-{{ forloop.index }}">
@@ -16,7 +16,7 @@
                 id="HeaderMenu-{{ link.handle }}"
                 class="header__menu-item list-menu__item link focus-inset"
               >
-                <span
+                <span class="header-nav-span-items"
                   {%- if link.child_active %}
                     class="header__active-menu-item"
                   {% endif %}
@@ -32,7 +32,7 @@
                 tabindex="-1"
               >
                 {%- for childlink in link.links -%}
-                  <li>
+                  <li class="header-nav-list-items">
                     {%- if childlink.links == blank -%}
                       <a
                         id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
@@ -50,7 +50,7 @@
                           id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
                           class="header__menu-item link link--text list-menu__item focus-inset caption-large"
                         >
-                          <span>{{ childlink.title | escape }}</span>
+                          <span class="header-nav-span-items">{{ childlink.title | escape }}</span>
                           {{- 'icon-caret.svg' | inline_asset_content -}}
                         </summary>
                         <ul
@@ -58,7 +58,7 @@
                           class="header__submenu list-menu motion-reduce"
                         >
                           {%- for grandchildlink in childlink.links -%}
-                            <li>
+                            <li class="header-nav-list-items">
                               <a
                                 id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
                                 href="{{ grandchildlink.url }}"
@@ -88,7 +88,7 @@
               aria-current="page"
             {% endif %}
           >
-            <span
+            <span class="header-nav-span-items"
               {%- if link.current %}
                 class="header__active-menu-item"
               {% endif %}
@@ -98,6 +98,20 @@
           </a>
         {%- endif -%}
       </li>
+
     {%- endfor -%}
+      <li class="cart-icon-menu header-nav-list-items">
+        <a href="{{ routes.cart_url }}" class="kkjkjkj" id="">
+          <span class="header-nav-span-items">
+            <img src="https://cdn.shopify.com/s/files/1/0899/1355/7281/files/cart-icon.png?v=1727169937" alt="{{ 'templates.cart.cart' | t }}"  width="30" height="30" />
+          </span>
+        </a>
+      </li>
+                  
+      <li class="shop-now-menu header-nav-list-items">
+        <a href="{{ routes.collections_url }}" class="btn btn--shop-now">
+          Shop Now
+        </a>
+      </li>
   </ul>
 </nav>

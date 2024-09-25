@@ -8,6 +8,25 @@
   --focused-base-box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
 }
 
+@font-face {
+    font-family: 'Normal_Font'; 
+    src: url('https://cdn.shopify.com/s/files/1/0899/1355/7281/files/Raleway.ttf?v=1727166657') format('truetype'); 
+    font-weight: normal; 
+}
+
+
+@font-face {
+    font-family: 'Medium_Font'; 
+    src: url('https://cdn.shopify.com/s/files/1/0899/1355/7281/files/Raleway.ttf?v=1727166657') format('truetype'); 
+    font-weight: 500; 
+}
+
+@font-face {
+    font-family: 'Bold_Font'; 
+    src: url('https://cdn.shopify.com/s/files/1/0899/1355/7281/files/Raleway.ttf?v=1727166657') format('truetype'); 
+    font-weight: 700; 
+}
+
 .product-card-wrapper .card,
 .contains-card--product {
   --border-radius: var(--product-card-corner-radius);
