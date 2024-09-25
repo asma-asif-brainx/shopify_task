@@ -440,25 +440,6 @@
                     </volume-pricing>
                   {%- endif -%}
                 </div>
-
-                                              
-                                          <div>
-      <span>Ingredients:</span>
-      <span>{{ product.metafields.custom.ingredients }}</span>
-    </div>
-
-    <div>
-       <span>About Product:</span>
-      <span>{{ product.metafields.custom.about_product }}</span>
-    </div>
-
-              <div>
-               Rating:
-      <span>{{ product.metafields.custom.rating.value }}</span>
-              </div>
-
-
-              
               {%- when 'popup' -%}
                 <modal-opener
                   class="product-popup-modal__opener quick-add-hidden"
@@ -479,7 +460,6 @@
                   assign share_url = product.selected_variant.url | default: product.url | prepend: request.origin
                   render 'share-button', block: block, share_link: share_url
                 %}
-              
 
               {%- when 'variant_picker' -%}
                 {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
@@ -491,7 +471,6 @@
                   section_id: section.id,
                   show_pickup_availability: true
                 -%}
-              
               {%- when 'rating' -%}
                 {%- if product.metafields.reviews.rating.value != blank -%}
                   <div class="rating-wrapper">
@@ -504,8 +483,6 @@
                         assign rating_decimal = 1
                       endif
                     %}
-
-                    
                     <div
                       class="rating"
                       role="img"
@@ -532,7 +509,6 @@
                     </p>
                   </div>
                 {%- endif -%}
-              
               {%- when 'complementary' -%}
                 <product-recommendations
                   class="complementary-products quick-add-hidden{% if block.settings.make_collapsible_row %} is-accordion{% endif %}{% if block.settings.enable_quick_add %} complementary-products-contains-quick-add{% endif %}"
@@ -675,7 +651,6 @@
                       </div>
                     </aside>
                   {%- endif -%}
-                  
                   {{ 'component-card.css' | asset_url | stylesheet_tag }}
                   {{ 'component-complementary-products.css' | asset_url | stylesheet_tag }}
                   {%- if block.settings.enable_quick_add -%}
@@ -742,7 +717,7 @@
         assign seo_media = product.featured_media
       endif
     -%}
-    
+
     <script type="application/ld+json">
       {{ product | structured_data }}
     </script>
