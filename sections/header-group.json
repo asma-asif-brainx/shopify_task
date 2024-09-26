@@ -46,7 +46,7 @@
         "menu": "main-menu",
         "enable_search_modal": false,
         "enable_account_icon": false,
-        "desktop_button_text": "SHOP NOW ->",
+        "desktop_button_text": "SHOP NOW→",
         "mobile_button_text": "SHOP",
         "enable_cart_icon": true,
         "cart_image": "shopify:\/\/shop_images\/cart-icon.png",

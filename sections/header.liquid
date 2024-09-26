@@ -142,7 +142,7 @@
   -%}
   <header class="header-main-div header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} page-width{% if section.settings.menu_type_desktop == 'drawer' %} drawer-menu{% endif %}{% if section.settings.menu != blank %} header--has-menu{% endif %}{% if has_app_block %} header--has-app{% endif %}{% if social_links %} header--has-social{% endif %}{% if shop.customer_accounts_enabled %} header--has-account{% endif %}{% if localization_forms %} header--has-localizations{% endif %}">
 
-    <div class"drawer-mobile-section drawer-custom-mob">
+    <div class="drawer-mobile-section drawer-custom-mob">
       {%- liquid
           if section.settings.menu != blank
             render 'header-drawer'
@@ -291,6 +291,14 @@
           <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
             <img src="{{ section.settings.cart_image | image_url }}" alt="{{ 'templates.cart.cart' | t }}" width="28" height="28" />
             <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span> 
+
+            {%- if cart != empty -%}
+              <div class="cart-count-bubble">
+                {%- if cart.item_count < 100 -%}
+                  <span aria-hidden="true">{{ cart.item_count }}</span>
+                {%- endif -%}
+              </div>
+            {%- endif -%}
           </a>
         {%- endif -%}
         

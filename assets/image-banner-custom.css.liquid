@@ -1,0 +1,153 @@
+.main-img-banner-content{
+    display: flex;
+    flex-direction: row;
+}
+.your-text, .routine-text , .perfect-text{
+    font-size:64px;
+    font-family: 'Bold_Font';
+}
+
+.main-img-banner-content .banner-text-section{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}  
+
+.main-img-banner-content .banner-text-section .browse-button,
+.main-img-banner-content .banner-text-section .survey-button{
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.banner-text-section .tailored-text{
+    font-family: 'Normal_Font';
+    margin:0;
+}
+
+.banner-text-section .free-coffee-text{
+    font-family: 'Bold_Font';
+}
+
+.main-img-banner-content .banner-text-section{
+    max-width: 40%;
+    width: 100%;
+}
+
+.main-img-banner-content  .beans-image-section{
+    max-width: 60%;
+    width: 100%;
+}
+
+.banner-text-section .browse-button , 
+.banner-text-section .survey-button {
+    max-width: 90%;
+    width: 100%;
+    max-height: 10%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    font-family: 'Bold_Font'
+}
+
+.rating-text-coffee .rating-star-text
+{
+    font-size: 12px;
+    margin: 0;
+}
+
+.rating-text-coffee{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:10px;
+}
+.banner-text-section .banner-text-image{
+    width: 90%;
+    height: 38%;
+}
+.rating-text-coffee .rating-star-image{
+    width: 15%;
+    height: 60%;
+}
+.beans-image-section .banner-beans-image{
+    width: 100%;
+    height: 100%;
+}
+
+.perfect-routine-head .perfect-text{
+    font-family: '';
+}
+
+@media screen and (max-width:1280px){
+    .main-img-banner-content .banner-text-section .browse-button,
+    .main-img-banner-content .banner-text-section .survey-button{
+        font-size: 14px;
+    }
+}
+
+
+@media screen and (max-width:1024px){
+
+}
+
+@media screen and (max-width:980px){
+    .rating-text-coffee .rating-star-text{
+        font-size: 10px;
+    }
+    .main-img-banner-content .banner-text-section .browse-button,
+    .main-img-banner-content .banner-text-section .survey-button{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width:767px){
+    .main-img-banner-content{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .your-text, .routine-text , .perfect-text{
+        font-size:42px;
+        font-family: 'Bold_Font';
+    }
+    .banner-text-section .banner-text-image {
+        width: 60%;
+        height: 38%;
+    }
+    .main-img-banner-content .banner-text-section , .main-img-banner-content .beans-image-section{
+        max-width: 100%;
+        width: 100%;
+    }
+    .main-img-banner-content .banner-text-section {
+        max-width: 92%;
+        width: 100%;
+    }
+    .main-img-banner-content .banner-text-section{
+        align-items: center;
+        justify-content: center;
+    }
+    .main-img-banner-content  .beans-image-section{
+        order: -1;
+    }
+    .banner-text-section .tailored-text{
+        font-size: 13px;
+        text-align: center;
+    }
+    .banner-text-section .browse-button, .banner-text-section .survey-button {
+        max-height: 100%;
+        height:40px;
+        max-width: 100%;
+        width: 100%;
+    }
+    .rating-text-coffee .rating-star-text{
+        font-size: 12px;
+    }
+
+    .main-img-banner-content .banner-text-section{
+        padding-bottom: 45px ;
+    }
+
+}

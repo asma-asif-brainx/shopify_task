@@ -1,4 +1,42 @@
+<!--  Access custom stylesheet-->
+{% if section.settings.include-custom-style  %}
+  <link rel="stylesheet" href="{{ 'image-banner-custom.css' | asset_url }}">
+  {% endif %}
+
 {{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
+
+<style>
+  .banner:after, .banner__media:after
+  {
+    background-color: {{ section.settings.banner-img-bg-color }};
+  }   
+  .custom-browse-button-color{
+    color: {{ section.settings.browse-btn-text-color }};
+    background-color: {{ section.settings.browse-btn-bg-color }};
+  }
+  .custom-survey-button-color{
+    color: {{ section.settings.survey-btn-text-color }};
+    background-color: {{ section.settings.survey-btn-bg-color }};
+  }
+  .custom-tailored-text-color {
+    color: {{ section.settings.tailored-text-color }};
+  }
+  .custom-star-text-color
+  {
+    color: {{ section.settings.star_text-color }};
+  }
+  .custom-perfect-text-color{
+    color: {{ section.settings.Perfect-text-color }}
+  }
+  .custom-your-text-color{
+    color: {{ section.settings.your-text-color }}
+  }
+  .custom-routine-text-color{
+    color: {{ section.settings.routine-text-color }}
+  }
+</style>
+
+
 
 {%- if section.settings.image_height == 'adapt' and section.settings.image != blank -%}
   {%- style -%}
@@ -117,7 +155,10 @@
   {%- endif -%}
   
   <div class="banner__content banner__content--{{ section.settings.desktop_content_position }} page-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-    <div class="banner__box content-container content-container--full-width-mobile color-{{ section.settings.color_scheme }} gradient">
+    <div class=" main-img-banner-content banner__box content-container content-container--full-width-mobile color-{{ section.settings.color_scheme }} gradient">
+     
+      <div class="main-img-banner-content">
+        <div class="banner-text-section">
       {%- for block in section.blocks -%}
         {%- case block.type -%}
           {%- when 'heading' -%}
@@ -127,12 +168,44 @@
             >
               {{ block.settings.heading }}
             </h2>
-         
-          
+
           {%- when 'text' -%}
-            <div class="banner__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
-              <p>{{ block.settings.text }}</p>
+
+            <h2 class="perfect-routine-head"> 
+              <span class="your-text {% if section.settings.your-text-color %} custom-your-text-color {% endif %}">{{ block.settings.your_text }}</span>
+              <span class="perfect-text {% if section.settings.Perfect-text-color %} custom-perfect-text-color {% endif %}">{{ block.settings.perfect_text }}</span> 
+              <span class="routine-text {% if section.settings.routine-text-color %} custom-routine-text-color {% endif %}">{{ block.settings.routine_text }}</span>
+            </h2>
+
+            {%- if block.settings.enable_description -%}
+              <div class="banner__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
+                <p>{{ block.settings.text }}</p>
+              </div>
+            {% endif %}
+
+            <p class="tailored-text {% if section.settings.tailored-text-color %} custom-tailored-text-color {% endif %}"> {{ block.settings.discover_text }}
+              <span class="free-coffee-text">{{ block.settings.coffee_free_concierge }}</span>
+           </p>
+
+           <a href="{{ routes.collections_url }}" class="btn browse-button {% if section.settings.browse-btn-text-color %} custom-browse-button-color {% endif %}">
+            {{ block.settings.browse_btn-text }}
+          </a>
+          <a href="{{ routes.collections_url }}" class="btn survey-button {% if section.settings.survey-btn-text-color %} custom-survey-button-color {% endif %}">
+            {{ block.settings.survey_now_btn_text }}
+          </a>
+
+          {%- when 'image' -%}
+            <div class="rating-text-coffee">
+                <img  class="rating-star-image" src= "{{ block.settings.stars_image | image_url }}" alt ="img_text"  width="" height="" />
+                <p class="rating-star-text {% if section.settings.star_text-color %} custom-star-text-color {% endif %}">{{ block.settings.rating_text_coffee_lovers }}</p>
+              </div>
+
             </div>
+            <div class="beans-image-section">
+              <img class="banner-beans-image" src= "{{ block.settings.beans_banner_image | image_url }}" alt ="img_text"  width="" height="" />
+            </div>
+          </div>
+
           {%- when 'buttons' -%}
             <div
               class="banner__buttons{% if block.settings.button_label_1 != blank and block.settings.button_label_2 != blank %} banner__buttons--multiple{% endif %}"
@@ -163,9 +236,12 @@
                 </a>
               {%- endif -%}
             </div>
+
         {%- endcase -%}
       {%- endfor -%}
     </div>
+  
+
   </div>
 </div>
 
@@ -187,6 +263,56 @@
       "type": "image_picker",
       "id": "image_2",
       "label": "t:sections.image-banner.settings.image_2.label"
+    },
+    {
+      "type": "color",
+      "id": "banner-img-bg-color",
+      "label": "Banner Image color"
+    },
+    {
+      "type": "color",
+      "id": "your-text-color",
+      "label": "Your text color"
+    },
+    {
+      "type": "color",
+      "id": "Perfect-text-color",
+      "label": "Perfect text color"
+    },
+    {
+      "type": "color",
+      "id": "routine-text-color",
+      "label": "Routine text color"
+    },
+    {
+      "type": "color",
+      "id": "star_text-color",
+      "label": "Star text color"
+    },
+    {
+      "type": "color",
+      "id": "browse-btn-bg-color",
+      "label": "Browse btn bg color"
+    },
+    {
+      "type": "color",
+      "id": "survey-btn-bg-color",
+      "label": "Survey btn bg color"
+    },
+    {
+      "type": "color",
+      "id": "browse-btn-text-color",
+      "label": "Browse btn text color"
+    },
+    {
+      "type": "color",
+      "id": "survey-btn-text-color",
+      "label": "Survey btn text color"
+    },
+    {
+      "type": "color",
+      "id": "tailored-text-color",
+      "label": "Tailored text color"
     },
     {
       "type": "range",
@@ -272,6 +398,11 @@
       "id": "show_text_box",
       "default": true,
       "label": "t:sections.image-banner.settings.show_text_box.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "include-custom-style",
+      "label": "custom-style"
     },
     {
       "type": "select",
@@ -418,6 +549,47 @@
           "label": "t:sections.image-banner.blocks.text.settings.text.label"
         },
         {
+          "type": "text",
+          "id": "browse_btn-text",
+          "label": "browse btn text"
+        },
+        {
+          "type": "text",
+          "id": "survey_now_btn_text",
+          "label": "Survey now btn text "
+        },
+        {    
+          "type": "checkbox",       
+          "id": "enable_description",      
+          "label": "Enable description",      
+          "default": true    
+        },
+        {
+          "type": "inline_richtext",
+          "id": "your_text",
+          "label": "Your Text"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "perfect_text",
+          "label": "Perfect Text"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "routine_text",
+          "label": "Routine Text"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "coffee_free_concierge",
+          "label": "Coffee free concierge"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "discover_text",
+          "label": "Discover text"
+        },
+        {
           "type": "select",
           "id": "text_style",
           "options": [
@@ -440,9 +612,35 @@
       ]
     },
     {
+      "type": "image",
+      "name": "Images",
+      "settings": [
+        {
+        "type": "image_picker",
+        "id": "beans_banner_image",
+        "label": "Beans banner image"
+      },
+      {
+        "type": "image_picker",
+        "id": "banner_text_img",
+        "label": "Banner text image"
+      },
+      {
+        "type": "image_picker",
+        "id": "stars_image",
+        "label": "Star image"
+      },
+      {
+        "type": "inline_richtext",
+        "id": "rating_text_coffee_lovers",
+        "label": "Rating text coffee lovers"
+      }
+    ]
+    },
+    {
       "type": "buttons",
       "name": "t:sections.image-banner.blocks.buttons.name",
-      "limit": 1,
+      "limit": 2,
       "settings": [
         {
           "type": "text",
