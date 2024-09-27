@@ -288,7 +288,7 @@
 
       <div class="header-icons-cart-button">
         {%- if section.settings.enable_cart_icon -%}
-          <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
+          <a href="{{ routes.cart_url }}" class="custom-header-icon header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
             <img src="{{ section.settings.cart_image | image_url }}" alt="{{ 'templates.cart.cart' | t }}" width="28" height="28" />
             <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span> 
 
@@ -563,7 +563,7 @@
       {
       "type": "checkbox",
       "id": "include-custom-style",
-      "label": "custom-style"
+      "label": "Apply custom styling to header"
     },
     {
       "type": "select",

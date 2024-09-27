@@ -1,5 +1,74 @@
 {
   "sections": {
+    "image_banner_KX9HyU": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_3j6HBB": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        },
+        "text_DREAGN": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "browse_btn-text": "",
+            "survey_now_btn_text": "",
+            "enable_description": false,
+            "your_text": "Your",
+            "perfect_text": "Perfect",
+            "routine_text": "\u2028Coffee Routine!",
+            "coffee_free_concierge": "100% FREE Coffee Concierge!",
+            "discover_text": "Discover your tailored at home coffee products & routine as we are your",
+            "text_style": "body"
+          }
+        },
+        "buttons_6LVh6j": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Browse All Products  →",
+            "button_link_1": "shopify:\/\/collections\/coffee",
+            "button_style_secondary_1": false,
+            "button_label_2": "Take Your Free Survey now  →",
+            "button_link_2": "shopify:\/\/collections\/coffee",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_3j6HBB",
+        "text_DREAGN",
+        "buttons_6LVh6j"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Rectangle_9.svg",
+        "image_2": "shopify:\/\/shop_images\/Group_164633_1.png",
+        "banner-img-bg-color": "#075d57",
+        "your-text-color": "#ffffff",
+        "Perfect-text-color": "#deb126",
+        "routine-text-color": "#ffffff",
+        "star_text-color": "#ffffff",
+        "browse-btn-bg-color": "#ef4444",
+        "survey-btn-bg-color": "#1b4a46",
+        "browse-btn-text-color": "#ffffff",
+        "survey-btn-text-color": "#ffffff",
+        "tailored-text-color": "#ffffff",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-left",
+        "show_text_box": true,
+        "include-custom-style": true,
+        "desktop_content_alignment": "left",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -13,7 +82,6 @@
         },
         "button": {
           "type": "buttons",
-          "disabled": true,
           "settings": {
             "button_label_1": "Shop all",
             "button_link_1": "shopify:\/\/collections\/all",
@@ -22,25 +90,50 @@
             "button_link_2": "",
             "button_style_secondary_2": false
           }
+        },
+        "text_UPncLB": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "browse_btn-text": "Browse All Products  →",
+            "survey_now_btn_text": "Take Your Free Survey now  →",
+            "enable_description": false,
+            "your_text": "Your",
+            "perfect_text": "Perfect",
+            "routine_text": "Coffee Routine",
+            "coffee_free_concierge": "100% FREE Coffee Concierge!",
+            "discover_text": "Discover your tailored at home coffee products & routine as we are your",
+            "text_style": "body"
+          }
+        },
+        "image_PzdQNC": {
+          "type": "image",
+          "settings": {
+            "beans_banner_image": "shopify:\/\/shop_images\/Group_164633_1.png",
+            "stars_image": "shopify:\/\/shop_images\/5-star-rating.png",
+            "rating_text_coffee_lovers": "4.9\/5.00  (Serviced 6,000,000+ Coffee Lovers)"
+          }
         }
       },
       "block_order": [
         "heading",
-        "button"
+        "button",
+        "text_UPncLB",
+        "image_PzdQNC"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/Rectangle_9_9d6d6ff3-681f-4b26-9a89-04179a75ddb5.png",
-        "beans_banner_image": "shopify:\/\/shop_images\/Group_164633_1.png",
-        "banner_text_img": "shopify:\/\/shop_images\/Group_164624_1.png",
-        "stars_image": "shopify:\/\/shop_images\/5-star-rating.png",
+        "banner-img-bg-color": "#075d57",
+        "your-text-color": "#ffffff",
+        "Perfect-text-color": "#deb126",
+        "routine-text-color": "#ffffff",
         "star_text-color": "#ffffff",
         "browse-btn-bg-color": "#ed4444",
         "survey-btn-bg-color": "#1b4a46",
         "browse-btn-text-color": "#ffffff",
         "survey-btn-text-color": "#ffffff",
         "tailored-text-color": "#fffcfc",
-        "browse_btn-text": "BROWSE ALL PRODUCTS →",
-        "survey_now_btn_text": "TAKE YOUR FREE SURVEY NOW →",
         "image_overlay_opacity": 30,
         "image_height": "small",
         "desktop_content_position": "middle-center",
@@ -192,6 +285,7 @@
     }
   },
   "order": [
+    "image_banner_KX9HyU",
     "image_banner",
     "featured_collection",
     "featured_product_YrQjbj",

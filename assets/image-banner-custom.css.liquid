@@ -2,11 +2,43 @@
     display: flex;
     flex-direction: row;
 }
+.banner-content-main-custom {
+    padding: 0 !important;
+    margin: 0 !important ;
+}
+.main-img-banner-content .button{
+    width: 100%;
+}
+.banner-content-main-custom  .main-img-banner-content{
+    max-width:93% !important;
+    justify-content: right;
+}
+.main-img-banner-content .banner-text-section {
+    max-width: 84%;
+    width: 100%;
+}
+.main-img-banner-content{
+    background-color: transparent;
+}
+.banner-content-main-custom .main-img-banner-content {
+    max-width: 53% !important;
+    justify-content: center;
+}
 .your-text, .routine-text , .perfect-text{
     font-size:64px;
     font-family: 'Bold_Font';
 }
 
+.perfect-routine-head .perfect-text{
+    font-family: 'Comforter_Bold';
+    display: inline-block;
+    transform: rotate(-10deg);
+}
+
+.perfect-routine-head
+{
+    line-height: 1;
+}
 .main-img-banner-content .banner-text-section{
     display: flex;
     flex-direction: column;
@@ -19,20 +51,23 @@
     font-size: 16px;
 }
 
+.main-img-banner-content .banner-text-section .browse-button::after,
+.main-img-banner-content .banner-text-section .survey-button::after{
+    box-shadow: none;
+}
 .banner-text-section .tailored-text{
     font-family: 'Normal_Font';
     margin:0;
 }
-
+.banner_side_image img {
+    object-fit: contain;
+}
 .banner-text-section .free-coffee-text{
     font-family: 'Bold_Font';
 }
-
-.main-img-banner-content .banner-text-section{
-    max-width: 40%;
-    width: 100%;
+.banner_side_image{
+    background-color: #075D57;
 }
-
 .main-img-banner-content  .beans-image-section{
     max-width: 60%;
     width: 100%;
@@ -77,10 +112,6 @@
     height: 100%;
 }
 
-.perfect-routine-head .perfect-text{
-    font-family: '';
-}
-
 @media screen and (max-width:1280px){
     .main-img-banner-content .banner-text-section .browse-button,
     .main-img-banner-content .banner-text-section .survey-button{
@@ -90,7 +121,6 @@
 
 
 @media screen and (max-width:1024px){
-
 }
 
 @media screen and (max-width:980px){
@@ -129,8 +159,8 @@
         align-items: center;
         justify-content: center;
     }
-    .main-img-banner-content  .beans-image-section{
-        order: -1;
+    section .banner-mobile-side-image{
+        flex-direction: column-reverse;
     }
     .banner-text-section .tailored-text{
         font-size: 13px;
@@ -148,6 +178,12 @@
 
     .main-img-banner-content .banner-text-section{
         padding-bottom: 45px ;
+    }
+    .main-img-banner-content{
+        padding: 0 !important;
+    }
+    .banner-content-main-custom .main-img-banner-content{
+        max-width: 100% !important;
     }
 
 }

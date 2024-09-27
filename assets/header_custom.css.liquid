@@ -22,14 +22,14 @@ header.header.header--middle-left.header--mobile-center.page-width.header--has-m
 }
 
 .header-nav-list-items, .header-nav-span-items{
-    font-size:16px !important;
+    font-size:14px !important;
 }
 .btn--shop-now{
   text-decoration:none;
 }
 
  .header-nav-span-items{
-   font-family:'Normal_Font';
+   font-family:'Medium_Font';
  }
  .header-nav-list-items{
     font-family:'Bold_Font';
@@ -46,11 +46,9 @@ header.header.header--middle-left.header--mobile-center.page-width.header--has-m
   width:auto;
 }
 .logo-heading-header{
-  max-width:20%;
-  width:100%;
   display: flex;
   justify-content: center;
-  max-width: 25%;
+  max-width: 20%;
   width: 100%;
 }
 .header-main-div{
@@ -61,13 +59,17 @@ header.header.header--middle-left.header--mobile-center.page-width.header--has-m
 .header__icons .localization-link{
   display:none;
 }
+.header-icons-cart-button .custom-header-icon{
+  padding: 15px;
+
+}
 .header-logo-img{
   width:180px;
 }
 .header-icons-cart-button{
    display:flex !important;
    align-items: center !important;
-  gap:45px;
+  gap:25px;
 }
 
 .icons-nav-section{
@@ -75,14 +77,31 @@ header.header.header--middle-left.header--mobile-center.page-width.header--has-m
     flex-direction: row;
     align-items: center;
 }
+.header-main-div .icons-nav-section{
+  width: 73%;
+  justify-content: right;
+}
+  @media screen and (max-width:1280px){
+    .logo-heading-header{
+      max-width: 26%;
+      width: 100%;
+    }
+    .header-main-div .icons-nav-section {
+      width: 66%;
+    }
+  }
+
 @media screen and (max-width:1024px){
   .header-nav-list-items, .header-nav-span-items {
-    font-size: 14px !important;
+    font-size: 12px !important;
  }
 }
 @media screen and (max-width:980px){
   .header-nav-list-items, .header-nav-span-items {
     font-size: 14px !important;
+ }
+ .header-main-div .icons-nav-section{
+  width: unset;
  }
  .mobile-shop-btn {
   display: block;
@@ -158,4 +177,16 @@ header.header.header--middle-left.header--mobile-center.page-width.header--has-m
     left: 8%;
     margin-left: 0;
   }
+}
+
+@media screen and (max-width: 330px){
+  .logo-heading-header {
+      position: relative;
+      left: 2%;
+      margin-left: 0;
+  }
+  .header-logo-img {
+    min-width: 95px;
+    width: 100%;
+}
 }

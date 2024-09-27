@@ -6,6 +6,10 @@
     min-height:60px;
     height:100%;
 }
+.custom-announecemnt-bar-main  .custom-slider-btn {
+  min-width: 30px !important;
+  padding: 0;
+}
 p.announcement-bar__message.h5 {
   display:flex;
   flex-direction:row;
@@ -24,7 +28,11 @@ p.announcement-bar__message.h5 {
 .announcement-message-span{
     width:auto;
     font-size:14px;
-    font-family:'Medium_Font';
+    font-family: 'Medium_Font';
+}
+.announecemnt-bar-slider{
+  max-width: 90% !important;
+  width: 100%;
 }
 .announcement-bar__link{
   justify-content: unset;
@@ -64,10 +72,10 @@ p.announcement-bar__message.h5 {
 @media screen and (max-width: 767px) {
   .announcement-message-span {
     width:auto;
-    font-size: 7px;
+    font-size: 6px;
   }
   .announcement-bar__link{
-    font-size:7px;
+    font-size:6px;
     width:auto;
   }
   .slider-button {
@@ -86,6 +94,6 @@ p.announcement-bar__message.h5 {
 
 @media screen and (max-width: 330px) {
   .announcement-bar__link , .announcement-message-span{
-      font-size: 5px;
+      font-size: 4px;
   }
 }
