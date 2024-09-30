@@ -21,7 +21,7 @@
     background-color: transparent;
 }
 .banner-content-main-custom .main-img-banner-content {
-    max-width: 53% !important;
+    max-width: 56% !important;
     justify-content: center;
 }
 .your-text, .routine-text , .perfect-text{
@@ -34,16 +34,22 @@
     display: inline-block;
     transform: rotate(-10deg);
 }
-
+.multiple-banner-buttons {
+    max-width: 100% !important;
+}
 .perfect-routine-head
 {
-    line-height: 1;
+    line-height: 0.5;
 }
 .main-img-banner-content .banner-text-section{
     display: flex;
     flex-direction: column;
     gap:10px;
 }  
+.banner-heading{
+    display: flex;
+    flex-direction: column;
+}
 
 .main-img-banner-content .banner-text-section .browse-button,
 .main-img-banner-content .banner-text-section .survey-button{
@@ -75,7 +81,7 @@
 
 .banner-text-section .browse-button , 
 .banner-text-section .survey-button {
-    max-width: 90%;
+    max-width: 100%;
     width: 100%;
     max-height: 10%;
     height: 100%;
@@ -117,10 +123,18 @@
     .main-img-banner-content .banner-text-section .survey-button{
         font-size: 14px;
     }
+    .your-text, .routine-text, .perfect-text {
+        font-size: 58px;
+    }
 }
 
 
+
 @media screen and (max-width:1024px){
+    .main-img-banner-content .banner-text-section {
+        max-width: 100%;
+        width: 100%;
+    }
 }
 
 @media screen and (max-width:980px){
@@ -130,6 +144,12 @@
     .main-img-banner-content .banner-text-section .browse-button,
     .main-img-banner-content .banner-text-section .survey-button{
         font-size: 12px;
+    }
+    .banner-content-main-custom .main-img-banner-content {
+        max-width: 59%!important;
+    }
+    .your-text, .routine-text, .perfect-text {
+        font-size: 42px;
     }
 }
 
@@ -185,5 +205,14 @@
     .banner-content-main-custom .main-img-banner-content{
         max-width: 100% !important;
     }
+    .banner-text-section .perfect-routine-head{
+        max-width: 100%;
+        width: 100%;
+    }
 
+}
+@media screen and (max-width:330px){
+    .your-text, .routine-text, .perfect-text{
+        font-size: 25px;
+    }
 }

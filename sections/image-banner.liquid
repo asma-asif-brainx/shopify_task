@@ -169,11 +169,15 @@
 
           {%- when 'text' -%}
 
+            <div class="banner-heading">
             <h2 class="perfect-routine-head"> 
               <span class="your-text {% if section.settings.your-text-color %} custom-your-text-color {% endif %}">{{ block.settings.your_text }}</span>
               <span class="perfect-text {% if section.settings.Perfect-text-color %} custom-perfect-text-color {% endif %}">{{ block.settings.perfect_text }}</span> 
+            </h2>
+            <h2 class="perfect-routine-head"> 
               <span class="routine-text {% if section.settings.routine-text-color %} custom-routine-text-color {% endif %}">{{ block.settings.routine_text }}</span>
             </h2>
+          </div>
 
             {%- if block.settings.enable_description -%}
               <div class="banner__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
@@ -185,21 +189,9 @@
               <span class="free-coffee-text">{{ block.settings.coffee_free_concierge }}</span>
            </p>
 
-          {%- when 'image' -%}
-            <div class="rating-text-coffee">
-                <img  class="rating-star-image" src= "{{ block.settings.stars_image | image_url }}" alt ="img_text"  width="" height="" />
-                <p class="rating-star-text {% if section.settings.star_text-color %} custom-star-text-color {% endif %}">{{ block.settings.rating_text_coffee_lovers }}</p>
-              </div>
-
-            </div>
-            <div class="beans-image-section">
-              <img class="banner-beans-image" src= "{{ block.settings.beans_banner_image | image_url }}" alt ="img_text"  width="" height="" />
-            </div>
-          
-
           {%- when 'buttons' -%}
             <div
-              class="banner__buttons{% if block.settings.button_label_1 != blank and block.settings.button_label_2 != blank %} banner__buttons--multiple{% endif %}"
+              class="multiple-banner-buttons banner__buttons{% if block.settings.button_label_1 != blank and block.settings.button_label_2 != blank %} banner__buttons--multiple{% endif %}"
               {{ block.shopify_attributes }}
             >
               {%- if block.settings.button_label_1 != blank -%}
@@ -229,6 +221,12 @@
                 </a>
               {%- endif -%}
             </div>
+            <div class="rating-text-coffee">
+              <img  class="rating-star-image" src= "{{ block.settings.stars_image | image_url }}" alt ="img_text"  width="" height="" />
+              <p class="rating-star-text {% if section.settings.star_text-color %} custom-star-text-color {% endif %}">{{ block.settings.rating_text_coffee_lovers }}</p>
+            </div>
+
+          </div>
 
         {%- endcase -%}
       {%- endfor -%}
@@ -607,16 +605,6 @@
         "type": "image_picker",
         "id": "banner_text_img",
         "label": "Banner text image"
-      },
-      {
-        "type": "image_picker",
-        "id": "stars_image",
-        "label": "Star image"
-      },
-      {
-        "type": "inline_richtext",
-        "id": "rating_text_coffee_lovers",
-        "label": "Rating text coffee lovers"
       }
     ]
     },
@@ -660,6 +648,16 @@
           "id": "button_style_secondary_2",
           "default": false,
           "label": "t:sections.image-banner.blocks.buttons.settings.button_style_secondary_2.label"
+        },
+        {
+          "type": "image_picker",
+          "id": "stars_image",
+          "label": "Image below buttons"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "rating_text_coffee_lovers",
+          "label": "Text below buttons"
         }
       ]
     }

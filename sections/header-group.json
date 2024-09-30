@@ -46,6 +46,8 @@
         "menu": "main-menu",
         "enable_search_modal": false,
         "enable_account_icon": false,
+        "show-built-in-cart-icon": false,
+        "show-custom-cart-icon": true,
         "desktop_button_text": "SHOP NOW→",
         "mobile_button_text": "SHOP",
         "enable_cart_icon": true,

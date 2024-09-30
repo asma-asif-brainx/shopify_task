@@ -15,12 +15,10 @@
           "type": "text",
           "settings": {
             "text": "Give customers details about the banner image(s) or content on the template.",
-            "browse_btn-text": "",
-            "survey_now_btn_text": "",
             "enable_description": false,
             "your_text": "Your",
             "perfect_text": "Perfect",
-            "routine_text": "\u2028Coffee Routine!",
+            "routine_text": "Coffee Routine!",
             "coffee_free_concierge": "100% FREE Coffee Concierge!",
             "discover_text": "Discover your tailored at home coffee products & routine as we are your",
             "text_style": "body"
@@ -34,7 +32,9 @@
             "button_style_secondary_1": false,
             "button_label_2": "Take Your Free Survey now  →",
             "button_link_2": "shopify:\/\/collections\/coffee",
-            "button_style_secondary_2": false
+            "button_style_secondary_2": false,
+            "stars_image": "shopify:\/\/shop_images\/5-star-rating.png",
+            "rating_text_coffee_lovers": "4.9\/5.00 (10,000+ people living healthy lifestyle)"
           }
         }
       },
@@ -88,15 +88,14 @@
             "button_style_secondary_1": true,
             "button_label_2": "",
             "button_link_2": "",
-            "button_style_secondary_2": false
+            "button_style_secondary_2": false,
+            "rating_text_coffee_lovers": ""
           }
         },
         "text_UPncLB": {
           "type": "text",
           "settings": {
             "text": "Give customers details about the banner image(s) or content on the template.",
-            "browse_btn-text": "Browse All Products  →",
-            "survey_now_btn_text": "Take Your Free Survey now  →",
             "enable_description": false,
             "your_text": "Your",
             "perfect_text": "Perfect",
@@ -109,9 +108,7 @@
         "image_PzdQNC": {
           "type": "image",
           "settings": {
-            "beans_banner_image": "shopify:\/\/shop_images\/Group_164633_1.png",
-            "stars_image": "shopify:\/\/shop_images\/5-star-rating.png",
-            "rating_text_coffee_lovers": "4.9\/5.00  (Serviced 6,000,000+ Coffee Lovers)"
+            "beans_banner_image": "shopify:\/\/shop_images\/Group_164633_1.png"
           }
         }
       },
@@ -183,13 +180,18 @@
           "type": "text",
           "settings": {
             "text": "{{ section.settings.product.vendor }}",
-            "text_style": "uppercase"
+            "text_style": "uppercase",
+            "mid_text": "Best Seller",
+            "post_text": "Staff Pick",
+            "show-pre-text": false
           }
         },
         "title_z87Awt": {
           "type": "title",
           "settings": {
-            "heading_size": "h1"
+            "heading_size": "h2",
+            "stars_image": "shopify:\/\/shop_images\/5-star-rating.png",
+            "rating_text_coffee_lovers": "4.9\/5.00  ( 117 Reviews )"
           }
         },
         "price_nGDnkR": {
@@ -197,22 +199,40 @@
           "settings": {
           }
         },
+        "text_6DeANa": {
+          "type": "text",
+          "settings": {
+            "text": "Pure Vitamin C easily dissolvable in liquids for gentle ingestion and improved absorption. Rigorously tested to ensure freedom from GMOs, corn, and other impurities.",
+            "text_style": "body",
+            "mid_text": "",
+            "post_text": "",
+            "show-pre-text": true
+          }
+        },
         "variant_picker_xzmG4h": {
           "type": "variant_picker",
           "settings": {
-            "picker_type": "button",
+            "picker_type": "dropdown",
             "swatch_shape": "circle"
           }
         },
         "quantity_selector_HnJGNn": {
           "type": "quantity_selector",
           "settings": {
+            "show-quantity-cart-label": false
           }
         },
         "buy_buttons_XcBwwf": {
           "type": "buy_buttons",
           "settings": {
-            "show_dynamic_checkout": true,
+            "show_dynamic_checkout": false,
+            "checkbox-1-label": "Secure Checkout",
+            "checkbox-1-image": "shopify:\/\/shop_images\/lets-icons_check-fill.svg",
+            "checkbox-2-image": "shopify:\/\/shop_images\/lets-icons_check-fill.svg",
+            "checkbox-3-image": "shopify:\/\/shop_images\/lets-icons_check-fill.svg",
+            "checkbox-2-label": "Secure Shipping",
+            "checkbox-3-label": "Satisfaction Guarantee",
+            "add-checkbox-below-button": true,
             "show_gift_card_recipient": true
           }
         },
@@ -228,6 +248,7 @@
         "text_gHKxnG",
         "title_z87Awt",
         "price_nGDnkR",
+        "text_6DeANa",
         "variant_picker_xzmG4h",
         "quantity_selector_HnJGNn",
         "buy_buttons_XcBwwf",
@@ -236,16 +257,32 @@
       "settings": {
         "product": "roasted-coffee-grinder-chocolate-flavour-2",
         "color_scheme": "",
+        "checkbox-label-color": "#075d57",
         "secondary_background": false,
         "media_size": "medium",
         "constrain_to_viewport": true,
+        "enable-custom-page-width": true,
         "media_fit": "contain",
         "media_position": "left",
-        "image_zoom": "lightbox",
+        "image_zoom": "none",
         "hide_variants": false,
         "enable_video_looping": false,
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 36,
+        "post-text-color": "#ffffff",
+        "quanity-buttons-color": "#f2f2f2",
+        "featured-product-description": "#424242",
+        "featured-product-submit-button-background-color": "#ef4444",
+        "show-sale-tag": false,
+        "quantity-button-custom-style": true,
+        "show-details": false,
+        "featured-product-submit-button-text-color": "#ffffff",
+        "price-sale-text-color": "#ef4444",
+        "price-regular-text-color": "#929292",
+        "mid-text-color": "#434343",
+        "post-background-color": "#424242",
+        "mid-background-color": "#ece03a",
+        "show-custom-styling": true
       }
     },
     "newsletter_H6EHYn": {

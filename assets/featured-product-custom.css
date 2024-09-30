@@ -1,0 +1,115 @@
+.page-section-custom{
+    padding-right: 0;
+    padding-left: 0;
+}
+.product-text-logos{
+    display: flex;
+    flex-direction: row;
+    gap:10px;
+}
+
+.product-text-logos .post-text, .product-text-logos .mid-text{
+    font-size: 14px;
+    font-family: 'Medium_Font';
+    width: 62px;
+    height: 62px;
+    border-radius: 30px;
+    text-align: center;
+    line-height:15px;
+    padding-top: 15px;
+}
+.featured-product-info{
+    padding-right: 0 !important;
+    padding-left: 30px !important;
+}
+
+.featured-product-info .product__title{
+    font-size: 24px;
+    font-family: 'Bold_Font';
+}
+
+.rating-text-coffee .rating-star-text {
+    font-size: 12px;
+    font-family: 'Bold_Font';
+}
+.price__sale .price-regular-text{
+    font-size: 14px;
+    font-family: 'Medium_Font';
+}
+.price__sale .price-sale-text{
+    font-size: 24px;
+    font-family: 'Bold_Font';
+}
+
+.featured-product-description {
+    font-size: 16px;
+    font-family: 'Medium_Font';
+}
+.featured-product-buttons{
+    padding-top: 5px;
+}
+.featured-product-buttons .featured-product-submit-button{
+    max-width: 379px;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: 'Bold_Font';
+}
+.featured-product-buttons .featured-product-submit-button::after{
+    box-shadow: none !important;
+}
+
+.variants-main{
+    display: flex;
+    flex-direction: row;
+    gap:30px;
+}
+.variants-main .custom-variants {
+    max-width: 47% !important;
+    min-width: 47% !important;
+}
+.custom-variants .variant-label{
+    font-size: 16px;
+    font-family: 'Bold_Font';
+}
+.custom-variants  .variant-selector .variant-select-options{
+    font-size: 16px;
+    font-family: 'Medium_Font';
+}
+.custom-variants .variant-selector{
+    max-width: 100% !important;
+}
+
+.quantity-main {
+    max-width: 20% !important;
+    width: 100%;
+}
+.quantity-main .quantity-label{
+    font-size: 16px;
+    font-family: 'Bold_Font';
+}
+.checkbox-container{
+    display: flex;
+    flex-direction: row;
+    gap:10px;
+}
+.checkbox-container .checkbox-label{
+    font-size: 11px;
+    font-family: 'Medium_Bold_Font';
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap:2px;
+}
+.quantity-button-custom-style{
+    display: flex;
+    flex-direction: row;
+    gap:20px;    
+}
+.buttons-main{
+    width: 100% !important;
+}
+.buttons-checkbox{
+display: flex;
+flex-direction: column;
+}
