@@ -5,6 +5,13 @@
     "newsletter_XqkMnE": {
       "type": "newsletter",
       "blocks": {
+        "title_h9qJyM": {
+          "type": "title",
+          "settings": {
+            "title-text": "Newsletter subscripion",
+            "title-image": "shopify:\/\/shop_images\/Group_44.svg"
+          }
+        },
         "heading_D7yhtp": {
           "type": "heading",
           "settings": {
@@ -25,6 +32,7 @@
         }
       },
       "block_order": [
+        "title_h9qJyM",
         "heading_D7yhtp",
         "paragraph_ULKHD7",
         "email_form_t8wzdM"
@@ -32,8 +40,12 @@
       "settings": {
         "color_scheme": "",
         "full_width": true,
+        "add-newsletter-background": true,
+        "newsletter-background-color": "#f2f2f2",
+        "newsletter-title-color": "#035d57",
         "padding_top": 40,
-        "padding_bottom": 52
+        "padding_bottom": 52,
+        "include-custom-style": true
       }
     },
     "footer": {

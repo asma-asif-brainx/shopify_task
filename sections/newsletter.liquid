@@ -1,3 +1,17 @@
+<!--  Access custom stylesheet-->
+{% if section.settings.include-custom-style  %}
+  {{ 'newsletter-custom.css' | asset_url | stylesheet_tag }}
+{% endif %}
+
+<style>
+  .newsletter-wrapper-color{
+    background-color: {{ section.settings.newsletter-background-color }}
+  }
+  .newsletter-title-text{
+    color: {{ section.settings.newsletter-title-color }}
+  }
+</style>
+
 {{ 'component-newsletter.css' | asset_url | stylesheet_tag }}
 {{ 'newsletter-section.css' | asset_url | stylesheet_tag }}
 
@@ -16,9 +30,14 @@
 {%- endstyle -%}
 
 <div class="newsletter center {% if section.settings.full_width == false %}newsletter--narrow page-width{% endif %}">
-  <div class="newsletter__wrapper color-{{ section.settings.color_scheme }} gradient content-container isolate{% if section.settings.full_width %} content-container--full-width{% endif %} section-{{ section.id }}-padding">
+  <div class="newsletter__wrapper color-{{ section.settings.color_scheme }} gradient content-container isolate{% if section.settings.full_width %} content-container--full-width{% endif %} section-{{ section.id }}-padding
+    {% if section.settings.add-newsletter-background %} newsletter-wrapper-color {% endif %}">
     {%- for block in section.blocks -%}
       {%- case block.type -%}
+        {%- when 'title' -%}
+          <img class="newsletter-logo" src= "{{ block.settings.title-image | image_url }}" alt ="img_text"  width="66" height="24" />
+          <p class="newsletter-title-text">{{ block.settings.title-text }}</p>
+
         {%- when '@app' -%}
           {% render block %}
         {%- when 'heading' -%}
@@ -142,6 +161,22 @@
       "label": "t:sections.newsletter.settings.full_width.label"
     },
     {
+      "type": "checkbox",
+      "id": "add-newsletter-background",
+      "default": false,
+      "label": "Add newsletter background color"
+    },
+    {
+      "type": "color",
+      "id": "newsletter-background-color",
+      "label": "Newsletter background color"
+    },
+    {
+      "type": "color",
+      "id": "newsletter-title-color",
+      "label": "Newsletter title text color"
+    },
+    {
       "type": "paragraph",
       "content": "t:sections.newsletter.settings.paragraph.content"
     },
@@ -168,6 +203,12 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 52
+    },
+    {
+      "type": "checkbox",
+      "id": "include-custom-style",
+      "default": false,
+      "label": "Apply custom style",
     }
   ],
   "blocks": [
@@ -226,6 +267,23 @@
       ]
     },
     {
+      "type": "title",
+      "name": "title",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "title-text",
+          "label": "Title text"
+        },
+        {
+          "type": "image_picker",
+          "id": "title-image",
+          "label": "Title logo image"
+        }
+      ]
+    },
+    {
       "type": "email_form",
       "name": "t:sections.newsletter.blocks.email_form.name",
       "limit": 1
@@ -246,6 +304,9 @@
         },
         {
           "type": "email_form"
+        },
+        {
+          "type": "title"
         }
       ]
     }
