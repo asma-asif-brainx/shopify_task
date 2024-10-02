@@ -110,8 +110,8 @@
     width: 100% !important;
 }
 .buttons-checkbox{
-display: flex;
-flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 

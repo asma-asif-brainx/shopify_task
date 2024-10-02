@@ -3,22 +3,36 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "vendor": {
+        "text_rXXHbb": {
           "type": "text",
-          "disabled": true,
           "settings": {
-            "text": "{{ product.vendor }}",
-            "text_style": "uppercase"
+            "text": "Text block",
+            "show-pre-text": false,
+            "mid_text": "Best Seller",
+            "post_text": "Staff Pick",
+            "text_style": "body"
           }
         },
         "title": {
           "type": "title",
           "settings": {
+            "stars_image": "shopify:\/\/shop_images\/5-star-rating.png",
+            "rating_text_coffee_lovers": "4.9\/5.00  ( 117 Reviews )"
           }
         },
         "price": {
           "type": "price",
           "settings": {
+          }
+        },
+        "text_TLPhcL": {
+          "type": "text",
+          "settings": {
+            "text": "Pure Vitamin C easily dissolvable in liquids for gentle ingestion and improved absorption. Rigorously tested to ensure freedom from GMOs, corn, and other impurities.",
+            "show-pre-text": true,
+            "mid_text": "",
+            "post_text": "",
+            "text_style": "body"
           }
         },
         "variant_picker": {
@@ -31,33 +45,28 @@
         "quantity_selector": {
           "type": "quantity_selector",
           "settings": {
+            "show-quantity-cart-label": false
           }
         },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "show_dynamic_checkout": true,
+            "show_dynamic_checkout": false,
             "show_gift_card_recipient": true
           }
         },
-        "description": {
-          "type": "description",
+        "accordion_ygcq8j": {
+          "type": "accordion",
           "settings": {
+            "accordion_heading": "About Product:",
+            "accordion_text": "The Manual Coffee Grinder by JavaPresse Coffee Company was built with a professional grade ceramic conical burr to heighten flavors of the most exquisite coffees in the world. It was born out of pure necessity, to provide an incredibly consistent grind for a variety of brews while making as little noise as possible. Combined with an impeccable stainless steel frame and convenient size, this grinder is at the pinnacle of travel gadgets. Who said you can’t have it all?"
           }
         },
-        "share": {
-          "type": "share",
-          "disabled": true,
+        "accordion_LgEaAV": {
+          "type": "accordion",
           "settings": {
-            "share_label": "Share"
-          }
-        },
-        "text_3BXfKm": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "text": "Text block{{ product.vendor }}",
-            "text_style": "body"
+            "accordion_heading": "Ingredients:",
+            "accordion_text": "Chocolate honey..."
           }
         },
         "collapsible_tab_ALhPJT": {
@@ -72,15 +81,15 @@
         }
       },
       "block_order": [
-        "vendor",
+        "text_rXXHbb",
         "title",
         "price",
+        "text_TLPhcL",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "description",
-        "share",
-        "text_3BXfKm",
+        "accordion_ygcq8j",
+        "accordion_LgEaAV",
         "collapsible_tab_ALhPJT"
       ],
       "settings": {
@@ -96,7 +105,19 @@
         "hide_variants": true,
         "enable_video_looping": false,
         "padding_top": 36,
-        "padding_bottom": 12
+        "padding_bottom": 12,
+        "post-background-color": "#424242",
+        "mid-background-color": "#ece03a",
+        "mid-text-color": "#434343",
+        "post-text-color": "#ffffff",
+        "show-custom-styling": true,
+        "main-product-information-color": "#424242",
+        "price-sale-text-color": "#ef4444",
+        "price-regular-text-color": "#929292",
+        "featured-product-submit-button-background-color": "#ef4444",
+        "featured-product-submit-button-text-color": "#ffffff",
+        "quantity-button-custom-style": true,
+        "about-box-background-color": "#f2f2f2"
       }
     },
     "related-products": {
@@ -114,7 +135,16 @@
         "show_rating": false,
         "columns_mobile": "2",
         "padding_top": 36,
-        "padding_bottom": 28
+        "padding_bottom": 28,
+        "include-custom-style": true,
+        "add-to-cart-button": true,
+        "recommendation-background-color": "#e3e3e3",
+        "product-information-text-color": "#424242",
+        "sale-price-cut-color": "#929292",
+        "review-text": "( 1171 Reviews )",
+        "review-image": "shopify:\/\/shop_images\/5-star-rating.svg",
+        "add-to-cart-button-background-color": "#ef4444",
+        "add-to-cart-button-text-color": "#ffffff"
       }
     }
   },

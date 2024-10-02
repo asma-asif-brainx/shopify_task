@@ -10,6 +10,10 @@
   .newsletter-title-text{
     color: {{ section.settings.newsletter-title-color }}
   }
+  .newsletter-button-email{
+    background-color:{{ section.settings.button-background-color }} !important;
+    color: {{ section.settings.button-text-color }}
+}
 </style>
 
 {{ 'component-newsletter.css' | asset_url | stylesheet_tag }}
@@ -64,7 +68,7 @@
           </div>
         {%- when 'email_form' -%}
           <div {{ block.shopify_attributes }}>
-            {% form 'customer', class: 'newsletter-form' %}
+            {% form 'customer', class: 'newsletter-form newsletter-email-form' %}
               <input type="hidden" name="contact[tags]" value="newsletter">
               <div
                 class="newsletter-form__field-wrapper{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
@@ -99,14 +103,20 @@
                   </label>
                   <button
                     type="submit"
-                    class="newsletter-form__button field__button"
+                    class="newsletter-form__button newsletter-button-email field__button"
                     name="commit"
                     id="Subscribe"
                     aria-label="{{ 'newsletter.button_label' | t }}"
                   >
+                    {% if section.settings.add-button-text %}
+                      {{ section.settings.newsletter-button-text }} 
+                    {%  endif %}
+
+                    {% if section.settings.add-button-arrow-icon %}
                     <span class="svg-wrapper">
                       {{- 'icon-arrow.svg' | inline_asset_content -}}
                     </span>
+                  {%  endif %}
                   </button>
                 </div>
                 {%- if form.errors -%}
@@ -209,6 +219,33 @@
       "id": "include-custom-style",
       "default": false,
       "label": "Apply custom style",
+    },
+    {
+      "type": "text",
+      "id": "newsletter-button-text",
+      "label": "Button Text",
+      "default": "Subscribe Now"
+    },
+    {
+      "type": "checkbox",
+      "id": "add-button-text",
+      "default": false,
+      "label": "Add button text"
+    },{
+      "type": "checkbox",
+      "id": "add-button-arrow-icon",
+      "default": true,
+      "label": "Add button arrow icon"
+    },
+    {
+      "type": "color",
+      "id": "button-background-color",
+      "label": "Newsletter  button background color"
+    },
+    {
+      "type": "color",
+      "id": "button-text-color",
+      "label": "Newsletter button text color"
     }
   ],
   "blocks": [

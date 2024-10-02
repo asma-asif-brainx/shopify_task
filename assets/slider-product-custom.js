@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
+        loop: true, 
         breakpoints: {
             320: { slidesPerView: 2, spaceBetween: 10 },
             768: { slidesPerView: 2, spaceBetween: 20 },

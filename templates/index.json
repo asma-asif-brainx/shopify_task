@@ -388,8 +388,68 @@
       "settings": {
         "color_scheme": "",
         "full_width": true,
+        "add-newsletter-background": false,
+        "newsletter-background-color": "",
+        "newsletter-title-color": "",
         "padding_top": 40,
-        "padding_bottom": 52
+        "padding_bottom": 52,
+        "include-custom-style": false,
+        "newsletter-button-text": "Subscribe Now",
+        "add-button-text": false,
+        "add-button-arrow-icon": true,
+        "button-background-color": "",
+        "button-text-color": ""
+      }
+    },
+    "product_custom_information_KmPYFp": {
+      "type": "product-custom-information",
+      "blocks": {
+        "heading_aYMVmw": {
+          "type": "heading",
+          "settings": {
+            "heading_text": "Why 100,000 Coffee drinkers have switched to organicCoffee"
+          }
+        },
+        "information_wEeyyc": {
+          "type": "information",
+          "settings": {
+            "info_title": "Top 1% of the world’s coffee",
+            "info_description": "Specialty grade, single origin, and hand-picked at peak ripeness for the highest quality."
+          }
+        },
+        "information_WKcc6k": {
+          "type": "information",
+          "settings": {
+            "info_title": "A new coffee each month",
+            "info_description": "These coffees aren’t on the shelves, from Malawi to Myanmar, India to Ecuador, and more."
+          }
+        },
+        "information_rGni4E": {
+          "type": "information",
+          "settings": {
+            "info_title": "Roasted fresh to order",
+            "info_description": "And always roasted to your preference. Maximum freshness, maximum flavor."
+          }
+        },
+        "information_wbaMfW": {
+          "type": "information",
+          "settings": {
+            "info_title": "Delivered on your schedule",
+            "info_description": "Skip or change your delivery date at any time, and set a schedule that works for you."
+          }
+        }
+      },
+      "block_order": [
+        "heading_aYMVmw",
+        "information_wEeyyc",
+        "information_WKcc6k",
+        "information_rGni4E",
+        "information_wbaMfW"
+      ],
+      "settings": {
+        "custom-section-background-color": "#075d57",
+        "show-custom-styling": true,
+        "custom-section-heading-color": "#ffffff"
       }
     }
   },
@@ -399,6 +459,7 @@
     "featured_collection",
     "best_sellers_custom_bXtPLL",
     "featured_product_YrQjbj",
-    "newsletter_H6EHYn"
+    "newsletter_H6EHYn",
+    "product_custom_information_KmPYFp"
   ]
 }

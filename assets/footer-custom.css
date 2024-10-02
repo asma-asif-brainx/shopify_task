@@ -1,0 +1,23 @@
+.copyright-custom-caption {
+    margin: auto;
+}
+.copyright-custom-caption  .custom-caption-text{
+    font-size: 14px;
+    font-family: 'Bold_Font';
+}
+.quick-links-list .quick-links{
+    list-style-type: none;
+    text-decoration: none;
+}
+.footer-quick-block  .footer-quick-block-heading{
+    font-size: 20px;
+    font-family: 'Bold_Font';
+}
+.footer-rating-text-coffee{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.footer-rating-text-coffee .footer-rating-star-text{
+    font-size: 11px;
+}

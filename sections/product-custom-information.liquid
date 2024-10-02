@@ -1,0 +1,105 @@
+{% if section.settings.show-custom-styling  %}
+    {{ 'product-custom-information.css' | asset_url | stylesheet_tag }}
+  {% endif %}
+
+<style>
+    .product-custom-section{
+        background-color: {{ section.settings.custom-section-background-color }}
+    }
+    .heading-block .custom-head{
+        color: {{ section.settings.custom-section-heading-color }}
+    }
+</style>
+
+<section id="custom-section" class="product-custom-section">
+    <div class="container">
+      {% for block in section.blocks %}
+        {% case block.type %}
+        
+          <!-- Heading Block -->
+          {% when 'heading' %}
+          <div class="heading-block">
+            <h2 class="custom-head">{{ block.settings.heading_text }}</h2>
+          </div>
+          
+          <!-- Information Block -->
+          {% when 'information' %}
+          <div class="information-block">
+            <div class="info-image">
+              <img src="{{ block.settings.info_image | image_url: 'medium' }}" width="" height="" alt="{{ block.settings.info_title }}">
+            </div>
+            <div class="info-text">
+              <h3>{{ block.settings.info_title }}</h3>
+              <p>{{ block.settings.info_description }}</p>
+            </div>
+          </div>
+        
+        {% endcase %}
+      {% endfor %}
+    </div>
+  </section>
+
+  {% schema %}
+  {
+    "name": "Custom Section",
+    "settings": [
+        {
+            "type": "color",
+            "id": "custom-section-background-color",
+            "label": "Custom section background color"
+        },
+        {    
+            "type": "checkbox",       
+            "id": "show-custom-styling",      
+            "label": "Include custom styling",      
+            "default": false    
+          },
+          {    
+            "type": "color",       
+            "id": "custom-section-heading-color",      
+            "label": "Custom section heading color"    
+          }
+         
+    ],
+    "blocks": [
+      {
+        "type": "heading",
+        "name": "Heading Block",
+        "settings": [
+          {
+            "type": "text",
+            "id": "heading_text",
+            "label": "Heading"
+          }
+        ]
+      },
+      {
+        "type": "information",
+        "name": "Information Block",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "info_image",
+            "label": "Select Image"
+          },
+          {
+            "type": "text",
+            "id": "info_title",
+            "label": "Title"
+          },
+          {
+            "type": "textarea",
+            "id": "info_description",
+            "label": "Description"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Custom Section with Heading and Information",
+        "category": "Custom"
+      }
+    ]
+  }
+  {% endschema %}

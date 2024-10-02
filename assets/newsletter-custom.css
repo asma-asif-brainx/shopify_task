@@ -1,4 +1,25 @@
 .newsletter-title-text{
     font-family: 'Bold_Font';
-    
+
+}
+.newsletter-email-form{
+    width: 100% !important;
+    max-width: 80% !important;
+    min-width: 80%;
+}
+
+.newsletter-email-form .newsletter-form__field-wrapper {
+    width: 100% !important;
+    max-width: 80% !important;
+    min-width: 80%;
+}
+.field .field__input{
+    width: 100% !important;
+    max-width: 80% !important;
+    min-width: 80%
+}
+.newsletter-button-email{
+    width: 100% !important;
+    max-width: 30% !important;
+    min-width: 30%
 }
