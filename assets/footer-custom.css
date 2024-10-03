@@ -21,3 +21,18 @@
 .footer-rating-text-coffee .footer-rating-star-text{
     font-size: 11px;
 }
+
+.footer-content-top{
+    padding-bottom: 10px !important;
+}
+.footer-content-bottom{
+    padding-top: 10px !important;
+}
+@media screen and (max-width:980px)
+{
+
+}
+
+@media screen and (max-width:767px){
+
+}

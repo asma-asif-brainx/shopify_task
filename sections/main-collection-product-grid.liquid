@@ -1,3 +1,36 @@
+<!--  Access custom stylesheet-->
+{% if section.settings.include-custom-style  %}
+  {{ 'main-collection-custom.css' | asset_url | stylesheet_tag }}
+{% endif %}
+
+<style>
+  .add-to-cart-button
+  {
+      color: {{ section.settings.add-to-cart-button-text-color }};
+      background-color:{{ section.settings.add-to-cart-button-background-color }};
+  }
+
+  .price-sale-text-color{
+    color: {{ section.settings.price-sale-text-color }};
+  }
+  .price-regular-text-color{
+    color: {{ section.settings.price-regular-text-color }} !important;
+  }
+  .product-card-information .product-card-title-heading{
+    color: {{ section.settings.product-card-heading-color }};
+  }
+  .facet-filter-wrapper .filter-facet-heading, .facet-summary-wrap .facet-filter-summary-label,
+  .facet-sort-heading .facet-sort-heading-label, .product-count-collection-head .product-count-collection{
+    color: {{ section.settings.facet-filter-text-color }};
+  }
+
+  .facet-sort-select .facet-sort-option{
+    border: 1px solid {{ section.settings.facet-sort-border-color }}
+}
+
+
+</style>
+
 {{ 'template-collection.css' | asset_url | stylesheet_tag }}
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
@@ -112,7 +145,7 @@
             enable_filtering: section.settings.enable_filtering,
             enable_sorting: section.settings.enable_sorting,
             filter_type: section.settings.filter_type,
-            paginate: paginate
+            paginate: paginate,
           %}
         </aside>
       {%- endif -%}
@@ -147,7 +180,7 @@
               id="product-grid"
               data-id="{{ section.id }}"
               class="
-                grid product-grid grid--{{ section.settings.columns_mobile }}-col-tablet-down
+                grid collection-product-grid product-grid grid--{{ section.settings.columns_mobile }}-col-tablet-down
                 grid--{{ section.settings.columns_desktop }}-col-desktop
                 {% if section.settings.quick_add == 'bulk' %} collection-quick-add-bulk{% endif %}
               "
@@ -159,7 +192,7 @@
                   {%- assign lazy_load = true -%}
                 {%- endif -%}
                 <li
-                  class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                  class="collection-grid-item grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
                   {% if settings.animations_reveal_on_scroll %}
                     data-cascade
                     style="--animation-order: {{ forloop.index }};"
@@ -175,7 +208,10 @@
                     lazy_load: lazy_load,
                     skip_styles: skip_card_product_styles,
                     quick_add: section.settings.quick_add,
-                    section_id: section.id
+                    section_id: section.id,
+                    show_add_to_cart_button: section.settings.add-to-cart-button,
+                    show_text_below_title: section.settings.review-text,
+                    show_image_below_title : section.settings.review-image
                   %}
                 </li>
                 {%- assign skip_card_product_styles = true -%}
@@ -411,7 +447,66 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
-    }
+    },
+    {
+      "type": "checkbox",
+      "id": "add-to-cart-button",
+      "label": "Show add to cart button",
+      "default" : false
+  },
+  {
+    "type": "checkbox",
+    "id": "include-custom-style",
+    "default": false,
+    "label": "Apply custom style",
+  },
+
+    {
+      "type": "color",
+      "id": "add-to-cart-button-text-color",
+      "label": "Add to cart button text color "
+  },
+  {
+      "type": "color",
+      "id": "add-to-cart-button-background-color",
+      "label": "Add to cart button background color"
+  },
+  {
+    "type": "text",
+    "id": "review-text",
+    "label": "Add text below the product title",
+  },
+  {
+      "type": "image_picker",
+      "id": "review-image",
+      "label": "Add image below the product title",
+  },
+  {
+    "type": "color",
+    "id": "price-sale-text-color",
+    "label": "Sale price text color"
+  },
+  {
+    "type": "color",
+    "id": "price-regular-text-color",
+    "label": "Regular price text color"
+  },
+  {
+    "type": "color",
+    "id": "product-card-heading-color",
+    "label": "Product card heading color"
+  },
+  {
+    "type": "color",
+    "id": "facet-filter-text-color",
+    "label": "Facet filter text color"
+  },
+  {
+    "type": "color",
+    "id": "facet-sort-border-color",
+    "label": "Facet sort border color"
+  }
+ 
   ]
 }
 {% endschema %}

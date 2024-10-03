@@ -1,5 +1,67 @@
+.product-custom-section .container{
+    padding: 30px;
+}
 .heading-block .custom-head{
     text-align: center;
     font-size: 32px;
     font-family: 'Bold_Font';
+}
+.information-blocks-wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+}
+.information-blocks-wrapper .information-block{
+    max-width: 21%;
+    width: 100%;
+}
+.information-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.information-block .info-text .information-title {
+    font-size: 16px;
+    font-family: 'Bold_Font';
+
+}
+.information-block .info-text .information-text {
+    font-size: 14px;
+    font-family: 'Medium_Font';
+    text-align: center;
+
+}
+
+@media screen and (max-width:980px)
+{
+    .information-blocks-wrapper{
+        flex-wrap: wrap;
+    }
+    .information-blocks-wrapper .information-block{
+        max-width: 45%;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:767px){
+    .information-blocks-wrapper{
+        flex-direction: column;
+    }
+    .information-blocks-wrapper .information-block{
+        max-width: 95%;
+        width: 100%;
+    }
+    .product-custom-section .container{
+        padding: 20px;
+    }
+    .heading-block .custom-head{
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width:330px){
 }

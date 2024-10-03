@@ -120,6 +120,62 @@
         "about-box-background-color": "#f2f2f2"
       }
     },
+    "product_custom_information_NyCHRb": {
+      "type": "product-custom-information",
+      "blocks": {
+        "heading_Fpntgf": {
+          "type": "heading",
+          "settings": {
+            "heading_text": "Why 100,000 Coffee Drinkers Have Switched To OrganicCoffee"
+          }
+        },
+        "information_Fna4pk": {
+          "type": "information",
+          "settings": {
+            "info_image": "shopify:\/\/shop_images\/Mask_group.png",
+            "info_title": "Top 1% of the world’s coffee",
+            "info_description": "Specialty grade, single origin, and hand-picked at peak ripeness for the highest quality."
+          }
+        },
+        "information_zVL6DA": {
+          "type": "information",
+          "settings": {
+            "info_image": "shopify:\/\/shop_images\/Mask_group_1.png",
+            "info_title": "A new coffee each month",
+            "info_description": "These coffees aren’t on the shelves, from Malawi to Myanmar, India to Ecuador, and more."
+          }
+        },
+        "information_LLqtnQ": {
+          "type": "information",
+          "settings": {
+            "info_image": "shopify:\/\/shop_images\/Mask_group_2.png",
+            "info_title": "Roasted fresh to order",
+            "info_description": "And always roasted to your preference. Maximum freshness, maximum flavor."
+          }
+        },
+        "information_XcrK3h": {
+          "type": "information",
+          "settings": {
+            "info_image": "shopify:\/\/shop_images\/Mask_group_3.png",
+            "info_title": "Delivered on your schedule",
+            "info_description": "Skip or change your delivery date at any time, and set a schedule that works for you."
+          }
+        }
+      },
+      "block_order": [
+        "heading_Fpntgf",
+        "information_Fna4pk",
+        "information_zVL6DA",
+        "information_LLqtnQ",
+        "information_XcrK3h"
+      ],
+      "settings": {
+        "custom-section-background-color": "#075d57",
+        "show-custom-styling": true,
+        "custom-section-heading-color": "#ffffff",
+        "informtaion-block-text-color": "#eaeaea"
+      }
+    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -146,10 +202,28 @@
         "add-to-cart-button-background-color": "#ef4444",
         "add-to-cart-button-text-color": "#ffffff"
       }
+    },
+    "17279434676f6cb296": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_jyW9xk": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_jyW9xk"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
     "main",
-    "related-products"
+    "product_custom_information_NyCHRb",
+    "related-products",
+    "17279434676f6cb296"
   ]
 }

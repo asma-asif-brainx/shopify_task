@@ -50,3 +50,23 @@
 .add-to-cart-button::after{
     box-shadow: none !important;
 }
+
+@media screen and (max-width:980px)
+{
+    .recommendation-product-grid-main{
+        flex-wrap: wrap;
+        gap:20px;
+    }
+    .recommendation-product-card-grid{
+        max-width: 44% !important;
+        width: 100%;
+    }
+    
+}
+
+
+@media screen and (max-width:767px){
+    .recommendation-product-grid-main{
+        gap:12px;
+    }
+}

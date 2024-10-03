@@ -68,7 +68,7 @@
     or section.settings.enable_follow_on_shop
   -%}
     {%- unless only_empty_brand -%}
-      <div class="footer__content-top page-width">
+      <div class="footer-content-top footer__content-top page-width">
         {%- if section.blocks.size > 0 -%}
           {%- liquid
             if section.blocks.size == 9
@@ -80,7 +80,7 @@
             endif
           -%}
           <div
-            class="footer__blocks-wrapper grid grid--1-col grid--2-col grid--4-col-tablet {{ footer_grid_class }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            class="footer-blocks-wrapper-main footer__blocks-wrapper grid grid--1-col grid--2-col grid--4-col-tablet {{ footer_grid_class }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
             {% if settings.animations_reveal_on_scroll %}
               data-cascade
             {% endif %}
@@ -102,33 +102,35 @@
                   {%- when '@app' -%}
                     {% render block %}
                   {%- when 'text' -%}
-                    {% if section.settings.add-footer-logo %}
-                    <div class="footer-logo-main">
-                      <img class="footer-logo" src= "{{ block.settings.add-footer-logo-image | image_url }}" alt ="img_text"  width="114" height="94" />
-                    </div>
-                    {% endif %}
 
-                    <div class="footer-block__details-content footer-subtext rte">
-                      {{ block.settings.subtext }}
-                    </div>
-
-                    {% if section.settings.add-images %}
-                      <div class="footer-images">
-                        <img  class="footer-image-one" src= "{{ block.settings.image1 | image_url }}" alt ="img_text"  width="" height="" />
-                        <img  class="footer-image-two" src= "{{ block.settings.image2 | image_url }}" alt ="img_text"  width="" height="" />
-                        <img  class="footer-image-three" src= "{{ block.settings.image3 | image_url }}" alt ="img_text"  width="" height="" />
+                  <div class="{% if section.settings.footer-logo-main-div %} footer-logo-main-div {% endif %}">
+                      {% if section.settings.add-footer-logo %}
+                      <div class="footer-logo-main">
+                        <img class="footer-logo" src= "{{ block.settings.add-footer-logo-image | image_url }}" alt ="img_text"  width="114" height="94" />
                       </div>
-                    {% endif %}
+                      {% endif %}
 
-                      
-                    {% if section.settings.add-rating %}
-                      <div class="footer-rating-text-coffee">
-                        <img  class="footer-rating-star-image" src= "{{ block.settings.stars_image | image_url }}" alt ="img_text"  width="" height="" />
-                        <p class="footer-rating-star-text">{{ block.settings.rating_text_coffee_lovers }}</p>
+                      <div class="footer-block__details-content footer-subtext rte">
+                        {{ block.settings.subtext }}
                       </div>
-                    {% endif %}
 
+                      {% if section.settings.add-images %}
+                        <div class="footer-images">
+                          <img  class="footer-image-one" src= "{{ block.settings.image1 | image_url }}" alt ="img_text"  width="" height="" />
+                          <img  class="footer-image-two" src= "{{ block.settings.image2 | image_url }}" alt ="img_text"  width="" height="" />
+                          <img  class="footer-image-three" src= "{{ block.settings.image3 | image_url }}" alt ="img_text"  width="" height="" />
+                        </div>
+                      {% endif %}
 
+                        
+                      {% if section.settings.add-rating %}
+                        <div class="footer-rating-text-coffee">
+                          <img  class="footer-rating-star-image" src= "{{ block.settings.stars_image | image_url }}" alt ="img_text"  width="" height="" />
+                          <p class="footer-rating-star-text">{{ block.settings.rating_text_coffee_lovers }}</p>
+                        </div>
+                      {% endif %}
+
+                  </div>
 
 
                   {%- when 'link_list' -%}
@@ -300,7 +302,7 @@
   {%- endif -%}
 
   <div
-    class="footer__content-bottom{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+    class="footer-content-bottom footer__content-bottom{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
     {% if settings.animations_reveal_on_scroll %}
       data-cascade
     {% endif %}
@@ -693,6 +695,12 @@
       "id": "add-images",
       "default": false,
       "label": "Add images"
+    },
+    {
+      "type": "checkbox",
+      "id": "footer-logo-main-div",
+      "default": false,
+      "label": "Add footer logo main div"
     }
   ],
   "default": {

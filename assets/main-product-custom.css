@@ -105,6 +105,9 @@
     justify-content: space-between;
 
 }
+.accordion-item {
+    padding: 15px;
+}
 
 .accordion-name .accordion-button{
     background-color: transparent !important; 
@@ -118,8 +121,45 @@
 .accordion-name .accordion-title-text{
     font-size: 16px;
     font-family: 'Bold_Font';
+    margin: 0;
 }
 .accordion-name  .accordion-button{
     font-size: 24px;
     font-family: 'Medium_Font';
+}
+
+
+@media screen and (max-width:980px)
+{
+        
+    .variants-main{
+        display: flex;
+        flex-direction: column;
+        gap:20px;
+    }
+    .variants-main .custom-variants {
+        max-width: 98% !important;
+        min-width: 98% !important;
+    }
+    .quantity-button-custom-style{
+        flex-direction: column;
+        gap:20px;    
+    }
+    .quantity-main {
+        max-width: 98% !important;
+        width: 100%;
+    }
+    .quantity-input-field{
+        width: 100%;
+    }
+    .featured-product-buttons .featured-product-submit-button
+    {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width:767px){
+ 
 }

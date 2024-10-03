@@ -145,7 +145,8 @@
         "footer-text-color": "#ffffff",
         "add-footer-logo": true,
         "add-rating": true,
-        "add-images": true
+        "add-images": true,
+        "footer-logo-main-div": true
       }
     }
   },

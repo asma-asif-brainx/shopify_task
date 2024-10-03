@@ -115,6 +115,6 @@
 }
 .swiper-pagination
 {
-    top:10% !important; 
-    z-index: -999 !important;
+    transform: translateY(15px) !important; 
+    z-index: 999 !important;
 }
