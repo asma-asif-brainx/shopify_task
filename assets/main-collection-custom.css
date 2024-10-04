@@ -60,6 +60,9 @@
     padding: 3px;
 
 }
+.collection-main-page-width {
+    padding-right: 0;
+}
 
 @media screen and (max-width:980px) {
     .collection-product-grid .collection-grid-item{
@@ -81,6 +84,14 @@
     .price-regular-text{
         font-size: 14px;
     }
+    .facet-filter-wrapper .filter-facet-heading, .facet-summary-wrap .facet-filter-summary-label,
+     .facet-sort-heading .facet-sort-heading-label, .product-count-collection-head .product-count-collection,
+     .facet-sort-select .facet-sort-option{
+        font-size: 11px;
+     }
+     .collection-main-page-width {
+        padding-right:5rem;
+    }
 }
 
 @media screen and (max-width:760px) {
@@ -91,5 +102,34 @@
     .mobile-select-facet .mobile-select-facet-option{
         font-size: 18px;
         font-family: 'Normal_Font';
+    }
+    .mobile-facet-footer-buttons-main .mobile-facet-footer-button{
+        font-size: 16px;
+        border-radius: 5px;
+        font-family: 'Bold_Font';
+    }
+    .mobile-facet-footer-buttons-main .mobile-facet-footer-button::after
+    {
+        box-shadow: none !important;
+    }
+    .mobile-facet-remove-link-wrapper .mobile-facet-remove-link{
+        font-size: 16px !important;
+        font-family: 'Normal_font';
+    }
+    .mobile-facet-header-filter .mobile-facet-heading-filter
+    {
+        font-size: 16px;
+        font-family: 'Bold_Font';
+    }
+    .mobile-facet-count {
+        font-size: 12px !important;
+        font-family: 'Normal_font';
+    }
+    .collection-main-page-width {
+        padding-right: 1.5rem;
+    }
+    .star-rating-text-image .show-text-below-product-title{
+        font-size: 12px !important;
+
     }
 }

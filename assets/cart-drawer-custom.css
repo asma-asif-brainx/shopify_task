@@ -1,0 +1,58 @@
+
+.cart-item-quantity-delete-main {
+    display: flex;
+    flex-direction: column;
+}
+.add-to-cart-card-details .add-to-cart-card-title, .cart-item-total-price-wrapper .cart-item-total-price{
+    font-size: 14px;
+    font-family: 'Medium_Bold_Font';
+}
+.add-to-cart-product-option, .variant-options .variant-title , .variant-options .variant-data {
+    font-size: 13px;
+    font-family: 'Normal_Font';
+}
+.cart-drawer-button-main .cart-drawer-checkout-button{
+    font-size: 16px;
+    font-family: 'Bold_Font';
+    border-radius: 5px;
+}
+.cart-drawer-button-main .cart-drawer-checkout-button::after
+{
+    box-shadow: none !important;
+}
+.calender-cart-footer{
+    display: flex;
+    flex-direction: column;
+}
+.calender-cart-footer .date-input-label{
+    font-size: 12px;
+    font-family: 'Normal_Font';
+}
+.calender-cart-footer .date-input-field{
+    height:42px;
+    border: none !important;
+    padding: 10px;
+    border-radius: 5px;
+}
+.cart-total .cart-total-title, .cart-total .cart-total-price{
+    font-size: 18px;
+    font-family: 'Bold_Font';
+}
+.drawer-header-main .drawer-heading{
+    font-size: 16px;
+    font-family: 'Bold_Font';
+  
+}
+.drawer-header-main {
+    align-items: center;
+    justify-content: center;
+}
+.cart-remove-button-main-div{
+    margin-left: 0 !important;
+}
+.cart-remove-button-main-div .cart-remove-button{
+    justify-content: left !important;
+}
+.cart-remove-button .delete-svg{
+    justify-content: left !important;
+}

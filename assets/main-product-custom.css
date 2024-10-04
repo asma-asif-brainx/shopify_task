@@ -135,7 +135,8 @@
     .variants-main{
         display: flex;
         flex-direction: column;
-        gap:20px;
+        gap:0px;
+        margin-bottom: 0 !important;
     }
     .variants-main .custom-variants {
         max-width: 98% !important;
@@ -143,7 +144,7 @@
     }
     .quantity-button-custom-style{
         flex-direction: column;
-        gap:20px;    
+        gap:0px;    
     }
     .quantity-main {
         max-width: 98% !important;

@@ -176,6 +176,22 @@
         "informtaion-block-text-color": "#eaeaea"
       }
     },
+    "17279434676f6cb296": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_jyW9xk": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_jyW9xk"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -202,28 +218,12 @@
         "add-to-cart-button-background-color": "#ef4444",
         "add-to-cart-button-text-color": "#ffffff"
       }
-    },
-    "17279434676f6cb296": {
-      "type": "apps",
-      "blocks": {
-        "judge_me_reviews_review_widget_jyW9xk": {
-          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "judge_me_reviews_review_widget_jyW9xk"
-      ],
-      "settings": {
-        "include_margins": true
-      }
     }
   },
   "order": [
     "main",
     "product_custom_information_NyCHRb",
-    "related-products",
-    "17279434676f6cb296"
+    "17279434676f6cb296",
+    "related-products"
   ]
 }

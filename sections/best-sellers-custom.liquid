@@ -14,8 +14,11 @@
         color: {{ section.settings.add-to-cart-button-text-color }};
         background-color:{{ section.settings.add-to-cart-button-background-color }};
     }
-    .active{
+    .collection-tabs-navigation .active{
         text-decoration-color: {{ section.settings.active-tab-text-decoration }} !important;
+    }
+    .collection-main-section{
+      background-color:{{ section.settings.multiple-collections-background-color }};
     }
 
   
@@ -85,7 +88,7 @@
   class="color-{{ section.settings.color_scheme }} isolate gradient"
 >
   <div
-    class="collection{% if section.settings.quick_add == 'bulk' %} collection-quick-add-bulk{% endif %} section-{{ section.id }}-padding{% if section.settings.full_width %} collection--full-width{% endif %}"
+    class="collection-main-section collection{% if section.settings.quick_add == 'bulk' %} collection-quick-add-bulk{% endif %} section-{{ section.id }}-padding{% if section.settings.full_width %} collection--full-width{% endif %}"
     id="collection-{{ section.id }}"
     data-id="{{ section.id }}"
   >
@@ -594,7 +597,12 @@
         "type": "color",
         "id": "active-tab-text-decoration",
         "label": "Active tab text decoration color"
-    }
+    },
+    {
+      "type": "color",
+      "id": "multiple-collections-background-color",
+      "label": "Multiple collections background color"
+  }
     
   ],
   "blocks": [

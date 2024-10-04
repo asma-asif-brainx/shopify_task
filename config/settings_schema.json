@@ -1463,7 +1463,56 @@
         "id": "cart_color_scheme",
         "label": "t:sections.all.colors.label",
         "default": "scheme-1"
+      },
+      {
+        "type": "color",
+        "id": "cart-button-bg-color",
+        "label": "Cart drawer button background color"
+    },
+    {
+        "type": "color",
+        "id": "cart-button-text-color",
+        "label": "Cart drawer button text color"
+    },
+    {
+        "type": "checkbox",
+        "id": "include-custom-style",
+        "default": false,
+        "label": "Apply custom style",
+      },
+      {
+        "type": "checkbox",
+        "id": "add-cart-calender",
+        "default": false,
+        "label": "Add calender in cart drawer",
+      },
+      {
+        "type": "text",
+        "id": "add-cart-calender-label-text",
+        "label": "Add calender label text"
+      },
+      {
+        "type": "color",
+        "id": "add-cart-calender-label-color",
+        "label": "Add calender label text color"
+      },
+      {
+        "type": "color",
+        "id": "add-cart-calender-input-bg-color",
+        "label": "Add calender input background color"
+      },
+      {
+        "type": "text",
+        "id": "custom-title",
+        "label": "Custom cart drawer title"
+      },
+      {
+        "type": "checkbox",
+        "id": "add-built-in-cart-title",
+        "label": "Built in cart drawer title",
+        "default":true
       }
+      
     ]
   }
 ]

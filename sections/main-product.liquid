@@ -345,16 +345,18 @@
                       <label class=" quantity-label quantity__label form__label" for="Quantity-{{ section.id }}">
                         {{ 'products.product.quantity.label' | t }}:
     
-                        {% if block.settings.show-quantity-cart-label %}
+                      
                         <span class="quantity__rules-cart{% if cart_qty == 0 %} hidden{% endif %}">
                           {%- render 'loading-spinner' -%}
+                          {% if block.settings.show-quantity-cart-label %}
                           <span
                             >(
                             {{- 'products.product.quantity.in_cart_html' | t: quantity: cart_qty -}}
                             )</span
                           >
+                          {% endif %}
                         </span>
-                      {% endif %}
+                      
     
                       </label>
                       <div class="price-per-item__container">

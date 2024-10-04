@@ -4,7 +4,6 @@
     font-size: 20px;
     font-family: 'Medium_Font';
 }
-
 .collection-tabs-navigation {
     display: flex;
     flex-direction: row;
@@ -15,11 +14,10 @@
 .hidden {
     display: none !important;
 }
-
 .visible {
     display: block !important;
 }
-.active {
+.collection-tabs-navigation .active {
     text-decoration: underline !important;
     text-underline-offset: 18px;
     text-decoration-thickness: 1px !important; 
@@ -28,19 +26,16 @@
 .swiper-button-prev {
     display: block !important; 
 }
-
 .product-card-information .star-rating-text-image{
     display: flex;
     flex-direction: row;
     align-items: center;
     gap:10px;
 }
-
 .product-card-information .product-card-title-heading{
     font-size: 20px;
     font-family: 'Bold_Font';
 }
-
 .star-rating-text-image .show-text-below-product-title{
     font-size: 14px;
     font-family: 'Bold_Font';
@@ -60,7 +55,6 @@
     font-family: 'Bold_Font';
     font-size: 18px;
     border-radius: 5px;
-  
 }
 .add-to-cart-button::after{
     box-shadow: none !important;
@@ -85,7 +79,6 @@
     width: 45px !important; 
     height: 45px !important; 
 }
-
 .swiper-button-prev {
     background-image: url('https://cdn.shopify.com/s/files/1/0899/1355/7281/files/Group_37.svg?v=1727792028');
     background-size: contain;
@@ -95,15 +88,12 @@
     width: 45px !important; 
     height: 45px !important;
 }
-
 .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
     content: '' !important;
 }
-
 .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
     content: '' !important; 
 }
-
 .swiper-pagination-bullet{
     width: 9px !important;
     height: 9px !important;
@@ -117,4 +107,19 @@
 {
     transform: translateY(15px) !important; 
     z-index: 999 !important;
+}
+
+@media screen and (max-width:760px) {
+    .collection-tabs-navigation .collection-tabs{
+        font-size: 14px;
+    }
+    .collection-tabs-navigation{
+        padding-left:0 !important ;
+        gap: 15px ;
+    }
+    .add-to-cart-button{
+        max-width: 68%;
+        width: 100%;
+    }
+   
 }

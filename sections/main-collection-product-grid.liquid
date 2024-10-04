@@ -26,7 +26,11 @@
 
   .facet-sort-select .facet-sort-option{
     border: 1px solid {{ section.settings.facet-sort-border-color }}
-}
+  }
+  .mobile-facet-footer-buttons-main .mobile-facet-footer-button{
+      background-color: {{ section.settings.facet-mobile-footer-apply-button-bg-color }};
+      color: {{ section.settings.facet-mobile-footer-apply-button-text-color }};
+  }
 
 
 </style>
@@ -173,7 +177,7 @@
           </div>
         {%- else -%}
           <div
-            class="collection{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}"
+            class="collection-main-page-width collection{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}"
           >
             <div class="loading-overlay gradient"></div>
             <ul
@@ -505,6 +509,16 @@
     "type": "color",
     "id": "facet-sort-border-color",
     "label": "Facet sort border color"
+  },
+  {
+    "type": "color",
+    "id": "facet-mobile-footer-apply-button-bg-color",
+    "label": "Facet mobile footer button background color"
+  },
+  {
+    "type": "color",
+    "id": "facet-mobile-footer-apply-button-text-color",
+    "label": "Facet mobile footer button text color"
   }
  
   ]

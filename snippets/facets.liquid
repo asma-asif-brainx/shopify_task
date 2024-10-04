@@ -473,8 +473,8 @@
         <form id="FacetFiltersFormMobile" class="mobile-facets">
           <div class="mobile-facets__inner gradient">
             <div class="mobile-facets__header">
-              <div class="mobile-facets__header-inner">
-                <h2 class="mobile-facets__heading medium-hide large-up-hide">
+              <div class="mobile-facets__header-inner mobile-facet-header-filter">
+                <h2 class="mobile-facets__heading medium-hide large-up-hide mobile-facet-heading-filter">
                   {%- if enable_filtering and enable_sorting -%}
                     {{ 'products.facets.filter_and_sort' | t }}
                   {%- elsif enable_filtering -%}
@@ -488,7 +488,7 @@
                     {{ 'products.facets.filter_button' | t }}
                   {%- endif -%}
                 </h2>
-                <p class="mobile-facets__count">
+                <p class="mobile-facets__count mobile-facet-count">
                   {%- if results.results_count -%}
                     {{ 'templates.search.results_with_count' | t: terms: results.terms, count: results.results_count }}
                   {%- elsif results.products_count == results.all_products_count -%}
@@ -645,8 +645,8 @@
                           </ul>
 
                           <div class="mobile-facets__footer gradient">
-                            <facet-remove class="mobile-facets__clear-wrapper">
-                              <a href="{{ filter.url_to_remove }}" class="mobile-facets__clear underlined-link">
+                            <facet-remove class="mobile-facets__clear-wrapper ">
+                              <a href="{{ filter.url_to_remove }}" class="mobile-facets__clear  underlined-link">
                                 {{- 'products.facets.clear' | t -}}
                               </a>
                             </facet-remove>
@@ -696,8 +696,8 @@
                             {% render 'price-facet', filter: filter, id_prefix: 'Mobile-Filter-' %}
                           </price-range>
                           <div class="mobile-facets__footer">
-                            <facet-remove class="mobile-facets__clear-wrapper">
-                              <a href="{{ filter.url_to_remove }}" class="mobile-facets__clear underlined-link">
+                            <facet-remove class="mobile-facets__clear-wrapper ">
+                              <a href="{{ filter.url_to_remove }}" class="mobile-facets__clear underlined-link ">
                                 {{- 'products.facets.clear' | t -}}
                               </a>
                             </facet-remove>
@@ -749,15 +749,15 @@
                 </div>
               {%- endif -%}
 
-              <div class="mobile-facets__footer">
-                <facet-remove class="mobile-facets__clear-wrapper">
-                  <a href="{{ results_url }}" class="mobile-facets__clear underlined-link">
+              <div class="mobile-facets__footer mobile-facet-footer-buttons-main">
+                <facet-remove class="mobile-facets__clear-wrapper mobile-facet-remove-link-wrapper">
+                  <a href="{{ results_url }}" class="mobile-facets__clear underlined-link mobile-facet-remove-link">
                     {{- 'products.facets.clear_all' | t -}}
                   </a>
                 </facet-remove>
                 <button
                   type="button"
-                  class="button button--primary"
+                  class="button button--primary mobile-facet-footer-button"
                   onclick="this.closest('.mobile-facets__wrapper').querySelector('summary').click()"
                 >
                   {{ 'products.facets.apply' | t }}

@@ -9,6 +9,9 @@
     list-style-type: none;
     text-decoration: none;
 }
+.footer-quick-block.footer-block.grid__item.footer-block--menu.scroll-trigger.animate--slide-in{
+    max-width: 20% !important;
+}
 .footer-quick-block  .footer-quick-block-heading{
     font-size: 20px;
     font-family: 'Bold_Font';
@@ -28,11 +31,26 @@
 .footer-content-bottom{
     padding-top: 10px !important;
 }
+.footer-logo-main-div {
+    margin-right: 35px;
+
+}
 @media screen and (max-width:980px)
 {
-
+    
 }
 
 @media screen and (max-width:767px){
+    .footer-blocks-wrapper-main{
+        display: flex !important;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .footer-quick-block.footer-block.grid__item.footer-block--menu.scroll-trigger.animate--slide-in {
+        max-width: 48% !important;
+        margin-bottom: 0 !important;
+        margin-top: 0 !important;
 
+    }
 }

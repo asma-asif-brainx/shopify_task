@@ -2,8 +2,6 @@
     font-family: 'Bold_Font';
 
 }
-
-
 .newsletter-button-email{
     width: 100% !important;
     max-width: 30% !important;
@@ -37,6 +35,10 @@
     max-width: 100% !important;
     min-width: 100%;
 }
+.newslteter-heading {
+    font-family: 'Bold_Font';
+    font-size: 32px;
+}
 
 @media screen and (max-width:1024px){
     .newslteter-heading {
@@ -49,6 +51,7 @@
     .newslteter-heading {
         max-width: 100%;
         width: 100%;
+        font-size: 24px;
     }
 }
 @media screen and (max-width:767px){

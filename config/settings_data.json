@@ -118,6 +118,15 @@
     "show_cart_note": false,
     "cart_drawer_collection": "",
     "cart_color_scheme": "scheme-1",
+    "cart-button-bg-color": "#ef4444",
+    "cart-button-text-color": "#ffffff",
+    "include-custom-style": true,
+    "add-cart-calender": true,
+    "add-cart-calender-label-text": "Choose Delivery Date:",
+    "add-cart-calender-label-color": "#424242",
+    "add-cart-calender-input-bg-color": "#e2e2e2",
+    "custom-title": "Cart",
+    "add-built-in-cart-title": false,
     "sections": {
       "main-password-header": {
         "type": "main-password-header",

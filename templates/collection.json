@@ -38,7 +38,9 @@
         "price-regular-text-color": "#929292",
         "product-card-heading-color": "#424242",
         "facet-filter-text-color": "#424242",
-        "facet-sort-border-color": "#c4d1d0"
+        "facet-sort-border-color": "#c4d1d0",
+        "facet-mobile-footer-apply-button-bg-color": "#ef4444",
+        "facet-mobile-footer-apply-button-text-color": "#ffffff"
       }
     }
   },
