@@ -29,6 +29,7 @@
 
 <script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'quantity-popover.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'cart-drawer-calender.js' | asset_url }}" defer="defer"></script>
 
 <style>
   .drawer {
@@ -84,8 +85,12 @@
         
         <h2 class="drawer__heading drawer-heading">
           {% if section.add-built-in-cart-title %} {{ 'sections.cart.title' | t }} {% endif %}
-          {% if settings.custom-title != blank %} {{ settings.custom-title }} {% endif %}
+          {% if settings.custom-title != blank %}  
+              {{ settings.custom-title }} 
+              <span class="cart-item-count-drawer">{{ cart.item_count }} products </span>   
+          {% endif %}
         </h2>
+       
         <button
           class="drawer__close"
           type="button"
@@ -117,6 +122,8 @@
                       <th id="CartDrawer-ColumnProductImage" role="columnheader">
                         <span class="visually-hidden">{{ 'sections.cart.headings.image' | t }}</span>
                       </th>
+
+                      {% if settings.show-cart-product-table-header %}
                       <th
                         id="CartDrawer-ColumnProduct"
                         class="caption-with-letter-spacing"
@@ -133,6 +140,8 @@
                       >
                         {{ 'sections.cart.headings.total' | t }}
                       </th>
+                      {% endif %}
+        
                       <th id="CartDrawer-ColumnQuantity" role="columnheader">
                         <span class="visually-hidden">{{ 'sections.cart.headings.quantity' | t }}</span>
                       </th>
@@ -506,10 +515,11 @@
         {%- if settings.add-cart-calender -%}
           <div class="calender-cart-footer">
             <label class="date-input-label" for="date-selector">{{ settings.add-cart-calender-label-text }}</label>
-            <input class="date-input-field" type="date" id="date-selector" name="date-selector" />
+            <input class="date-input-field" type="date" id="date-selector" name="attributes[Delivery Date]" value="{{ cart.attributes["Delivery Date"] }}" required />
           </div>
-        {% endif %}
 
+        {% endif %}
+       
         <div class="cart-drawer__footer cart-drawer-footer" {{ block.shopify_attributes }}>
           <div>
             {%- if cart.cart_level_discount_applications.size > 0 -%}
@@ -527,7 +537,7 @@
 
           <div class="totals cart-total" role="status">
             <h2 class="totals__total cart-total-title">{{ 'sections.cart.estimated_total' | t }}</h2>
-            <p class="totals__total-value cart-total-price">{{ cart.total_price | money_with_currency }}</p>
+            <p class="totals__total-value cart-total-price">${{ cart.total_price | money_without_currency }}</p>
           </div>
 
           <small class="tax-note caption-large rte">

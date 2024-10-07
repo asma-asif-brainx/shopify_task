@@ -33,7 +33,6 @@
     font-size: 14px;
     font-family: 'Medium_Font';
     text-align: center;
-
 }
 
 @media screen and (max-width:980px)
@@ -61,7 +60,4 @@
     .heading-block .custom-head{
         font-size: 24px;
     }
-}
-
-@media screen and (max-width:330px){
 }

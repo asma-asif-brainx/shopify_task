@@ -75,9 +75,8 @@
             aria-label="{{ 'sections.announcements.previous_announcement' | t }}"
             aria-controls="Slider-{{ section.id }}"
           >
-            <span class="svg-wrapper">
-              {{- 'icon-caret.svg' | inline_asset_content -}}
-            </span>
+            {% render 'icon-caret' %}
+
           </button>
           <div
             class="grid grid--1-col slider slider--everywhere"
@@ -99,14 +98,14 @@
               >
 
                 <div
-                  class="announcement-bar__announcement"
+                  class="announcement-bar__announcement announcement-bar-main"
                   role="region"
                   aria-label="{{ 'sections.header.announcement' | t }}"
                   {{ block.shopify_attributes }}
                 >
                  {%- if block.settings.text != blank -%}
                     
-                 <p class="announcement-bar__message h5">
+                 <p class="announcement-bar__message h5 announcement-message">
                   <span class="announcement-message-span">{{ block.settings.text | escape }}</span>
                   {%- if block.settings.link != blank and block.settings.link_text != blank -%}
                     <a href="{{ block.settings.link }}" class="announcement-bar__link">{{ block.settings.link_text }}</a>
@@ -127,9 +126,8 @@
             aria-label="{{ 'sections.announcements.next_announcement' | t }}"
             aria-controls="Slider-{{ section.id }}"
           >
-            <span class="svg-wrapper">
-              {{- 'icon-caret.svg' | inline_asset_content -}}
-            </span>
+            {% render 'icon-caret' %}
+
           </button>
         </div>
       </slideshow-component>
@@ -298,4 +296,3 @@
   ]
 }
 {% endschema %}
-

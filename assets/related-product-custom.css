@@ -11,9 +11,10 @@
    justify-content: center;
    gap:30px;
 }
-.product-card-title-heading{
+.product-card-information .product-card-title-heading{
     font-size: 20px;
     font-family: 'Bold_Font';
+    height: 60px;
 }
 .price__sale .price-sale-text{
     font-size: 20px;
@@ -34,9 +35,7 @@
     font-size: 14px;
     text-decoration: underline;
     font-family: 'Bold_Font';
-
 }
-
 .add-to-cart-button{
     max-width: 100%;
     width: 100%;
@@ -45,12 +44,24 @@
     font-family: 'Bold_Font';
     font-size: 18px;
     border-radius: 5px;
-  
 }
 .add-to-cart-button::after{
     box-shadow: none !important;
 }
+.card-image-div .card-image-inner {
+    height: 290px;
+}
 
+@media screen and (max-width:1024px)
+{
+    .product-card-information .product-card-title-heading{
+        font-size: 16px;
+        height: 50px;
+    }
+    .card-image-div .card-image-inner {
+        height: 230px;
+    }
+}
 @media screen and (max-width:980px)
 {
     .recommendation-product-grid-main{
@@ -61,12 +72,25 @@
         max-width: 44% !important;
         width: 100%;
     }
-    
+    .product-card-information .product-card-title-heading{
+        font-size: 20px;
+    }
+    .card-image-div .card-image-inner {
+        height: 400px;
+    }
 }
-
 
 @media screen and (max-width:767px){
     .recommendation-product-grid-main{
         gap:12px;
+    }
+    .product-card-information .product-card-title-heading{
+        font-size: 14px;
+    }
+    .add-to-cart-button{
+        font-size: 16px;
+    }
+    .card-image-div .card-image-inner {
+        height: 215px;
     }
 }

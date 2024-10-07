@@ -336,9 +336,7 @@ if (!customElements.get('product-info')) {
       }
 
       fetchQuantityRules() {
-        debugger;
         const currentVariantId = this.productForm?.variantIdInput?.value;
-        console.log(currentVariantId)
         if (!currentVariantId) return;
 
         this.querySelector('.quantity__rules-cart .loading__spinner').classList.remove('hidden');

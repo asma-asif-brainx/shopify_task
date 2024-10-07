@@ -127,6 +127,7 @@
     "add-cart-calender-input-bg-color": "#e2e2e2",
     "custom-title": "Cart",
     "add-built-in-cart-title": false,
+    "show-cart-product-table-header": false,
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
@@ -148,6 +149,12 @@
       "14060646107696862457": {
         "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/judgeme_core\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
         "disabled": false,
+        "settings": {
+        }
+      },
+      "13293358103573487045": {
+        "type": "shopify:\/\/apps\/buunto-date-picker\/blocks\/app-embed\/c25d727a-3911-41c0-b858-6dd551b40d5b",
+        "disabled": true,
         "settings": {
         }
       }

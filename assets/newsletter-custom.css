@@ -1,6 +1,5 @@
 .newsletter-title-text{
     font-family: 'Bold_Font';
-
 }
 .newsletter-button-email{
     width: 100% !important;
@@ -8,7 +7,7 @@
     min-width: 30%
 }
 .newslteter-heading{
-    max-width: 70%;
+    max-width: 60%;
     width: 100%;
 }
 .newsletter-wrapper-main{
@@ -21,7 +20,6 @@
     max-width: 80%;
     width: 100%;
 }
-
 .newletter-form-main .newsletter-form{
     max-width: 80% !important;
     width: 100% !important;
@@ -33,7 +31,7 @@
 .newsletter-email-form, .newsletter-email-form .newsletter-form__field-wrapper, .field .field__input{
     width: 100% !important;
     max-width: 100% !important;
-    min-width: 100%;
+    min-width: 80%;
 }
 .newslteter-heading {
     font-family: 'Bold_Font';
@@ -49,9 +47,14 @@
 
 @media screen and (max-width:980px){
     .newslteter-heading {
-        max-width: 100%;
+        max-width: 90%;
         width: 100%;
         font-size: 24px;
+    }
+    .newsletter-email-form, .newsletter-email-form .newsletter-form__field-wrapper, .field .field__input{
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 100%;
     }
 }
 @media screen and (max-width:767px){

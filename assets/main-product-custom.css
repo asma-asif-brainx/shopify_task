@@ -36,7 +36,9 @@
     align-items: center;
     gap:4px;
   }
-
+.product-info-wrapper-custom {
+    padding-left: 0 !important;
+}
 .rating-text-coffee .rating-star-text {
     font-size: 12px;
     font-family: 'Bold_Font';
@@ -131,7 +133,9 @@
 
 @media screen and (max-width:980px)
 {
-        
+    .product-info-wrapper-custom {
+        padding-left: 10px !important;
+    }       
     .variants-main{
         display: flex;
         flex-direction: column;
@@ -158,9 +162,4 @@
         max-width: 100%;
         width: 100%;
     }
-}
-
-
-@media screen and (max-width:767px){
- 
 }

@@ -11,6 +11,19 @@
     font-size: 13px;
     font-family: 'Normal_Font';
 }
+.cart-drawer-footer-main{
+    display: flex;
+    flex-direction: column;
+}
+.cart-drawer-footer{
+    order: 2;
+}
+.cart-drawer-button-main{
+    order: 3;
+} 
+.cart-item-count-drawer{
+    display: block;
+}
 .cart-drawer-button-main .cart-drawer-checkout-button{
     font-size: 16px;
     font-family: 'Bold_Font';
@@ -41,11 +54,18 @@
 .drawer-header-main .drawer-heading{
     font-size: 16px;
     font-family: 'Bold_Font';
-  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.drawer-heading .cart-item-count-drawer{
+    font-size: 12px;
+    font-family: 'Normal_Font';   
 }
 .drawer-header-main {
     align-items: center;
     justify-content: center;
+    padding-bottom: 0;
 }
 .cart-remove-button-main-div{
     margin-left: 0 !important;

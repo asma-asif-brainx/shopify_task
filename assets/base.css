@@ -34,6 +34,24 @@
   font-weight: 700; 
 } 
 
+/* Reviews custom styling */
+.jdgm-rev{
+  display: flex;
+  gap: 10px;
+}
+.jdgm-rev__header{
+  order: 2;
+}
+.jdgm-row-rating{
+  display: flex;
+  flex-direction: column;
+}
+.jdgm-rev__content{
+  max-width: 40%;
+  width: 100%;
+}
+/* Reviews custom styling end  */
+
 .product-card-wrapper .card,
 .contains-card--product {
   --border-radius: var(--product-card-corner-radius);

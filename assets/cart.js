@@ -99,8 +99,11 @@ class CartItems extends HTMLElement {
             if (targetElement && sourceElement) {
               targetElement.replaceWith(sourceElement);
             }
+         
           }
+         
         })
+        
         .catch((e) => {
           console.error(e);
         });
@@ -146,11 +149,22 @@ class CartItems extends HTMLElement {
   updateQuantity(line, quantity, name, variantId) {
     this.enableLoading(line);
 
+    // console.log('nsndnmsdnmsmn')
+    // const dateInputField = document.getElementById('date-selector');
+    // const selectedDate= dateInputField.value;
+    // dateInputField.addEventListener('change', function() {
+    //       selectedDate = dateInputField.value;
+    // });
+    // console.log(selectedDate)
+
     const body = JSON.stringify({
       line,
       quantity,
       sections: this.getSectionsToRender().map((section) => section.section),
       sections_url: window.location.pathname,
+      // attributes: {
+      //   "Delivery Date": selectedDate
+      // }
     });
 
     fetch(`${routes.cart_change_url}`, { ...fetchConfig(), ...{ body } })
@@ -217,6 +231,7 @@ class CartItems extends HTMLElement {
       .finally(() => {
         this.disableLoading(line);
       });
+
   }
 
   updateLiveRegions(line, message) {

@@ -24,7 +24,7 @@
     color: {{ section.settings.facet-filter-text-color }};
   }
 
-  .facet-sort-select .facet-sort-option{
+.facet-sort-main .facet-sort-select{
     border: 1px solid {{ section.settings.facet-sort-border-color }}
   }
   .mobile-facet-footer-buttons-main .mobile-facet-footer-button{
@@ -103,9 +103,7 @@
                     </option>
                   {%- endfor -%}
                 </select>
-                <span class="svg-wrapper">
-                  {{- 'icon-caret.svg' | inline_asset_content -}}
-                </span>
+                {% render 'icon-caret' %}
               </div>
             </div>
           </div>
