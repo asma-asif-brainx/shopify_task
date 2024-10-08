@@ -51,6 +51,12 @@
         max-width: 48% !important;
         margin-bottom: 0 !important;
         margin-top: 0 !important;
-
+    }
+    .footer-content-top{
+        padding-left: 20px !important;
+        padding-right: 0 !important;
+    }
+    .footer-logo-main-div {
+        margin-right: 0;
     }
 }

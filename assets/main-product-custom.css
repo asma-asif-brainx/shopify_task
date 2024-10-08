@@ -35,6 +35,7 @@
     flex-direction: row;
     align-items: center;
     gap:4px;
+    margin: 0 !important;
   }
 .product-info-wrapper-custom {
     padding-left: 0 !important;
@@ -42,6 +43,7 @@
 .rating-text-coffee .rating-star-text {
     font-size: 12px;
     font-family: 'Bold_Font';
+    margin: 0 !important;
 }
 
 .variants-main{
@@ -119,7 +121,6 @@
 .accordion-name .accordion-button::after{
     box-shadow: none;
 }
-
 .accordion-name .accordion-title-text{
     font-size: 16px;
     font-family: 'Bold_Font';
@@ -129,7 +130,13 @@
     font-size: 24px;
     font-family: 'Medium_Font';
 }
-
+.accordion-content .accordion-content-text{
+    font-family: 'Medium_Font';
+    font-size: 14px;
+}
+.main-product-section-main{
+    margin-bottom: 30px;
+}
 
 @media screen and (max-width:980px)
 {
@@ -162,4 +169,18 @@
         max-width: 100%;
         width: 100%;
     }
+}
+@media screen and (max-width:760px)
+{
+    .rating-text-coffee, .rating-text-coffee .rating-star-text{
+        margin: 0 !important;
+
+    }
+    .main-product-heading-main{
+        margin: 2px !important;
+    }
+    .accordion-content .accordion-content-text{
+        font-size: 12px;
+    }
+
 }

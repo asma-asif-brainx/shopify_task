@@ -22,6 +22,9 @@
   .calender-cart-footer .date-input-field{
     background-color: {{ settings.add-cart-calender-input-bg-color}};
   }
+  .cart-quantity .cart-quantity-btn-minus , .cart-quantity .cart-quantity-btn-plus{
+    background-color: {{ settings.quanity-buttons-color }} !important;
+  } 
 </style>
 
 {{ 'quantity-popover.css' | asset_url | stylesheet_tag }}
@@ -29,7 +32,7 @@
 
 <script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'quantity-popover.js' | asset_url }}" defer="defer"></script>
-<script src="{{ 'cart-drawer-calender.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'cart-drawer-date.js' | asset_url }}" defer="defer"></script>
 
 <style>
   .drawer {
@@ -314,7 +317,7 @@
                             <div class="cart-item__quantity-wrapper quantity-popover-wrapper cart-item-quantity-delete-main">
                               <div class="quantity-popover-container{% if has_qty_rules or has_vol_pricing %} quantity-popover-container--hover{% endif %}">
                                 <quantity-input class="quantity cart-quantity">
-                                  <button class="quantity__button" name="minus" type="button">
+                                  <button class="cart-quantity-btn-minus quantity__button" name="minus" type="button">
                                     <span class="visually-hidden">
                                       {{-
                                         'products.product.quantity.decrease'
@@ -345,7 +348,7 @@
                                     id="Drawer-quantity-{{ item.index | plus: 1 }}"
                                     data-index="{{ item.index | plus: 1 }}"
                                   >
-                                  <button class="quantity__button" name="plus" type="button">
+                                  <button class="cart-quantity-btn-plus quantity__button" name="plus" type="button">
                                     <span class="visually-hidden">
                                       {{-
                                         'products.product.quantity.increase'

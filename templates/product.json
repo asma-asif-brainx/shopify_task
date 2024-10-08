@@ -117,7 +117,8 @@
         "featured-product-submit-button-background-color": "#ef4444",
         "featured-product-submit-button-text-color": "#ffffff",
         "quantity-button-custom-style": true,
-        "about-box-background-color": "#f2f2f2"
+        "about-box-background-color": "#f2f2f2",
+        "quanity-buttons-color": "#f2f2f2"
       }
     },
     "product_custom_information_NyCHRb": {

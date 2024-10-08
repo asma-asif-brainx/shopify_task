@@ -1517,6 +1517,11 @@
         "id": "show-cart-product-table-header",
         "label": "show cart product table header",
         "default":true
+      },
+      {
+        "type": "color",
+        "id": "quanity-buttons-color",
+        "label": "Quanity buttons color cart drawer"
       }
     ]
   }

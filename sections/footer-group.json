@@ -22,12 +22,21 @@
         "paragraph_ULKHD7": {
           "type": "paragraph",
           "settings": {
-            "text": "<p>Get “$20 discount” for your first order<\/p>"
+            "text": "<p>Get “$20 discount” for your first order<\/p>",
+            "text-1": "Get",
+            "text-2": "“$20 discount”",
+            "text-3": "for your first order",
+            "show-default-paragraph": false,
+            "show-custom-paragraphs": true
           }
         },
         "email_form_t8wzdM": {
           "type": "email_form",
           "settings": {
+            "email-form-placeholder-text": "Your Email Address",
+            "email-form-placeholder-image": "shopify:\/\/shop_images\/Message.svg",
+            "show-default-email-placeholder": false,
+            "show-custom-email-placeholder": true
           }
         }
       },
@@ -50,7 +59,10 @@
         "add-button-text": true,
         "add-button-arrow-icon": false,
         "button-background-color": "#ef4444",
-        "button-text-color": "#ffffff"
+        "button-text-color": "#ffffff",
+        "email-field-background-color": "#d9d9d9",
+        "subheading-text-color": "#424242",
+        "newsletter-label-color": "#888a8c"
       }
     },
     "footer": {

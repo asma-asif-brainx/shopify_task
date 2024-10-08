@@ -45,12 +45,15 @@
     background-color: {{ section.settings.about-box-background-color }};
   }
 
+  .quantity-input-field .quantity-btn-product-minus,.quantity-input-field .quantity-btn-product-plus {
+    background-color: {{ section.settings.quanity-buttons-color }} !important;
+  }
 </style>
 
 
 <product-info
   id="MainProduct-{{ section.id }}"
-  class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}"
+  class="main-product-section-main section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}"
   data-section="{{ section.id }}"
   data-product-id="{{ product.id }}"
   data-update-url="true"
@@ -361,7 +364,7 @@
                       </label>
                       <div class="price-per-item__container">
                         <quantity-input class="quantity-input-field quantity" data-url="{{ product.url }}" data-section="{{ section.id }}">
-                          <button class="quantity__button" name="minus" type="button">
+                          <button class="quantity-btn-product-minus quantity__button" name="minus" type="button">
                             <span class="visually-hidden">
                               {{- 'products.product.quantity.decrease' | t: product: product.title | escape -}}
                             </span>
@@ -385,7 +388,7 @@
                             value="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
                             form="{{ product_form_id }}"
                           >
-                          <button class="quantity__button" name="plus" type="button">
+                          <button class="quantity-btn-product-plus quantity__button" name="plus" type="button">
                             <span class="visually-hidden">
                               {{- 'products.product.quantity.increase' | t: product: product.title | escape -}}
                             </span>
@@ -577,7 +580,7 @@
                     </div>
                     <!-- Accordion Content -->
                     <div class="accordion-content" id="content--{{ block.id }}" style="display: none;">
-                      <p>{{ block.settings.accordion_text }}</p>
+                      <p class="accordion-content-text">{{ block.settings.accordion_text }}</p>
                     </div>
                   </div>
               
@@ -2498,6 +2501,11 @@
       "type": "color",
       "id": "about-box-background-color",
       "label": "About box background color",
+    },
+    {
+      "type": "color",
+      "id": "quanity-buttons-color",
+      "label": "Quanity buttons color Prodcut page"
     }
   ],
   "presets": [

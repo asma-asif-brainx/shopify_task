@@ -13,7 +13,16 @@
   .newsletter-button-email{
     background-color:{{ section.settings.button-background-color }} !important;
     color: {{ section.settings.button-text-color }}
-}
+  }
+  .email-input-main-field{
+    background-color:{{ section.settings.email-field-background-color }} !important;
+  }
+  .newsletter-subhead{
+    color:{{ section.settings.subheading-text-color }};
+  }
+  .email-label-placeholder-main{
+    color:{{ section.settings.newsletter-label-color }};
+  }
 </style>
 
 {{ 'component-newsletter.css' | asset_url | stylesheet_tag }}
@@ -57,14 +66,24 @@
           </h2>
         {%- when 'paragraph' -%}
           <div
-            class="newsletter__subheading rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            class="newsletter-subhead newsletter__subheading rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
             {{ block.shopify_attributes }}
             {% if settings.animations_reveal_on_scroll %}
               data-cascade
               style="--animation-order: {{ forloop.index }};"
             {% endif %}
           >
-            {{ block.settings.text }}
+
+            {% if block.settings.show-default-paragraph %}
+              {{ block.settings.text }}
+            {% endif %}
+
+            {% if block.settings.show-custom-paragraphs %}
+              <span class="subhead-text-one">{{ block.settings.text-1 }}</span>
+              <span class="subhead-text-two">{{ block.settings.text-2 }}</span>
+              <span class="subhead-text-three">{{ block.settings.text-3 }}</span>
+            {% endif %}
+
           </div>
         {%- when 'email_form' -%}
           <div class="newletter-form-main" {{ block.shopify_attributes }}>
@@ -77,12 +96,12 @@
                   style="--animation-order: {{ forloop.index }};"
                 {% endif %}
               >
-                <div class="field">
+                <div class="field email-field">
                   <input
                     id="NewsletterForm--{{ section.id }}"
                     type="email"
                     name="contact[email]"
-                    class="field__input"
+                    class="field__input email-input-main-field"
                     value="{{ form.email }}"
                     aria-required="true"
                     autocorrect="off"
@@ -95,11 +114,24 @@
                     {% elsif form.posted_successfully? %}
                       aria-describedby="Newsletter-success--{{ section.id }}"
                     {% endif %}
+                    
                     placeholder="{{ 'newsletter.label' | t }}"
+
                     required
                   >
                   <label class="field__label" for="NewsletterForm--{{ section.id }}">
-                    {{ 'newsletter.label' | t }}
+                   
+                    {% if block.settings.show-default-email-placeholder %}
+                       {{ 'newsletter.label' | t }}
+                    {% endif %}
+                                       
+                    {% if block.settings.show-custom-email-placeholder %} 
+                      <div class="email-label-placeholder-main">
+                        {{ block.settings.email-form-placeholder-image | img_url: '100x100' | img_tag }}
+                        {{ block.settings.email-form-placeholder-text }}
+                      </div>
+                    {% endif %}
+
                   </label>
                   <button
                     type="submit"
@@ -246,6 +278,21 @@
       "type": "color",
       "id": "button-text-color",
       "label": "Newsletter button text color"
+    },
+    {
+      "type": "color",
+      "id": "email-field-background-color",
+      "label": "Email field background color"
+    },
+    {
+      "type": "color",
+      "id": "subheading-text-color",
+      "label": "Subheading text color"
+    },
+    {
+      "type": "color",
+      "id": "newsletter-label-color",
+      "label": "newsletter label text color"
     }
   ],
   "blocks": [
@@ -300,6 +347,33 @@
           "id": "text",
           "default": "t:sections.newsletter.blocks.paragraph.settings.paragraph.default",
           "label": "t:sections.newsletter.blocks.paragraph.settings.paragraph.label"
+        },
+        {
+          "type": "text",
+          "id": "text-1",
+          "label": "Text 1"
+        },
+        {
+          "type": "text",
+          "id": "text-2",
+          "label": "Text 2"
+        },
+        {
+          "type": "text",
+          "id": "text-3",
+          "label": "Text 3"
+        },
+        {
+          "type": "checkbox",
+          "id": "show-default-paragraph",
+          "label": "Show default paragraph",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "show-custom-paragraphs",
+          "label": "Show custom paragraph",
+          "default": false
         }
       ]
     },
@@ -323,7 +397,32 @@
     {
       "type": "email_form",
       "name": "t:sections.newsletter.blocks.email_form.name",
-      "limit": 1
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "email-form-placeholder-text",
+          "label": "Email form placeholder text"
+        },
+        {
+          "type": "image_picker",
+          "id": "email-form-placeholder-image",
+          "label": "Email form placeholder image"
+        },
+        {
+          "type": "checkbox",
+          "id": "show-default-email-placeholder",
+          "label": "Show default email placeholder",
+          "default" : true
+        },
+        {
+          "type": "checkbox",
+          "id": "show-custom-email-placeholder",
+          "label": "Show custom email placeholder",
+          "default" : false
+        },
+        
+      ],
     },
     {
       "type": "@app"

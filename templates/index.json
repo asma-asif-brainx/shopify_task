@@ -371,12 +371,20 @@
         "paragraph_gcFNpW": {
           "type": "paragraph",
           "settings": {
-            "text": "<p>Get “$20 discount” for your first order<\/p>"
+            "text": "<p>Get “$20 discount” for your first order<\/p>",
+            "text-1": "",
+            "text-2": "",
+            "text-3": "",
+            "show-default-paragraph": true,
+            "show-custom-paragraphs": false
           }
         },
         "email_form_a9Mqwp": {
           "type": "email_form",
           "settings": {
+            "email-form-placeholder-text": "",
+            "show-default-email-placeholder": true,
+            "show-custom-email-placeholder": false
           }
         }
       },
@@ -399,7 +407,9 @@
         "add-button-text": false,
         "add-button-arrow-icon": true,
         "button-background-color": "",
-        "button-text-color": ""
+        "button-text-color": "",
+        "email-field-background-color": "",
+        "subheading-text-color": "#424242"
       }
     },
     "product_custom_information_KmPYFp": {

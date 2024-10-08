@@ -11,7 +11,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap:10px;
+    gap:20px;
 }
 .information-blocks-wrapper .information-block{
     max-width: 21%;
@@ -34,15 +34,27 @@
     font-family: 'Medium_Font';
     text-align: center;
 }
+@media screen and (max-width:1024px)
+{
+    .heading-block .custom-head{
+        font-size: 26px;
+    }
+}
 
 @media screen and (max-width:980px)
 {
     .information-blocks-wrapper{
         flex-wrap: wrap;
+        gap: 10px;
     }
     .information-blocks-wrapper .information-block{
         max-width: 45%;
         width: 100%;
+    }
+    .heading-block  .custom-head{
+        max-width: 90%;
+        width: 100%;
+        
     }
 }
 
@@ -58,6 +70,6 @@
         padding: 20px;
     }
     .heading-block .custom-head{
-        font-size: 24px;
+        font-size: 18px;
     }
 }
