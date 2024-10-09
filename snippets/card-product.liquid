@@ -313,15 +313,16 @@
                       type="hidden"
                       name="id"
                       value="{{ card_product.selected_or_first_available_variant.id }}"
-                      disabled
+                       {% comment %} disabled  {% endcomment %}
                     >
                     <button
                       type="submit"
                       name="add"
-                      class="quick-add__submit button button--full-width button--secondary add-to-cart-button"
+                      class="quick-add__submit button button--full-width button--secondary add-to-cart-button" 
                       {% if card_product.selected_or_first_available_variant.available == false %}
                         disabled
                       {% endif %}
+                      
                     >
                       <span>
                         {%- if card_product.selected_or_first_available_variant.available -%}

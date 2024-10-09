@@ -118,7 +118,9 @@
  .swiper-wrapper{
     padding-bottom: 60px !important;
 }
-
+.collection-tabs-navigation .collection-tabs{
+    cursor: pointer;
+}
 @media screen and (max-width:980px) {
     .product-card-title-heading {
         height: 50px;

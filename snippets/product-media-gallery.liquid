@@ -58,7 +58,7 @@
     </a>
     <ul
       id="Slider-Gallery-{{ section.id }}"
-      class="product__media-list contains-media grid grid--peek list-unstyled slider slider--mobile"
+      class="product-media-list-custom product__media-list contains-media grid grid--peek list-unstyled slider slider--mobile"
       role="list"
     >
       {%- if product.selected_or_first_available_variant.featured_media != null -%}
@@ -132,9 +132,7 @@
         name="previous"
         aria-label="{{ 'general.slider.previous_slide' | t }}"
       >
-        <span class="svg-wrapper">
-          {{- 'icon-caret.svg' | inline_asset_content -}}
-        </span>
+          {%- render 'icon-caret' -%}
       </button>
       <div class="slider-counter caption">
         <span class="slider-counter--current">1</span>
@@ -148,9 +146,7 @@
         name="next"
         aria-label="{{ 'general.slider.next_slide' | t }}"
       >
-        <span class="svg-wrapper">
-          {{- 'icon-caret.svg' | inline_asset_content -}}
-        </span>
+          {%- render 'icon-caret' -%}
       </button>
     </div>
   </slider-component>
@@ -193,9 +189,7 @@
         aria-controls="GalleryThumbnails-{{ section.id }}"
         data-step="3"
       >
-        <span class="svg-wrapper">
-          {{- 'icon-caret.svg' | inline_asset_content -}}
-        </span>
+        {%- render 'icon-caret' -%}
       </button>
       <ul
         id="Slider-Thumbnails-{{ section.id }}"
@@ -323,9 +317,7 @@
         aria-controls="GalleryThumbnails-{{ section.id }}"
         data-step="3"
       >
-        <span class="svg-wrapper">
-          {{- 'icon-caret.svg' | inline_asset_content -}}
-        </span>
+        {%- render 'icon-caret' -%}
       </button>
     </slider-component>
   {%- endif -%}

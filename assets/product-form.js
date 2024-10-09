@@ -7,6 +7,7 @@ if (!customElements.get('product-form')) {
 
         this.form = this.querySelector('form');
         this.variantIdInput.disabled = false;
+        
         this.form.addEventListener('submit', this.onSubmitHandler.bind(this));
         this.cart = document.querySelector('cart-notification') || document.querySelector('cart-drawer');
         this.submitButton = this.querySelector('[type="submit"]');
@@ -25,6 +26,7 @@ if (!customElements.get('product-form')) {
 
         this.submitButton.setAttribute('aria-disabled', true);
         this.submitButton.classList.add('loading');
+       
         this.querySelector('.loading__spinner').classList.remove('hidden');
 
         const config = fetchConfig('javascript');

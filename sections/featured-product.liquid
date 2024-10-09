@@ -115,7 +115,7 @@
     <div class="page-width section-{{ section.id }}-padding{% if section.settings.secondary_background %} isolate{% endif %}
       {% if section.settings.enable-custom-page-width %} page-section-custom {% endif %}">
       <div class="featured-product product product--{{ section.settings.media_size }} grid grid--1-col gradient color-{{ section.settings.color_scheme }} product--{{ section.settings.media_position }}{% if section.settings.secondary_background == false %} isolate{% endif %} {% if product.media.size > 0 or section.settings.product == blank %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
-        <div class="grid__item product__media-wrapper">
+        <div class="grid__item product__media-wrapper featured-product-media-wrapper">
           {%- unless placeholder -%}
             {% render 'product-media-gallery', product: product, variant_images: variant_images, limit: 1 %}
           {%- else -%}
@@ -261,16 +261,17 @@
                       <label class="quantity__label form__label quantity-label" for="Quantity-{{ section.id }}">
                         {{ 'products.product.quantity.label' | t }}:
   
-                        {% if block.settings.show-quantity-cart-label %}
                           <span class="quantity__rules-cart{% if cart_qty == 0 %} hidden{% endif %}">
                             {%- render 'loading-spinner' -%}
-                            <span
-                              >(
-                              {{- 'products.product.quantity.in_cart_html' | t: quantity: cart_qty -}}
-                              )</span
-                            >
+                            {% if block.settings.show-quantity-cart-label %}
+                              <span
+                                >(
+                                {{- 'products.product.quantity.in_cart_html' | t: quantity: cart_qty -}}
+                                )</span
+                              >
+                            {% endif %}
                           </span>
-                        {% endif %}
+                       
   
                       </label>
                       <div class="price-per-item__container">
