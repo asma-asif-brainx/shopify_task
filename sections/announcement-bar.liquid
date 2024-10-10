@@ -5,16 +5,16 @@
 <!--  Access custom stylesheet-->
 {% if section.settings.include-custom-style  %}
   <link rel="stylesheet" href="{{ 'announcement-bar-custom.css' | asset_url }}">
-  {% endif %}
+{% endif %}
 
 <!-- Custom styling for accessing dynamic settings  -->
 <style>
-  .announcement-bar__link{
-    color: {{ section.settings.link_text_color }};
+  #shopify-section-{{ section.id }} .announcement-bar__link{
+    color: {{ section.settings.link_text_color }} !important;
   }
-  .utility-bar{
+  #shopify-section-{{ section.id }} .custom-utility-bar{
      background-color: {{ section.settings.announcement-bg-color }};
-}
+  } 
 </style>
 
 
@@ -36,7 +36,7 @@
 {% endif %}
 
 <div
-  class="utility-bar color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator and section.blocks.size > 0 %} utility-bar--bottom-border{% elsif section.settings.show_line_separator and section.settings.show_social and social_icons%} utility-bar--bottom-border-social-only{% endif %}{% if section.settings.enable_country_selector or section.settings.enable_language_selector %} header-localization{% endif %}"
+  class="custom-utility-bar utility-bar color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator and section.blocks.size > 0 %} utility-bar--bottom-border{% elsif section.settings.show_line_separator and section.settings.show_social and social_icons%} utility-bar--bottom-border-social-only{% endif %}{% if section.settings.enable_country_selector or section.settings.enable_language_selector %} header-localization{% endif %}"
   {{ block.shopify_attributes }}
 >
   <div class="announecemnt-bar-slider page-width utility-bar__grid{% if announcement_bar and language_country_selector or section.settings.show_social and social_icons %} utility-bar__grid--3-col{% elsif language_country_selector or section.settings.show_social and social_icons %} utility-bar__grid--2-col{% endif %}">
@@ -190,14 +190,12 @@
     {
       "type": "color",
       "id": "link_text_color",
-      "label": "Announcement Link Text Color",
-      "default": "#EF4444"
+      "label": "Announcement Link Text Color"
     },
     {
        "type": "color",
       "id": "announcement-bg-color",
-      "label": "Announcement background color",
-      "default": "#D3D3D3"
+      "label": "Announcement background color"
     },
     {
       "type": "checkbox",

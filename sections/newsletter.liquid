@@ -4,26 +4,27 @@
 {% endif %}
 
 <style>
-  .newsletter-wrapper-color{
+  #shopify-section-{{ section.id }} .newsletter-wrapper-color{
     background-color: {{ section.settings.newsletter-background-color }}
   }
-  .newsletter-title-text{
+  #shopify-section-{{ section.id }} .newsletter-title-text{
     color: {{ section.settings.newsletter-title-color }}
   }
-  .newsletter-button-email{
+  #shopify-section-{{ section.id }} .newsletter-button-email{
     background-color:{{ section.settings.button-background-color }} !important;
     color: {{ section.settings.button-text-color }}
   }
-  .email-input-main-field{
+  #shopify-section-{{ section.id }} .email-input-main-field{
     background-color:{{ section.settings.email-field-background-color }} !important;
   }
-  .newsletter-subhead{
+  #shopify-section-{{ section.id }} .newsletter-subhead{
     color:{{ section.settings.subheading-text-color }};
   }
-  .email-label-placeholder-main{
+  #shopify-section-{{ section.id }} .email-label-placeholder-main{
     color:{{ section.settings.newsletter-label-color }};
   }
 </style>
+
 
 {{ 'component-newsletter.css' | asset_url | stylesheet_tag }}
 {{ 'newsletter-section.css' | asset_url | stylesheet_tag }}

@@ -4,19 +4,19 @@
   {{ 'related-product-custom.css' | asset_url | stylesheet_tag }}
 {% endif %}
 <style>
-  .recommendation-gradient{
+  #shopify-section-{{ section.id }} .recommendation-gradient{
       background-color: {{ section.settings.recommendation-background-color }};
   }
-  .recommendation-main .recommendation-heading{
+  #shopify-section-{{ section.id }} .recommendation-main .recommendation-heading{
     color:{{ section.settings.product-information-text-color }};
   }
-  .price__sale .price-sale-text{
+  #shopify-section-{{ section.id }} .price__sale .price-sale-text{
       color:{{ section.settings.product-information-text-color }};
   }
-  .price__sale .price-regular-text {
+  #shopify-section-{{ section.id }} .price__sale .price-regular-text {
     color: {{ section.settings.sale-price-cut-color }} !important; 
   }
-  .add-to-cart-button
+  #shopify-section-{{ section.id }} .add-to-cart-button
   {
       color: {{ section.settings.add-to-cart-button-text-color }};
       background-color:{{ section.settings.add-to-cart-button-background-color }};

@@ -79,7 +79,18 @@
 {
     height: 286px;
 }
-
+.facet-filters .facet-sort-main{
+    transform: translateY(-10px);
+}
+.price-facet-main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.price-facet-summary, .facet-disclosure-custom{
+    margin-right:15px !important ;
+}
 @media screen and (max-width:1024px) {
     .card-image-div .card-image-inner
     {

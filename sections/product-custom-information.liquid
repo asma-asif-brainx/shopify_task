@@ -1,18 +1,17 @@
 {% if section.settings.show-custom-styling  %}
     {{ 'product-custom-information.css' | asset_url | stylesheet_tag }}
-  {% endif %}
+{% endif %}
 
 <style>
-    .product-custom-section{
-        background-color: {{ section.settings.custom-section-background-color }}
-    }
-    .heading-block .custom-head{
-        color: {{ section.settings.custom-section-heading-color }}
-    }
-    .information-block .info-text .information-title,  .information-block .info-text .information-text{
-       color: {{ section.settings.informtaion-block-text-color }};
-    }
-   
+  #shopify-section-{{ section.id }} .product-custom-section{
+    background-color: {{ section.settings.custom-section-background-color }}
+  }
+  #shopify-section-{{ section.id }} .heading-block .custom-head{
+    color: {{ section.settings.custom-section-heading-color }}
+  }
+  #shopify-section-{{ section.id }} .information-block .info-text .information-title,  .information-block .info-text .information-text{
+    color: {{ section.settings.informtaion-block-text-color }};
+  } 
 </style>
 
 <section id="custom-section" class="product-custom-section">

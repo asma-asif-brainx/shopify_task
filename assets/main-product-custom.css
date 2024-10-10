@@ -38,7 +38,7 @@
     margin: 0 !important;
   }
 .product-info-wrapper-custom {
-    padding-left: 0 !important;
+    padding-left: 20px !important;
 }
 .rating-text-coffee .rating-star-text {
     font-size: 12px;
@@ -139,10 +139,7 @@
 }
 
 @media screen and (max-width:980px)
-{
-    .product-info-wrapper-custom {
-        padding-left: 10px !important;
-    }       
+{     
     .variants-main{
         display: flex;
         flex-direction: column;

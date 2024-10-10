@@ -33,7 +33,9 @@
 }
 .footer-logo-main-div {
     margin-right: 35px;
-
+}
+.footer-logo-main .footer-logo{
+    width: 180px;
 }
 @media screen and (max-width:980px)
 {

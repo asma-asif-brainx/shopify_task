@@ -1,7 +1,8 @@
 
 .cart-item-quantity-delete-main {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    gap:15px;
 }
 .add-to-cart-card-details .add-to-cart-card-title, .cart-item-total-price-wrapper .cart-item-total-price{
     font-size: 14px;
@@ -75,4 +76,11 @@
 }
 .cart-remove-button .delete-svg{
     justify-content: left !important;
+}
+
+@media screen and (max-width:767px){
+    .cart-item-quantity-delete-main {
+        flex-direction: column;
+        gap: 0;
+    }
 }

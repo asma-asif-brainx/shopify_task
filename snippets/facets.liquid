@@ -299,16 +299,16 @@
                 {% when 'price_range' %}
                   <details
                     id="Details-{{ filter.param_name | escape }}-{{ section.id }}"
-                    class="{% if filter_type == 'horizontal' %}disclosure-has-popup facets__disclosure{% else %} facets__disclosure-vertical{% endif %} js-filter"
+                    class="price-facet-summary {% if filter_type == 'horizontal' %}disclosure-has-popup facets__disclosure{% else %} facets__disclosure-vertical{% endif %} js-filter"
                     data-index="{{ forloop.index }}"
                     {% if filter_type == 'vertical' and forloop.index == 1 %}
                       open
                     {% endif %}
                   >
                     <summary class="facets__summary caption-large focus-offset">
-                      <div>
-                        <span>{{ filter.label | escape }}</span>
-                          {% render 'icon-caret' %}
+                      <div class="price-facet-main">
+                        <span class="price-facet-label">{{ filter.label | escape }}</span>
+                        {% render 'icon-caret-custom' %}
                       </div>
                     </summary>
                     <div
@@ -411,7 +411,7 @@
                       </option>
                     {%- endfor -%}
                   </select>
-                    {% render 'icon-caret-custom' %}
+                  {% render 'icon-caret-custom' %}
                 </div>
               </div>
             </div>
@@ -742,7 +742,7 @@
                             </option>
                           {%- endfor -%}
                         </select>
-                          {% render 'icon-caret' %}
+                        {% render 'icon-caret-custom' %}
                       </div>
                     </div>
                   </div>
@@ -847,7 +847,7 @@
                   </option>
                 {%- endfor -%}
               </select>
-                {% render 'icon-caret' %}
+              {% render 'icon-caret-custom' %}
             </div>
           </div>
         </div>

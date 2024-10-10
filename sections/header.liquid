@@ -4,16 +4,16 @@
 <link rel="stylesheet" href="{{ 'component-cart-notification.css' | asset_url }}" media="print" onload="this.media='all'">
 
 <style>
-  .shop-now-menu{
+  #shopify-section-{{ section.id }} .shop-now-menu{
     background-color: {{ section.settings.button_background_color }};
   }
-  .btn--shop-now{
+  #shopify-section-{{ section.id }} .btn--shop-now{
     color: {{ section.settings.button_text_color }};
   }
   @media screen and (max-width:767px){
-  .header-main-div .drawer-mobile-section{
-    display:flex !important;
-  }
+    #shopify-section-{{ section.id }} .header-main-div .drawer-mobile-section{
+      display:flex !important;
+    }
   }
 </style>
 

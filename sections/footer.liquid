@@ -5,13 +5,13 @@
 
 <style>
 
-  .footer-main{
+  #shopify-section-{{ section.id }} .footer-main{
     background-color: {{ section.settings.footer-background-color }};
   }
-  .copyright-custom-caption  .custom-caption-text,  .footer-subtext , .footer-quick-block .footer-quick-block-heading ,  
+  #shopify-section-{{ section.id }} .copyright-custom-caption  .custom-caption-text,  .footer-subtext , .footer-quick-block .footer-quick-block-heading ,  
    .footer-rating-text-coffee .footer-rating-star-text, 
    .quick-links-list .quick-links  {
-    color: {{ section.settings.footer-text-color }} !important;
+      color: {{ section.settings.footer-text-color }} !important;
   }
 
 </style>
@@ -106,7 +106,7 @@
                   <div class="{% if section.settings.footer-logo-main-div %} footer-logo-main-div {% endif %}">
                       {% if section.settings.add-footer-logo %}
                       <div class="footer-logo-main">
-                        <img class="footer-logo" src= "{{ block.settings.add-footer-logo-image | image_url }}" alt ="img_text"  width="114" height="94" />
+                        <img class="footer-logo" src= "{{ block.settings.add-footer-logo-image | image_url }}" alt ="img_text"  width="" height="" />
                       </div>
                       {% endif %}
 

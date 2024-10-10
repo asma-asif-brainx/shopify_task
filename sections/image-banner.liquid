@@ -6,32 +6,32 @@
 {{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
 
 <style>
-  .banner:after, .banner__media:after,   section .banner-mobile-side-image
+  #shopify-section-{{ section.id }} .banner:after, .banner__media:after,   section .banner-mobile-side-image
   {
     background-color: {{ section.settings.banner-img-bg-color }};
   }   
-  .custom-browse-button-color{
+  #shopify-section-{{ section.id }} .custom-browse-button-color{
     color: {{ section.settings.browse-btn-text-color }};
     background-color: {{ section.settings.browse-btn-bg-color }};
   }
-  .custom-survey-button-color{
+  #shopify-section-{{ section.id }} .custom-survey-button-color{
     color: {{ section.settings.survey-btn-text-color }};
     background-color: {{ section.settings.survey-btn-bg-color }};
   }
-  .custom-tailored-text-color {
+  #shopify-section-{{ section.id }} .custom-tailored-text-color {
     color: {{ section.settings.tailored-text-color }};
   }
-  .custom-star-text-color
+  #shopify-section-{{ section.id }} .custom-star-text-color
   {
     color: {{ section.settings.star_text-color }};
   }
-  .custom-perfect-text-color{
+  #shopify-section-{{ section.id }} .custom-perfect-text-color{
     color: {{ section.settings.Perfect-text-color }}
   }
-  .custom-your-text-color{
+  #shopify-section-{{ section.id }} .custom-your-text-color{
     color: {{ section.settings.your-text-color }}
   }
-  .custom-routine-text-color{
+  #shopify-section-{{ section.id }} .custom-routine-text-color{
     color: {{ section.settings.routine-text-color }}
   }
 </style>
@@ -221,11 +221,12 @@
                 </a>
               {%- endif -%}
             </div>
-            <div class="rating-text-coffee">
-              <img  class="rating-star-image" src= "{{ block.settings.stars_image | image_url }}" alt ="img_text"  width="" height="" />
-              <p class="rating-star-text {% if section.settings.star_text-color %} custom-star-text-color {% endif %}">{{ block.settings.rating_text_coffee_lovers }}</p>
-            </div>
-
+            {%- if block.settings.stars_image != blank and block.settings.rating_text_coffee_lovers != blank -%}
+              <div class="rating-text-coffee">
+                <img  class="rating-star-image" src= "{{ block.settings.stars_image | image_url }}" alt ="img_text"  width="" height="" />
+                <p class="rating-star-text {% if section.settings.star_text-color %} custom-star-text-color {% endif %}">{{ block.settings.rating_text_coffee_lovers }}</p>
+              </div>
+            {% endif %}
           </div>
 
         {%- endcase -%}

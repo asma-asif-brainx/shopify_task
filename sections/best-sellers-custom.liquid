@@ -3,25 +3,24 @@
     {{ 'best-sellers-custom.css' | asset_url | stylesheet_tag }}
 {% endif %}
 
-<!-- Swiper CSS --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
 <style>
-    .collection-tabs-navigation .collection-tabs{
+  #shopify-section-{{ section.id }} .collection-tabs-navigation .collection-tabs{
         color:{{ section.settings.tabs-color }}
-    }
-    .add-to-cart-button
-    {
-        color: {{ section.settings.add-to-cart-button-text-color }};
-        background-color:{{ section.settings.add-to-cart-button-background-color }};
-    }
-    .collection-tabs-navigation .active{
-        text-decoration-color: {{ section.settings.active-tab-text-decoration }} !important;
-    }
-    .collection-main-section{
-      background-color:{{ section.settings.multiple-collections-background-color }};
-    }
-
-  
+  }
+  #shopify-section-{{ section.id }} .add-to-cart-button
+  {
+      color: {{ section.settings.add-to-cart-button-text-color }};
+      background-color:{{ section.settings.add-to-cart-button-background-color }};
+  }
+  #shopify-section-{{ section.id }} .collection-tabs-navigation .active{
+      text-decoration-color: {{ section.settings.active-tab-text-decoration }} !important;
+  }
+  #shopify-section-{{ section.id }} .collection-main-section{
+    background-color:{{ section.settings.multiple-collections-background-color }};
+  }
 </style>
 
 {{ 'component-card.css' | asset_url | stylesheet_tag }}

@@ -4,36 +4,36 @@
 {% endif %}
 
 <style>
-  .add-to-cart-button
+  #shopify-section-{{ section.id }} .add-to-cart-button
   {
       color: {{ section.settings.add-to-cart-button-text-color }};
       background-color:{{ section.settings.add-to-cart-button-background-color }};
   }
-
-  .price-sale-text-color{
+  #shopify-section-{{ section.id }} .price-sale-text-color{
     color: {{ section.settings.price-sale-text-color }};
   }
-  .price-regular-text-color{
+  #shopify-section-{{ section.id }} .price-regular-text-color{
     color: {{ section.settings.price-regular-text-color }} !important;
   }
-  .product-card-information .product-card-title-heading{
+  #shopify-section-{{ section.id }} .product-card-information .product-card-title-heading{
     color: {{ section.settings.product-card-heading-color }};
   }
-  .facet-filter-wrapper .filter-facet-heading, .facet-summary-wrap .facet-filter-summary-label,
+  #shopify-section-{{ section.id }} .facet-filter-wrapper .filter-facet-heading, .facet-summary-wrap .facet-filter-summary-label,
   .facet-sort-heading .facet-sort-heading-label, .product-count-collection-head .product-count-collection{
     color: {{ section.settings.facet-filter-text-color }};
   }
-
-.facet-sort-main .facet-sort-select{
+  #shopify-section-{{ section.id }} .facet-sort-main .facet-sort-select{
     border: 1px solid {{ section.settings.facet-sort-border-color }}
   }
-  .mobile-facet-footer-buttons-main .mobile-facet-footer-button{
+  #shopify-section-{{ section.id }} .mobile-facet-footer-buttons-main .mobile-facet-footer-button{
       background-color: {{ section.settings.facet-mobile-footer-apply-button-bg-color }};
       color: {{ section.settings.facet-mobile-footer-apply-button-text-color }};
   }
-
-
 </style>
+
+<script src="{{ 'prevent-default-add-to-cart.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 
 {{ 'template-collection.css' | asset_url | stylesheet_tag }}
 {{ 'component-card.css' | asset_url | stylesheet_tag }}

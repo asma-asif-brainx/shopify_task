@@ -4,48 +4,45 @@
 
 <script src="{{ 'main-product.js' | asset_url }}" defer="defer"></script>
 
-
 <style>
-  .mid-text-color{
+  #shopify-section-{{ section.id }} .mid-text-color{
     color: {{ section.settings.mid-text-color }};
   }
-  .post-text-color{
+  #shopify-section-{{ section.id }} .post-text-color{
     color: {{ section.settings.post-text-color }};
   }
-  .mid-background-color{
+  #shopify-section-{{ section.id }} .mid-background-color{
     background-color: {{ section.settings.mid-background-color }};
   }
-  .post-background-color{
+  #shopify-section-{{ section.id }} .post-background-color{
     background-color: {{ section.settings.post-background-color }};
   }
-
-  .main-product-heading-main .main-product-heading,  .main-product-description-text
+  #shopify-section-{{ section.id }} .main-product-heading-main .main-product-heading,  .main-product-description-text
   {
     color: {{ section.settings.main-product-information-color }};
   }
-  .price-sale-text-color{
+  #shopify-section-{{ section.id }} .price-sale-text-color{
     color: {{ section.settings.price-sale-text-color }} !important;
   }
-  .price-regular-text-color{
+  #shopify-section-{{ section.id }} .price-regular-text-color{
     color: {{ section.settings.price-regular-text-color }} !important;
   }
-  .featured-product-submit-button-background-color{
+  #shopify-section-{{ section.id }} .featured-product-submit-button-background-color{
     background-color: {{ section.settings.featured-product-submit-button-background-color }};
   }
-  .featured-product-submit-button-text-color{
+  #shopify-section-{{ section.id }} .featured-product-submit-button-text-color{
     color: {{ section.settings.featured-product-submit-button-text-color }};
   }
-  .about-box-main{
+  #shopify-section-{{ section.id }} .about-box-main{
     background-color: {{ section.settings.about-box-background-color }};
   }
-  .about-box-main .about-heading,   .about-box-main .about-text, .accordion-name  .accordion-button{
+  #shopify-section-{{ section.id }} .about-box-main .about-heading, .about-box-main .about-text, .accordion-name  .accordion-button{
     color: {{ section.settings.main-product-information-color }};
   }
-  .accordion-item{
+  #shopify-section-{{ section.id }} .accordion-item{
     background-color: {{ section.settings.about-box-background-color }};
   }
-
-  .quantity-input-field .quantity-btn-product-minus,.quantity-input-field .quantity-btn-product-plus {
+  #shopify-section-{{ section.id }} .quantity-input-field .quantity-btn-product-minus,.quantity-input-field .quantity-btn-product-plus {
     background-color: {{ section.settings.quanity-buttons-color }} !important;
   }
 </style>
