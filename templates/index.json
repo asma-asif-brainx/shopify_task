@@ -328,7 +328,7 @@
         "share_46bRUH"
       ],
       "settings": {
-        "product": "roasted-coffee-grinder-chocolate-flavour-2",
+        "product": "roasted-coffee-blend-caramel-flavour",
         "color_scheme": "",
         "checkbox-label-color": "#075d57",
         "secondary_background": false,
@@ -355,7 +355,8 @@
         "mid-text-color": "#434343",
         "post-background-color": "#424242",
         "mid-background-color": "#ece03a",
-        "show-custom-styling": true
+        "show-custom-styling": true,
+        "product-title-color": "#424242"
       }
     },
     "newsletter_H6EHYn": {
@@ -409,7 +410,8 @@
         "button-background-color": "",
         "button-text-color": "",
         "email-field-background-color": "",
-        "subheading-text-color": "#424242"
+        "subheading-text-color": "#424242",
+        "newsletter-label-color": ""
       }
     },
     "product_custom_information_KmPYFp": {

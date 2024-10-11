@@ -1,7 +1,3 @@
-{% if section.settings.show-custom-styling  %}
-  {{ 'featured-product-custom.css' | asset_url | stylesheet_tag }}
-{% endif %}
-
 <style>
   #shopify-section-{{ section.id }} .mid-text-color{
     color: {{ section.settings.mid-text-color }};
@@ -36,6 +32,11 @@
   #shopify-section-{{ section.id }} .quantity-buttons-main .quantity-button-minus, .quantity-buttons-main .quantity-button-plus
   {
       background-color: {{ section.settings.quanity-buttons-color }} !important;
+  }
+
+  #shopify-section-{{ section.id }} .product-title-head,  .product-title-head a ,  .product-title-head a:visited
+  {
+    color: {{ section.settings.product-title-color }};
   }
 </style>
 
@@ -81,6 +82,10 @@
       }
     }
   {%- endstyle -%}
+
+{% if section.settings.show-custom-styling  %}
+  {{ 'featured-product-custom.css' | asset_url | stylesheet_tag }}
+{% endif %}
 
   <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'show-more.js' | asset_url }}" defer="defer"></script>
@@ -168,11 +173,15 @@
 
 
                 {%- when 'title' -%}
-                  <h2 class="product__title {{ block.settings.heading_size }}" {{ block.shopify_attributes }}>
+                  <h2 class="product-title-head product__title {{ block.settings.heading_size }}" {{ block.shopify_attributes }}>
                     {%- unless placeholder -%}
-                      {{ product.title | escape }}
+                      <a href="{{ product.url }}" title="{{ product.title | escape }}">
+                        {{ product.title | escape }}
+                      </a>
                     {%- else -%}
-                      {{ 'onboarding.product_title' | t }}
+                      <a href="#" title="{{ 'onboarding.product_title' | t }}">
+                        {{ 'onboarding.product_title' | t }}
+                      </a>
                     {%- endunless -%}
                   </h2>
 
@@ -185,7 +194,7 @@
                   {% endif %}
 
                 {%- when 'price' -%}
-                  <div id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
+                  <div id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }} class="product-price-template">
                     {%- render 'price',
                       product: product,
                       placeholder: placeholder,
@@ -492,11 +501,6 @@
                   {% endif %}
                   </div>
                 </div>
-
-
-                
-
-              
 
 
               
@@ -1748,7 +1752,13 @@
       "id": "show-custom-styling",      
       "label": "Include custom styling",      
       "default": true    
+    },
+    {    
+      "type": "color",       
+      "id": "product-title-color",      
+      "label": "Product title color",         
     }
+
    
   ],
   "presets": [

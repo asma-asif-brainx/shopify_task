@@ -31,6 +31,10 @@
     font-size: 12px;
     font-family: 'Bold_Font';
 }
+.rating-text-coffee{
+    margin-top: 8px !important;
+    margin-bottom: 8px !important;
+}
 .price__sale .price-regular-text{
     font-size: 14px;
     font-family: 'Medium_Font';
@@ -47,6 +51,7 @@
 .featured-product-buttons{
     padding-top: 5px;
 }
+
 .featured-product-buttons .featured-product-submit-button{
     width: 100%;
     border-radius: 5px;
@@ -120,6 +125,39 @@
 .product--medium:not(.product--no-media) .product__info-wrapper, .product--small:not(.product--no-media) .product__media-wrapper{
     max-width: 55% !important;
 }
+.product-form,.variants-main{
+    margin-bottom: 0 !important;
+}
+.featured-product-description{
+    margin-bottom: 25px !important;
+}
+.quantity-button-custom-style {
+    margin-top: 0 !important;
+}
+.viewer-slider-buttons{
+    display: none;
+}
+.product-media-container-custom{
+    border-radius: 15px;
+}
+.product__title>a {
+    display: block !important;
+}
+.product-title-head a{
+    text-decoration: none !important;
+}
+.product-title-head a:hover{
+    text-decoration: underline !important;
+}
+.product-price-template{
+    margin: 0 !important;
+}
+.featured-product .product-price-template + div:not([class]){
+    display: none;
+}
+.featured-product-description {
+    margin-top: 10px !important;
+}
 @media screen and (max-width:1024px){
     .product--medium:not(.product--no-media) .product__media-wrapper, .product--small:not(.product--no-media) .product__info-wrapper{
         max-width: 40% !important;
@@ -162,7 +200,9 @@
     .buttons-checkbox{
         width: 100%;
     }
-    
+    .product-form{
+        margin-top: 15px !important;
+    }
 }
 
 @media screen and (max-width:767px){

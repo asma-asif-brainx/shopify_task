@@ -45,6 +45,9 @@
   #shopify-section-{{ section.id }} .quantity-input-field .quantity-btn-product-minus,.quantity-input-field .quantity-btn-product-plus {
     background-color: {{ section.settings.quanity-buttons-color }} !important;
   }
+  #shopify-section-{{ section.id }} .checkbox-label-color{
+    color: {{ section.settings.checkbox-label-color }};
+  }
 </style>
 
 
@@ -180,7 +183,7 @@
                 {% endif %}
 
               {%- when 'price' -%}
-                <div id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
+                <div id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }} class="main-product-price-template">
                   {%- render 'price',
                     product: product,
                     use_variant: true,
@@ -550,14 +553,34 @@
                       {%- endif -%}
                     </div>
               {%- when 'buy_buttons' -%}
-                {%- render 'buy-buttons',
-                  block: block,
-                  product: product,
-                  product_form_id: product_form_id,
-                  section_id: section.id,
-                  show_pickup_availability: true
-                -%}
+                <div class="buttons-checkbox">
+                  {%- render 'buy-buttons',
+                    block: block,
+                    product: product,
+                    product_form_id: product_form_id,
+                    section_id: section.id,
+                    show_pickup_availability: true
+                  -%}
 
+                  {%- if block.settings.add-checkbox-below-button != blank -%}
+                    <div class="checkbox-container">
+                      <span class="checkbox-label {% if section.settings.checkbox-label-color %} checkbox-label-color {% endif %}">
+                        <img src="{{ block.settings.checkbox-1-image | image_url }}" alt="{{ block.settings.checkbox-1-label }}" width="" height="" class="checkbox-image" />
+                        {{ block.settings.checkbox-1-label }}
+                      </span>
+                      
+                      <span class="checkbox-label {% if section.settings.checkbox-label-color %} checkbox-label-color {% endif %}">
+                        <img src="{{ block.settings.checkbox-2-image | image_url }}" alt="{{ block.settings.checkbox-2-label }}" width="" height="" class="checkbox-image" />
+                        {{ block.settings.checkbox-2-label }}
+                      </span>
+                      
+                      <span class="checkbox-label {% if section.settings.checkbox-label-color %} checkbox-label-color {% endif %}">
+                        <img src="{{ block.settings.checkbox-3-image | image_url }}" alt="{{ block.settings.checkbox-3-label }}" width="" height="" class="checkbox-image" />
+                        {{ block.settings.checkbox-3-label }}
+                      </span>
+                    </div>
+                  {% endif %}
+                </div>
               </div>
 
               {%- when 'box' -%}
@@ -1062,6 +1085,44 @@
           "default": true,
           "label": "t:sections.main-product.blocks.buy_buttons.settings.show_gift_card_recipient.label",
           "info": "t:sections.main-product.blocks.buy_buttons.settings.show_gift_card_recipient.info"
+        },
+        {
+          "type": "checkbox",
+          "id": "add-checkbox-below-button",
+          "default": false,
+          "label": "Add checkbox below button"
+        },
+        {
+          "type": "text",
+          "id": "checkbox-1-label",
+          "label": "Add checkbox 1 label"
+        },
+        {
+          "type": "image_picker",
+          "id": "checkbox-1-image",
+          "label": "Add checkbox 1 image"
+        },
+        {
+          "type": "image_picker",
+          "id": "checkbox-2-image",
+          "label": "Add checkbox 2 image"
+        },
+       
+        {
+          "type": "image_picker",
+          "id": "checkbox-3-image",
+          "label": "Add checkbox 3 image"
+        },
+       
+        {
+          "type": "text",
+          "id": "checkbox-2-label",
+          "label": "Add checkbox 2 label"
+        },
+        {
+          "type": "text",
+          "id": "checkbox-3-label",
+          "label": "Add checkbox 3 label"
         }
       ]
     },
@@ -2503,7 +2564,12 @@
       "type": "color",
       "id": "quanity-buttons-color",
       "label": "Quanity buttons color Prodcut page"
-    }
+    },
+    {
+      "type": "color",
+      "id": "checkbox-label-color",
+      "label": "Checkbox label color",
+    },
   ],
   "presets": [
     {

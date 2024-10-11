@@ -13,7 +13,9 @@
    .quick-links-list .quick-links  {
       color: {{ section.settings.footer-text-color }} !important;
   }
-
+  #shopify-section-{{ section.id }} .footer-break{
+    background-color: {{ section.settings.footer-line-break-color}};
+  }
 </style>
 
 {% comment %}theme-check-disable UndefinedObject{% endcomment %}
@@ -116,9 +118,15 @@
 
                       {% if section.settings.add-images %}
                         <div class="footer-images">
-                          <img  class="footer-image-one" src= "{{ block.settings.image1 | image_url }}" alt ="img_text"  width="" height="" />
-                          <img  class="footer-image-two" src= "{{ block.settings.image2 | image_url }}" alt ="img_text"  width="" height="" />
-                          <img  class="footer-image-three" src= "{{ block.settings.image3 | image_url }}" alt ="img_text"  width="" height="" />
+                          <a class="footer-img-url" href="{{ block.settings.link1 }}" target="_blank" rel="noopener">
+                            <img  class="footer-image-one" src= "{{ block.settings.image1 | image_url }}" alt ="img_text"  width="" height="" />
+                          </a>
+                          <a class="footer-img-url" href="{{ block.settings.link2 }}" target="_blank" rel="noopener">
+                            <img  class="footer-image-two" src= "{{ block.settings.image2 | image_url }}" alt ="img_text"  width="" height="" />
+                          </a>
+                          <a class="footer-img-url" href="{{ block.settings.link3 }}" target="_blank" rel="noopener">
+                            <img  class="footer-image-three" src= "{{ block.settings.image3 | image_url }}" alt ="img_text"  width="" height="" />
+                          </a>
                         </div>
                       {% endif %}
 
@@ -301,6 +309,10 @@
     {%- endunless -%}
   {%- endif -%}
 
+  {% if section.settings.add-footer-break %}
+      <hr class="footer-break">
+  {% endif %}
+
   <div
     class="footer-content-bottom footer__content-bottom{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
     {% if settings.animations_reveal_on_scroll %}
@@ -333,7 +345,7 @@
           </localization-form>
         {%- endif -%}
       </div>
-      <div class="footer__column footer__column--info">
+      <div class="footer__column footer__column--info footer-column-info-custom">
         {%- if section.settings.payment_enable -%}
           <div class="footer__payment">
             <span class="visually-hidden">{{ 'sections.footer.payment' | t }}</span>
@@ -463,6 +475,21 @@
           "type": "image_picker",
           "id": "image3",
           "label": "Image 3"
+        },
+        {
+          "type": "url",
+          "id": "link1",
+          "label": "First Image Link"
+        },
+        {
+          "type": "url",
+          "id": "link2",
+          "label": "Second Image Link"
+        },
+        {
+          "type": "url",
+          "id": "link3",
+          "label": "Third Image Link"
         },
         {
           "type": "image_picker",
@@ -701,7 +728,19 @@
       "id": "footer-logo-main-div",
       "default": false,
       "label": "Add footer logo main div"
+    },
+    {
+      "type": "checkbox",
+      "id": "add-footer-break",
+      "default": false,
+      "label": "add footer break line"
+    },
+    {
+      "type": "color",
+      "id": "footer-line-break-color",
+      "label": "Footer line break color"
     }
+    
   ],
   "default": {
     "blocks": [

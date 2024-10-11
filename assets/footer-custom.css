@@ -37,6 +37,24 @@
 .footer-logo-main .footer-logo{
     width: 180px;
 }
+.footer-subtext{
+    margin-bottom: 2rem !important;
+}
+.footer-break{
+    width: 80%;
+    opacity: 26%;
+    margin: auto;
+}
+.footer-column-info-custom{
+    display: none !important;
+}
+.footer-main {
+    padding-bottom: 0 !important;
+}
+.quick-links-list .list-menu__item:hover, .footer-img-url{
+    text-decoration: none !important;
+}
+
 @media screen and (max-width:980px)
 {
     

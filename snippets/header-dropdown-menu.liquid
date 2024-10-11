@@ -8,7 +8,7 @@
 <nav class="header__inline-menu main-nav-header">
   <ul class="list-menu list-menu--inline header-main-list" role="list">
     {%- for link in section.settings.menu.links -%}
-      <li >
+      <li class="header-nav-lists">
         {%- if link.links != blank -%}
           <header-menu>
             <details id="Details-HeaderMenu-{{ forloop.index }}">
@@ -83,7 +83,7 @@
           <a
             id="HeaderMenu-{{ link.handle }}"
             href="{{ link.url }}"
-            class="header__menu-item list-menu__item link link--text focus-inset"
+            class="list-nav-link header__menu-item list-menu__item link link--text focus-inset"
             {% if link.current %}
               aria-current="page"
             {% endif %}

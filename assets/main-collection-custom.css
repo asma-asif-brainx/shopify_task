@@ -91,6 +91,7 @@
 .price-facet-summary, .facet-disclosure-custom{
     margin-right:15px !important ;
 }
+
 @media screen and (max-width:1024px) {
     .card-image-div .card-image-inner
     {
@@ -104,6 +105,9 @@
     .product-count-collection-head .product-count-collection,
     .facet-filter-wrapper span{
         font-size: 16px;
+    }
+    .facets__form{
+        gap: 0 1.5rem !important;
     }
 }
 @media screen and (max-width:980px) {

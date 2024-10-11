@@ -9,9 +9,13 @@
     font-family: 'Bold_Font';
 }
 .newslteter-heading{
-    max-width: 60%;
-    width: 100%;
+    /* max-width: 60%;
+    width: 100%; */
+    width: 650px;
+    font-family: 'Bold_Font';
+    font-size: 30px;
 }
+
 .newsletter-wrapper-main{
     display: flex;
     flex-direction: column;
@@ -19,8 +23,9 @@
     align-items: center;
 }
 .newsletter-wrapper-main .newletter-form-main{
-    max-width: 77%;
+    max-width: 900px;
     width: 100%;
+    margin-bottom: 20px !important;
 }
 .newletter-form-main .newsletter-form{
     max-width: 80% !important;
@@ -34,10 +39,6 @@
     width: 100% !important;
     max-width: 100% !important;
     min-width: 80%;
-}
-.newslteter-heading {
-    font-family: 'Bold_Font';
-    font-size: 30px;
 }
 
 .email-label-placeholder-main{
@@ -56,11 +57,17 @@
 .subhead-text-two{
     font-family: 'Bold_Font';
 }
-@media screen and (max-width:1024px){
-    .newslteter-heading {
-        max-width: 65%;
+@media screen and (max-width:1280px){
+    .newsletter-wrapper-main .newletter-form-main{
+        max-width: 77%;
         width: 100%;
     }
+}
+@media screen and (max-width:1024px){
+    /* .newslteter-heading {
+        max-width: 65%;
+        width: 100%;
+    } */
     .newsletter-email-form, .newsletter-email-form .newsletter-form__field-wrapper, .field .field__input{
         width: 100% !important;
         max-width: 100% !important;
@@ -73,9 +80,8 @@
 
 @media screen and (max-width:980px){
     .newslteter-heading {
-        max-width: 65%;
-        width: 100%;
         font-size: 18px;
+        width: 260px;
     }
 }
 @media screen and (max-width:767px){
@@ -83,7 +89,6 @@
         max-width: 100%;
         width: 100%;
     }
-    
     .newletter-form-main .newsletter-form{
         max-width: 100% !important;
         width: 100% !important;
@@ -94,8 +99,11 @@
     }
     .newsletter-button-email{
         max-width: 40% !important;
+        font-size: 14px;
     }
-    .newslteter-heading {
-        max-width: 75%;
+    .input-field-label{
+        font-size: 12px;
+        padding-top: 4px;
     }
+
 }

@@ -37,6 +37,7 @@
 .product-card-information .product-card-title-heading{
     font-size: 20px;
     font-family: 'Bold_Font';
+    padding-bottom: 10px;
 }
 .star-rating-text-image .show-text-below-product-title{
     font-size: 14px;
@@ -125,10 +126,15 @@
     .product-card-title-heading {
         height: 50px;
     }
+    .swiper-button-next,
+    .swiper-button-prev {
+        width: 40px!important;
+        height: 40px !important;
+    }
 }
-@media screen and (max-width:760px) {
+@media screen and (max-width:767px) {
     .collection-tabs-navigation .collection-tabs{
-        font-size: 14px;
+        font-size: 12px;
     }
     .collection-tabs-navigation{
         padding-left:0 !important ;
@@ -142,6 +148,11 @@
     .product-card-information .product-card-title-heading{
         font-size: 14px;
         height: 45px;
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+        width: 35px!important;
+        height: 35px !important;
     }
 }
 @media screen and (max-width:330px) {

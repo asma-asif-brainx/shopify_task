@@ -1,19 +1,20 @@
 document.addEventListener('DOMContentLoaded', function() {
-  var accordionButtons = document.querySelectorAll('.accordion-button');
+  var accordionItems = document.querySelectorAll('.accordion-item');
   
-  accordionButtons.forEach(function(button) {
-    button.addEventListener('click', function() {
-      var isExpanded = this.getAttribute('aria-expanded') === 'true';
-      this.setAttribute('aria-expanded', !isExpanded);
+  accordionItems.forEach(function(item) {
+    item.addEventListener('click', function() {
+      var button = this.querySelector('.accordion-button');
+      var isExpanded = button.getAttribute('aria-expanded') === 'true';
+      button.setAttribute('aria-expanded', !isExpanded);
 
-      var content = document.getElementById(this.getAttribute('aria-controls'));
+      var content = document.getElementById(button.getAttribute('aria-controls'));
 
-      if (content.style.display === 'none') {
+      if (content.style.display === 'none' || content.style.display === '') {
         content.style.display = 'block';
-        this.textContent = '×';  
+        button.textContent = '×'; 
       } else {
         content.style.display = 'none';
-        this.textContent = '+';  
+        button.textContent = '+'; 
       }
     });
   });

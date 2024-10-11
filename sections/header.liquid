@@ -10,6 +10,12 @@
   #shopify-section-{{ section.id }} .btn--shop-now{
     color: {{ section.settings.button_text_color }};
   }
+  #shopify-section-{{ section.id }} .header-nav-lists .list-nav-link:hover span{
+    color: {{ section.settings.header-links-hover-color }} !important;
+  }
+  #shopify-section-{{ section.id }} .list-nav-link .header-nav-span-items:hover::after{
+    background-color: {{ section.settings.nav-link-dot-color }}; ; 
+  }
   @media screen and (max-width:767px){
     #shopify-section-{{ section.id }} .header-main-div .drawer-mobile-section{
       display:flex !important;
@@ -569,6 +575,11 @@
       "type": "checkbox",
       "id": "include-custom-style",
       "label": "Apply custom styling to header"
+    }, 
+    {
+      "type": "color",
+      "id": "header-links-hover-color",
+      "label": "Header links hover color",
     },
     {
       "type": "select",
@@ -728,7 +739,13 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 20
-    }
+    },
+    {
+      "type": "color",
+      "id": "nav-link-dot-color",
+      "label" : "Nav link hover dot color"
+    } 
+   
   ],
   "blocks": [
     {

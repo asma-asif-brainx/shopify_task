@@ -77,6 +77,26 @@ header.header.header--middle-left.header--mobile-center.page-width.header--has-m
   width: 73%;
   justify-content: right;
 }
+.header-nav-lists .list-nav-link:hover span{
+  text-decoration: none !important;
+  font-family: 'Bold_Font';
+}
+.list-nav-link .header-nav-span-items{
+  position: relative;
+}
+.list-nav-link .header-nav-span-items:hover::after{
+  content: ''; 
+  position: absolute;
+  bottom: -5px; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%; 
+  transition: opacity 0.3s ease-in-out;
+}
+
   @media screen and (max-width:1280px){
     .logo-heading-header{
       max-width: 26%;
