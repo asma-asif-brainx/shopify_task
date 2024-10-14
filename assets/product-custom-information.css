@@ -27,7 +27,6 @@
 .information-block .info-text .information-title {
     font-size: 16px;
     font-family: 'Bold_Font';
-
 }
 .information-block .info-text .information-text {
     font-size: 14px;
@@ -53,8 +52,7 @@
     }
     .heading-block  .custom-head{
         max-width: 90%;
-        width: 100%;
-        
+        width: 100%; 
     }
 }
 

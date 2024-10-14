@@ -10,9 +10,10 @@
   }
   #shopify-section-{{ section.id }} .copyright-custom-caption  .custom-caption-text,  .footer-subtext , .footer-quick-block .footer-quick-block-heading ,  
    .footer-rating-text-coffee .footer-rating-star-text, 
-   .quick-links-list .quick-links  {
+   .quick-links-list .quick-links ,  .quick-links-text-field{
       color: {{ section.settings.footer-text-color }} !important;
   }
+
   #shopify-section-{{ section.id }} .footer-break{
     background-color: {{ section.settings.footer-line-break-color}};
   }
@@ -153,6 +154,11 @@
                               {{ link.title | escape }}
                             </a>
                           </li>
+
+                            {% if block.settings.add-text-field-below-links != blank %}
+                              <span class="quick-links-text-field">{{ block.settings.add-text-field-below-links }}</span>
+                            {% endif %}
+
                         {%- endfor -%}
                       </ul>
                     {%- endif -%}
@@ -417,6 +423,11 @@
           "default": "footer",
           "label": "t:sections.footer.blocks.link_list.settings.menu.label",
           "info": "t:sections.footer.blocks.link_list.settings.menu.info"
+        },
+        {
+          "type": "text",
+          "id": "add-text-field-below-links",
+          "label": "Add text field below links"
         }
       ],
       "limit": 5

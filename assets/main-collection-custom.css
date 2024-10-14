@@ -67,6 +67,8 @@
 .facet-sort-select .facet-sort-option{
     font-size: 18px;
     font-family: 'Bold_Font';
+    box-shadow: none !important;
+    outline: none !important;
 }
 .facet-sort-main .facet-sort-select{
     border-radius: 5px !important;
@@ -131,11 +133,11 @@
         font-size: 14px;
     }
     .facet-filter-wrapper .filter-facet-heading, .facet-summary-wrap .facet-filter-summary-label,
-     .facet-sort-heading .facet-sort-heading-label, .product-count-collection-head .product-count-collection,
-     .facet-sort-select .facet-sort-option{
+    .facet-sort-heading .facet-sort-heading-label, .product-count-collection-head .product-count-collection,
+    .facet-sort-select .facet-sort-option{
         font-size: 11px;
-     }
-     .collection-main-page-width {
+    }
+    .collection-main-page-width {
         padding-right:5rem;
     }
     .card-image-div .card-image-inner
@@ -187,7 +189,6 @@
     }
     .star-rating-text-image .show-text-below-product-title{
         font-size: 12px !important;
-
     }
     .card-image-div .card-image-inner
     {

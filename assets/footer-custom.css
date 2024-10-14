@@ -12,6 +12,10 @@
 .footer-quick-block.footer-block.grid__item.footer-block--menu.scroll-trigger.animate--slide-in{
     max-width: 20% !important;
 }
+ .footer-subtext, .footer-rating-text-coffee .footer-rating-star-text,
+ .quick-links-list .quick-links, .quick-links-text-field{
+    font-family: 'Normal_Font';
+}
 .footer-quick-block  .footer-quick-block-heading{
     font-size: 20px;
     font-family: 'Bold_Font';
@@ -20,11 +24,14 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    gap: 5px;
 }
 .footer-rating-text-coffee .footer-rating-star-text{
     font-size: 11px;
+    min-width: 300px;
+    max-width: 300px;
+    width: 100%;
 }
-
 .footer-content-top{
     padding-bottom: 10px !important;
 }
@@ -51,13 +58,8 @@
 .footer-main {
     padding-bottom: 0 !important;
 }
-.quick-links-list .list-menu__item:hover, .footer-img-url{
+.footer-img-url{
     text-decoration: none !important;
-}
-
-@media screen and (max-width:980px)
-{
-    
 }
 
 @media screen and (max-width:767px){
@@ -75,8 +77,21 @@
     .footer-content-top{
         padding-left: 20px !important;
         padding-right: 0 !important;
+        background-image: url(https://cdn.shopify.com/s/files/1/0899/1355/7281/files/mug.png?v=1728896387),
+        url('https://cdn.shopify.com/s/files/1/0899/1355/7281/files/Vector.png?v=1728896604'),
+        url('https://cdn.shopify.com/s/files/1/0899/1355/7281/files/Vector_1.png?v=1728896886'),
+        url('https://cdn.shopify.com/s/files/1/0899/1355/7281/files/Vector_2.png?v=1728896987');
+        background-repeat: no-repeat;
+        background-position: center, center right, top center, top right; 
     }
     .footer-logo-main-div {
         margin-right: 0;
+    }
+    .footer-rating-star-text{
+        min-width: unset !important; 
+        max-width: unset !important;
+    }
+    .footer-rating-text-coffee{
+        display: none;
     }
 }

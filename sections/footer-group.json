@@ -81,28 +81,31 @@
             "link2": "shopify:\/\/collections",
             "link3": "shopify:\/\/collections",
             "stars_image": "shopify:\/\/shop_images\/5-star-rating.png",
-            "rating_text_coffee_lovers": "4.9\/5.00 (10,000+ people living healthy lifestyle)"
+            "rating_text_coffee_lovers": "4.9\/5.00  (Serviced 6,000,000+ Coffee Lovers)"
           }
         },
         "link_list_aK6gJn": {
           "type": "link_list",
           "settings": {
             "heading": "About",
-            "menu": "about"
+            "menu": "about",
+            "add-text-field-below-links": ""
           }
         },
         "link_list_qnWCe4": {
           "type": "link_list",
           "settings": {
             "heading": "Company",
-            "menu": "company"
+            "menu": "company",
+            "add-text-field-below-links": ""
           }
         },
         "link_list_XCrUNc": {
           "type": "link_list",
           "settings": {
             "heading": "Contact",
-            "menu": "contact"
+            "menu": "contact",
+            "add-text-field-below-links": "Phone: (+971 1234 567)"
           }
         },
         "brand_information_FUwhRE": {
