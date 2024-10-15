@@ -1,0 +1,97 @@
+.copyright-custom-caption {
+    margin: auto;
+}
+.copyright-custom-caption  .custom-caption-text{
+    font-size: 14px;
+    font-family: 'Bold_Font';
+}
+.quick-links-list .quick-links{
+    list-style-type: none;
+    text-decoration: none;
+}
+.footer-quick-block.footer-block.grid__item.footer-block--menu.scroll-trigger.animate--slide-in{
+    max-width: 20% !important;
+}
+ .footer-subtext, .footer-rating-text-coffee .footer-rating-star-text,
+ .quick-links-list .quick-links, .quick-links-text-field{
+    font-family: 'Normal_Font';
+}
+.footer-quick-block  .footer-quick-block-heading{
+    font-size: 20px;
+    font-family: 'Bold_Font';
+}
+.footer-rating-text-coffee{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+.footer-rating-text-coffee .footer-rating-star-text{
+    font-size: 11px;
+    min-width: 300px;
+    max-width: 300px;
+    width: 100%;
+}
+.footer-content-top{
+    padding-bottom: 10px !important;
+}
+.footer-content-bottom{
+    padding-top: 10px !important;
+}
+.footer-logo-main-div {
+    margin-right: 35px;
+}
+.footer-logo-main .footer-logo{
+    width: 180px;
+}
+.footer-subtext{
+    margin-bottom: 2rem !important;
+}
+.footer-break{
+    width: 80%;
+    opacity: 26%;
+    margin: auto;
+}
+.footer-column-info-custom{
+    display: none !important;
+}
+.footer-main {
+    padding-bottom: 0 !important;
+}
+.footer-img-url{
+    text-decoration: none !important;
+}
+
+@media screen and (max-width:767px){
+    .footer-blocks-wrapper-main{
+        display: flex !important;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .footer-quick-block.footer-block.grid__item.footer-block--menu.scroll-trigger.animate--slide-in {
+        max-width: 48% !important;
+        margin-bottom: 0 !important;
+        margin-top: 0 !important;
+    }
+    .footer-content-top{
+        padding-left: 20px !important;
+        padding-right: 0 !important;
+        background-image: url(https://cdn.shopify.com/s/files/1/0899/1355/7281/files/mug.png?v=1728896387),
+        url('https://cdn.shopify.com/s/files/1/0899/1355/7281/files/Vector.png?v=1728896604'),
+        url('https://cdn.shopify.com/s/files/1/0899/1355/7281/files/Vector_1.png?v=1728896886'),
+        url('https://cdn.shopify.com/s/files/1/0899/1355/7281/files/Vector_2.png?v=1728896987');
+        background-repeat: no-repeat;
+        background-position: center, center right, top center, top right; 
+    }
+    .footer-logo-main-div {
+        margin-right: 0;
+    }
+    .footer-rating-star-text{
+        min-width: unset !important; 
+        max-width: unset !important;
+    }
+    .footer-rating-text-coffee{
+        display: none;
+    }
+}

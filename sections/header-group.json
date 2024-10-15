@@ -8,16 +8,29 @@
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "Welcome to our store",
-            "link": ""
+            "text": "We are here to help as your coffee concierge!",
+            "link": "shopify:\/\/collections\/coffee",
+            "link_text": "TAKE THE SURVEY"
+          }
+        },
+        "announcement_YxPdXD": {
+          "type": "announcement",
+          "settings": {
+            "text": "We are here to help as your coffee concierge!",
+            "link": "shopify:\/\/collections\/coffee",
+            "link_text": "TAKE THE SURVEY"
           }
         }
       },
       "block_order": [
-        "announcement-bar-0"
+        "announcement-bar-0",
+        "announcement_YxPdXD"
       ],
       "settings": {
         "color_scheme": "scheme-1",
+        "include-custom-style": true,
+        "link_text_color": "#ef4444",
+        "announcement-bg-color": "#d3d3d3",
         "show_line_separator": true,
         "show_social": false,
         "auto_rotate": false,
@@ -31,6 +44,18 @@
       "settings": {
         "logo_position": "middle-left",
         "menu": "main-menu",
+        "enable_search_modal": false,
+        "enable_account_icon": false,
+        "show-built-in-cart-icon": false,
+        "show-custom-cart-icon": true,
+        "desktop_button_text": "SHOP NOW→",
+        "mobile_button_text": "SHOP",
+        "enable_cart_icon": true,
+        "cart_image": "shopify:\/\/shop_images\/cart-icon.png",
+        "button_background_color": "#ef4444",
+        "button_text_color": "#ffffff",
+        "include-custom-style": true,
+        "header-links-hover-color": "#ef4444",
         "menu_type_desktop": "dropdown",
         "sticky_header_type": "on-scroll-up",
         "show_line_separator": true,
@@ -42,7 +67,8 @@
         "mobile_logo_position": "center",
         "margin_bottom": 0,
         "padding_top": 20,
-        "padding_bottom": 20
+        "padding_bottom": 20,
+        "nav-link-dot-color": "#ef4444"
       }
     }
   },

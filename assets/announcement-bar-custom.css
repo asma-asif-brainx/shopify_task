@@ -1,0 +1,96 @@
+.utility-bar__grid{
+  min-height:60px;
+  height:100%;
+}
+.announcement-bar{
+  min-height:60px;
+  height:100%;
+}
+.custom-announecemnt-bar-main  .custom-slider-btn {
+  min-width: 30px !important;
+  padding: 0;
+}
+.announcement-bar-main .announcement-message {
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  align-items: center;
+  font-family:'Normal_Font';
+  padding-bottom: 0;
+  padding-top: 0;
+  max-width:100%;
+  width:100%;
+  text-align:unset;
+  gap:5px;
+}
+.announcement-message .announcement-message-span{
+  width:auto;
+  font-size:14px;
+  font-family: 'Medium_Font';
+}
+.announecemnt-bar-slider{
+  max-width: 90% !important;
+  width: 100%;
+}
+.announcement-message .announcement-bar__link{
+  justify-content: unset;
+  width:auto;
+  text-decoration:underline;
+  font-family:'Bold_Font';
+  font-size:14px
+}
+.utility-bar__grid.page-width {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+@media screen and (max-width: 1024px) {
+  .announcement-message .announcement-message-span {
+    width:auto;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+  }
+  .announcement-message .announcement-bar__link{
+    font-size:14px;
+    width:auto;
+  }
+}
+
+@media screen and (max-width:980px) {
+  .announcement-message .announcement-message-span {
+    width:auto;
+    font-size: 14px;
+  }
+  .announcement-message .announcement-bar__link{
+    font-size:14px;
+     width:auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .announcement-message .announcement-message-span {
+    width:auto;
+    font-size: 6px;
+  }
+  .announcement-message .announcement-bar__link{
+    font-size:6px;
+    width:auto;
+  }
+  .slider-button {
+    max-height: 24px;
+    height:100%;
+  }
+  .utility-bar__grid, .announcement-bar {
+    min-height: 24px;
+    height: 100%;
+  }
+  .announcement-message{
+     min-height: 24px;
+     height: 100%;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .announcement-message .announcement-bar__link , .announcement-message .announcement-message-span{
+      font-size: 4px;
+  }
+}

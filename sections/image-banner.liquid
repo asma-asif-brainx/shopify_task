@@ -1,4 +1,42 @@
+<!--  Access custom stylesheet-->
+{% if section.settings.include-custom-style  %}
+  {{ 'image-banner-custom.css' | asset_url | stylesheet_tag }}
+  {% endif %}
+
 {{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
+
+<style>
+  #shopify-section-{{ section.id }} .banner:after, .banner__media:after,   section .banner-mobile-side-image
+  {
+    background-color: {{ section.settings.banner-img-bg-color }};
+  }   
+  #shopify-section-{{ section.id }} .custom-browse-button-color{
+    color: {{ section.settings.browse-btn-text-color }};
+    background-color: {{ section.settings.browse-btn-bg-color }};
+  }
+  #shopify-section-{{ section.id }} .custom-survey-button-color{
+    color: {{ section.settings.survey-btn-text-color }};
+    background-color: {{ section.settings.survey-btn-bg-color }};
+  }
+  #shopify-section-{{ section.id }} .custom-tailored-text-color {
+    color: {{ section.settings.tailored-text-color }};
+  }
+  #shopify-section-{{ section.id }} .custom-star-text-color
+  {
+    color: {{ section.settings.star_text-color }};
+  }
+  #shopify-section-{{ section.id }} .custom-perfect-text-color{
+    color: {{ section.settings.Perfect-text-color }}
+  }
+  #shopify-section-{{ section.id }} .custom-your-text-color{
+    color: {{ section.settings.your-text-color }}
+  }
+  #shopify-section-{{ section.id }} .custom-routine-text-color{
+    color: {{ section.settings.routine-text-color }}
+  }
+</style>
+
+
 
 {%- if section.settings.image_height == 'adapt' and section.settings.image != blank -%}
   {%- style -%}
@@ -53,7 +91,7 @@
 
 <div
   id="Banner-{{ section.id }}"
-  class="banner banner--content-align-{{ section.settings.desktop_content_alignment }} banner--content-align-mobile-{{ section.settings.mobile_content_alignment }} banner--{{ section.settings.image_height }}{% if section.settings.stack_images_on_mobile and section.settings.image != blank and section.settings.image_2 != blank %} banner--stacked{% endif %}{% if section.settings.image_height == 'adapt' and section.settings.image != blank %} banner--adapt{% endif %}{% if section.settings.show_text_below %} banner--mobile-bottom{%- endif -%}{% if section.settings.show_text_box == false %} banner--desktop-transparent{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
+  class="banner-mobile-side-image banner banner--content-align-{{ section.settings.desktop_content_alignment }} banner--content-align-mobile-{{ section.settings.mobile_content_alignment }} banner--{{ section.settings.image_height }}{% if section.settings.stack_images_on_mobile and section.settings.image != blank and section.settings.image_2 != blank %} banner--stacked{% endif %}{% if section.settings.image_height == 'adapt' and section.settings.image != blank %} banner--adapt{% endif %}{% if section.settings.show_text_below %} banner--mobile-bottom{%- endif -%}{% if section.settings.show_text_box == false %} banner--desktop-transparent{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
 >
   {%- if section.settings.image != blank -%}
     <div class="banner__media media{% if section.settings.image == blank and section.settings.image_2 == blank %} placeholder{% endif %}{% if section.settings.image_2 != blank %} banner__media-half{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
@@ -83,12 +121,12 @@
       }}
     </div>
   {%- elsif section.settings.image_2 == blank -%}
-    <div class="banner__media media{% if section.settings.image == blank and section.settings.image_2 == blank %} placeholder{% endif %}{% if section.settings.image_2 != blank %} banner__media-half{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+    <div class="banner_side_image banner__media media{% if section.settings.image == blank and section.settings.image_2 == blank %} placeholder{% endif %}{% if section.settings.image_2 != blank %} banner__media-half{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
       {{ 'hero-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
     </div>
   {%- endif -%}
   {%- if section.settings.image_2 != blank -%}
-    <div class="banner__media media{% if section.settings.image != blank %} banner__media-half{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+    <div class="banner_side_image banner__media media{% if section.settings.image != blank %} banner__media-half{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
       {%- liquid
         assign image_height_2 = section.settings.image_2.width | divided_by: section.settings.image_2.aspect_ratio
         if section.settings.image != blank
@@ -115,8 +153,10 @@
       }}
     </div>
   {%- endif -%}
-  <div class="banner__content banner__content--{{ section.settings.desktop_content_position }} page-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-    <div class="banner__box content-container content-container--full-width-mobile color-{{ section.settings.color_scheme }} gradient">
+  
+  <div class="banner-content-main-custom banner__content banner__content--{{ section.settings.desktop_content_position }} page-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+    <div class="main-img-banner-content banner__box content-container content-container--full-width-mobile color-{{ section.settings.color_scheme }} gradient">
+        <div class="banner-text-section">
       {%- for block in section.blocks -%}
         {%- case block.type -%}
           {%- when 'heading' -%}
@@ -126,13 +166,32 @@
             >
               {{ block.settings.heading }}
             </h2>
+
           {%- when 'text' -%}
-            <div class="banner__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
-              <p>{{ block.settings.text }}</p>
-            </div>
+
+            <div class="banner-heading">
+            <h2 class="perfect-routine-head"> 
+              <span class="your-text {% if section.settings.your-text-color %} custom-your-text-color {% endif %}">{{ block.settings.your_text }}</span>
+              <span class="perfect-text {% if section.settings.Perfect-text-color %} custom-perfect-text-color {% endif %}">{{ block.settings.perfect_text }}</span> 
+            </h2>
+            <h2 class="perfect-routine-head"> 
+              <span class="routine-text {% if section.settings.routine-text-color %} custom-routine-text-color {% endif %}">{{ block.settings.routine_text }}</span>
+            </h2>
+          </div>
+
+            {%- if block.settings.enable_description -%}
+              <div class="banner__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
+                <p>{{ block.settings.text }}</p>
+              </div>
+            {% endif %}
+
+            <p class="tailored-text {% if section.settings.tailored-text-color %} custom-tailored-text-color {% endif %}"> {{ block.settings.discover_text }}
+              <span class="free-coffee-text">{{ block.settings.coffee_free_concierge }}</span>
+           </p>
+
           {%- when 'buttons' -%}
             <div
-              class="banner__buttons{% if block.settings.button_label_1 != blank and block.settings.button_label_2 != blank %} banner__buttons--multiple{% endif %}"
+              class="multiple-banner-buttons banner__buttons{% if block.settings.button_label_1 != blank and block.settings.button_label_2 != blank %} banner__buttons--multiple{% endif %}"
               {{ block.shopify_attributes }}
             >
               {%- if block.settings.button_label_1 != blank -%}
@@ -142,7 +201,8 @@
                   {% else %}
                     href="{{ block.settings.button_link_1 }}"
                   {% endif %}
-                  class="button{% if block.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %}"
+                  class="button browse-button {% if block.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %}
+                   {% if section.settings.browse-btn-text-color %} custom-browse-button-color {% endif %}"
                 >
                   {{- block.settings.button_label_1 | escape -}}
                 </a>
@@ -154,15 +214,26 @@
                   {% else %}
                     href="{{ block.settings.button_link_2 }}"
                   {% endif %}
-                  class="button{% if block.settings.button_style_secondary_2 %} button--secondary{% else %} button--primary{% endif %}"
+                  class="button survey-button{% if block.settings.button_style_secondary_2 %} button--secondary{% else %} button--primary{% endif %}
+                  {% if section.settings.survey-btn-text-color %} custom-survey-button-color {% endif %}"
                 >
                   {{- block.settings.button_label_2 | escape -}}
                 </a>
               {%- endif -%}
             </div>
+            {%- if block.settings.stars_image != blank and block.settings.rating_text_coffee_lovers != blank -%}
+              <div class="rating-text-coffee">
+                <img  class="rating-star-image" src= "{{ block.settings.stars_image | image_url }}" alt ="img_text"  width="" height="" />
+                <p class="rating-star-text {% if section.settings.star_text-color %} custom-star-text-color {% endif %}">{{ block.settings.rating_text_coffee_lovers }}</p>
+              </div>
+            {% endif %}
+          </div>
+
         {%- endcase -%}
       {%- endfor -%}
     </div>
+  
+
   </div>
 </div>
 
@@ -184,6 +255,56 @@
       "type": "image_picker",
       "id": "image_2",
       "label": "t:sections.image-banner.settings.image_2.label"
+    },
+    {
+      "type": "color",
+      "id": "banner-img-bg-color",
+      "label": "Banner Image color"
+    },
+    {
+      "type": "color",
+      "id": "your-text-color",
+      "label": "Head part 1 text color"
+    },
+    {
+      "type": "color",
+      "id": "Perfect-text-color",
+      "label": "Head part 2 text color"
+    },
+    {
+      "type": "color",
+      "id": "routine-text-color",
+      "label": "Head part 3 text color"
+    },
+    {
+      "type": "color",
+      "id": "star_text-color",
+      "label": "Star text color"
+    },
+    {
+      "type": "color",
+      "id": "browse-btn-bg-color",
+      "label": "Button 1 background color"
+    },
+    {
+      "type": "color",
+      "id": "survey-btn-bg-color",
+      "label": "Button 2 background color"
+    },
+    {
+      "type": "color",
+      "id": "browse-btn-text-color",
+      "label": "Button 1 text color"
+    },
+    {
+      "type": "color",
+      "id": "survey-btn-text-color",
+      "label": "Button 2 text color"
+    },
+    {
+      "type": "color",
+      "id": "tailored-text-color",
+      "label": "Tailored text color"
     },
     {
       "type": "range",
@@ -269,6 +390,11 @@
       "id": "show_text_box",
       "default": true,
       "label": "t:sections.image-banner.settings.show_text_box.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "include-custom-style",
+      "label": "Apply custom styling to banner"
     },
     {
       "type": "select",
@@ -414,6 +540,37 @@
           "default": "t:sections.image-banner.blocks.text.settings.text.default",
           "label": "t:sections.image-banner.blocks.text.settings.text.label"
         },
+        {    
+          "type": "checkbox",       
+          "id": "enable_description",      
+          "label": "Enable description",      
+          "default": true    
+        },
+        {
+          "type": "inline_richtext",
+          "id": "your_text",
+          "label": "Heading part 1 text"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "perfect_text",
+          "label": "Heading part 2 text"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "routine_text",
+          "label": "Heading part 3 text"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "coffee_free_concierge",
+          "label": "Coffee free concierge"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "discover_text",
+          "label": "Discover text"
+        },
         {
           "type": "select",
           "id": "text_style",
@@ -437,9 +594,25 @@
       ]
     },
     {
+      "type": "image",
+      "name": "Images",
+      "settings": [
+        {
+        "type": "image_picker",
+        "id": "beans_banner_image",
+        "label": "Beans banner image"
+      },
+      {
+        "type": "image_picker",
+        "id": "banner_text_img",
+        "label": "Banner text image"
+      }
+    ]
+    },
+    {
       "type": "buttons",
       "name": "t:sections.image-banner.blocks.buttons.name",
-      "limit": 1,
+      "limit": 2,
       "settings": [
         {
           "type": "text",
@@ -476,6 +649,16 @@
           "id": "button_style_secondary_2",
           "default": false,
           "label": "t:sections.image-banner.blocks.buttons.settings.button_style_secondary_2.label"
+        },
+        {
+          "type": "image_picker",
+          "id": "stars_image",
+          "label": "Image below buttons"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "rating_text_coffee_lovers",
+          "label": "Text below buttons"
         }
       ]
     }

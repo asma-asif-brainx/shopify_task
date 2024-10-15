@@ -8,6 +8,104 @@
   --focused-base-box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
 }
 
+@font-face {
+    font-family: 'Normal_Font'; 
+    src: url('https://cdn.shopify.com/s/files/1/0899/1355/7281/files/Raleway.ttf?v=1727166657') format('truetype'); 
+    font-weight: normal; 
+}
+@font-face {
+    font-family: 'Medium_Font'; 
+    src: url('https://cdn.shopify.com/s/files/1/0899/1355/7281/files/Raleway.ttf?v=1727166657') format('truetype'); 
+    font-weight: 500; 
+}
+@font-face {
+  font-family: 'Medium_Bold_Font'; 
+  src: url('https://cdn.shopify.com/s/files/1/0899/1355/7281/files/Raleway.ttf?v=1727166657') format('truetype'); 
+  font-weight: 600; 
+}
+@font-face {
+    font-family: 'Bold_Font'; 
+    src: url('https://cdn.shopify.com/s/files/1/0899/1355/7281/files/Raleway.ttf?v=1727166657') format('truetype'); 
+    font-weight: 700; 
+}
+@font-face {
+  font-family: 'Comforter_Bold'; 
+  src: url('https://cdn.shopify.com/s/files/1/0899/1355/7281/files/Comforter.ttf?v=1727419233') format('truetype'); 
+  font-weight: 700; 
+} 
+
+/* Reviews custom styling */
+.jdgm-rev{
+  display: flex;
+  gap: 10px;
+}
+.jdgm-rev__header{
+  order: 2;
+}
+.jdgm-row-rating{
+  display: flex;
+  flex-direction: column;
+}
+.jdgm-rev__content{
+  max-width: 80%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+}
+.jdgm-rev__pic-img{
+  max-width: 100%;
+  width: 100%;
+}
+.jdgm-rev__title{
+  max-width: 20%;
+  width: 100%;
+}
+.jdgm-rev__content:not(:first-child) {
+  flex-direction: row; 
+}
+.jdgm-rev__body{
+  max-width: 60%;
+  width: 100%;
+}
+
+.jdgm-rev__pics{
+  order:-1;
+  margin-top: 0 !important;
+}
+.jdgm-row-profile{
+  display: none;
+}
+@media screen and (max-width:980px) {
+  .jdgm-rev__body{
+    max-width: 50%;
+    width: 100%;
+  }
+}
+@media screen and (max-width:767px) {
+  .jdgm-rev__body{
+    max-width: 100%;
+    width: 100%;
+  }
+  .jdgm-rev__content{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    max-width: 100%;
+  }
+  .jdgm-rev__content:not(:first-child) {
+    flex-direction: column !important; 
+  }
+  .jdgm-rev__title{
+    max-width: 100%;
+  }
+  .jdgm-rev{
+    flex-direction: column;
+    gap: 0;
+  }
+}
+/* Reviews custom styling end  */
+
 .product-card-wrapper .card,
 .contains-card--product {
   --border-radius: var(--product-card-corner-radius);

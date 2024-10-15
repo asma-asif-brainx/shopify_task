@@ -1,10 +1,80 @@
 {
   "sections": {
+    "image_banner_KX9HyU": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_3j6HBB": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        },
+        "text_DREAGN": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "enable_description": false,
+            "your_text": "Your",
+            "perfect_text": "Perfect",
+            "routine_text": "Coffee Routine!",
+            "coffee_free_concierge": "100% FREE Coffee Concierge!",
+            "discover_text": "Discover your tailored at home coffee products & routine as we are your",
+            "text_style": "body"
+          }
+        },
+        "buttons_6LVh6j": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Browse All Products  →",
+            "button_link_1": "shopify:\/\/collections\/coffee",
+            "button_style_secondary_1": false,
+            "button_label_2": "Take Your Free Survey now  →",
+            "button_link_2": "shopify:\/\/collections\/coffee",
+            "button_style_secondary_2": false,
+            "stars_image": "shopify:\/\/shop_images\/5-star-rating.png",
+            "rating_text_coffee_lovers": "4.9\/5.00 (10,000+ people living healthy lifestyle)"
+          }
+        }
+      },
+      "block_order": [
+        "heading_3j6HBB",
+        "text_DREAGN",
+        "buttons_6LVh6j"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Rectangle_9.svg",
+        "image_2": "shopify:\/\/shop_images\/Group_164633_1.png",
+        "banner-img-bg-color": "#075d57",
+        "your-text-color": "#ffffff",
+        "Perfect-text-color": "#deb126",
+        "routine-text-color": "#ffffff",
+        "star_text-color": "#ffffff",
+        "browse-btn-bg-color": "#ef4444",
+        "survey-btn-bg-color": "#1b4a46",
+        "browse-btn-text-color": "#ffffff",
+        "survey-btn-text-color": "#ffffff",
+        "tailored-text-color": "#ffffff",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-left",
+        "show_text_box": true,
+        "include-custom-style": true,
+        "desktop_content_alignment": "left",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
         "heading": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "heading": "Browse our latest products",
             "heading_size": "h0"
@@ -18,20 +88,55 @@
             "button_style_secondary_1": true,
             "button_label_2": "",
             "button_link_2": "",
-            "button_style_secondary_2": false
+            "button_style_secondary_2": false,
+            "rating_text_coffee_lovers": ""
+          }
+        },
+        "text_UPncLB": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "enable_description": false,
+            "your_text": "Your",
+            "perfect_text": "Perfect",
+            "routine_text": "Coffee Routine",
+            "coffee_free_concierge": "100% FREE Coffee Concierge!",
+            "discover_text": "Discover your tailored at home coffee products & routine as we are your",
+            "text_style": "body"
+          }
+        },
+        "image_PzdQNC": {
+          "type": "image",
+          "settings": {
+            "beans_banner_image": "shopify:\/\/shop_images\/Group_164633_1.png"
           }
         }
       },
       "block_order": [
         "heading",
-        "button"
+        "button",
+        "text_UPncLB",
+        "image_PzdQNC"
       ],
+      "disabled": true,
       "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
+        "image": "shopify:\/\/shop_images\/Rectangle_9_9d6d6ff3-681f-4b26-9a89-04179a75ddb5.png",
+        "banner-img-bg-color": "#075d57",
+        "your-text-color": "#ffffff",
+        "Perfect-text-color": "#deb126",
+        "routine-text-color": "#ffffff",
+        "star_text-color": "#ffffff",
+        "browse-btn-bg-color": "#ed4444",
+        "survey-btn-bg-color": "#1b4a46",
+        "browse-btn-text-color": "#ffffff",
+        "survey-btn-text-color": "#ffffff",
+        "tailored-text-color": "#fffcfc",
+        "image_overlay_opacity": 30,
+        "image_height": "small",
+        "desktop_content_position": "middle-center",
         "show_text_box": false,
-        "desktop_content_alignment": "center",
+        "include-custom-style": true,
+        "desktop_content_alignment": "left",
         "color_scheme": "scheme-3",
         "image_behavior": "none",
         "mobile_content_alignment": "center",
@@ -41,6 +146,7 @@
     },
     "featured_collection": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "Featured products",
         "heading_size": "h2",
@@ -66,10 +172,255 @@
         "padding_top": 44,
         "padding_bottom": 36
       }
+    },
+    "best_sellers_custom_bXtPLL": {
+      "type": "best-sellers-custom",
+      "blocks": {
+        "collection_yxJPqc": {
+          "type": "collection",
+          "settings": {
+            "collection": "best-sellers"
+          }
+        },
+        "collection_FLcGmW": {
+          "type": "collection",
+          "settings": {
+            "collection": "daily-essentials"
+          }
+        },
+        "collection_Jft7VH": {
+          "type": "collection",
+          "settings": {
+            "collection": "skin-care"
+          }
+        },
+        "collection_BtE477": {
+          "type": "collection",
+          "settings": {
+            "collection": "starter-kits"
+          }
+        }
+      },
+      "block_order": [
+        "collection_yxJPqc",
+        "collection_FLcGmW",
+        "collection_Jft7VH",
+        "collection_BtE477"
+      ],
+      "settings": {
+        "title": "Try Our Best Sellers",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "coffee",
+        "products_to_show": 16,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "tabs-color": "#2d2d2d",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "show-title-heading": true,
+        "include-custom-style": true,
+        "show-collection-tabs": true,
+        "show-collection-product-card": true,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "review-text": "( 1171 Reviews )",
+        "review-image": "shopify:\/\/shop_images\/5-star-rating.svg",
+        "add-to-cart-button": true,
+        "add-to-cart-button-text-color": "#fdfdfd",
+        "add-to-cart-button-background-color": "#ef4444",
+        "show-sale-tag": false,
+        "active-tab-text-decoration": "#af272f",
+        "multiple-collections-background-color": "#f2f2f2"
+      }
+    },
+    "featured_product_YrQjbj": {
+      "type": "featured-product",
+      "blocks": {
+        "text_gHKxnG": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase",
+            "mid_text": "Best Seller",
+            "post_text": "Staff Pick",
+            "show-pre-text": false
+          }
+        },
+        "title_z87Awt": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h2",
+            "stars_image": "shopify:\/\/shop_images\/5-star-rating.png",
+            "rating_text_coffee_lovers": "4.9\/5.00  ( 117 Reviews )"
+          }
+        },
+        "price_nGDnkR": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "text_6DeANa": {
+          "type": "text",
+          "settings": {
+            "text": "Pure Vitamin C easily dissolvable in liquids for gentle ingestion and improved absorption. Rigorously tested to ensure freedom from GMOs, corn, and other impurities.",
+            "text_style": "body",
+            "mid_text": "",
+            "post_text": "",
+            "show-pre-text": true
+          }
+        },
+        "variant_picker_xzmG4h": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "dropdown",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector_HnJGNn": {
+          "type": "quantity_selector",
+          "settings": {
+            "show-quantity-cart-label": false
+          }
+        },
+        "buy_buttons_XcBwwf": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "checkbox-1-label": "Secure Checkout",
+            "checkbox-1-image": "shopify:\/\/shop_images\/lets-icons_check-fill.svg",
+            "checkbox-2-image": "shopify:\/\/shop_images\/lets-icons_check-fill.svg",
+            "checkbox-3-image": "shopify:\/\/shop_images\/lets-icons_check-fill.svg",
+            "checkbox-2-label": "Secure Shipping",
+            "checkbox-3-label": "Satisfaction Guarantee",
+            "add-checkbox-below-button": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "share_46bRUH": {
+          "type": "share",
+          "disabled": true,
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "text_gHKxnG",
+        "title_z87Awt",
+        "price_nGDnkR",
+        "text_6DeANa",
+        "variant_picker_xzmG4h",
+        "quantity_selector_HnJGNn",
+        "buy_buttons_XcBwwf",
+        "share_46bRUH"
+      ],
+      "settings": {
+        "product": "roasted-coffee-blend-caramel-flavour",
+        "color_scheme": "",
+        "checkbox-label-color": "#075d57",
+        "secondary_background": false,
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "enable-custom-page-width": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "none",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "post-text-color": "#ffffff",
+        "quanity-buttons-color": "#f2f2f2",
+        "featured-product-description": "#424242",
+        "featured-product-submit-button-background-color": "#ef4444",
+        "show-sale-tag": false,
+        "quantity-button-custom-style": true,
+        "show-details": false,
+        "featured-product-submit-button-text-color": "#ffffff",
+        "price-sale-text-color": "#ef4444",
+        "price-regular-text-color": "#929292",
+        "mid-text-color": "#434343",
+        "post-background-color": "#424242",
+        "mid-background-color": "#ece03a",
+        "show-custom-styling": true,
+        "product-title-color": "#424242"
+      }
+    },
+    "newsletter_H6EHYn": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_PjWXTQ": {
+          "type": "heading",
+          "settings": {
+            "heading": "Join our newsletter and get updates on\u2028promotions and coupons.",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph_gcFNpW": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Get “$20 discount” for your first order<\/p>",
+            "text-1": "",
+            "text-2": "",
+            "text-3": "",
+            "show-default-paragraph": true,
+            "show-custom-paragraphs": false
+          }
+        },
+        "email_form_a9Mqwp": {
+          "type": "email_form",
+          "settings": {
+            "email-form-placeholder-text": "",
+            "show-default-email-placeholder": true,
+            "show-custom-email-placeholder": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_PjWXTQ",
+        "paragraph_gcFNpW",
+        "email_form_a9Mqwp"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "",
+        "full_width": true,
+        "add-newsletter-background": false,
+        "newsletter-background-color": "",
+        "newsletter-title-color": "",
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "include-custom-style": false,
+        "newsletter-button-text": "Subscribe Now",
+        "add-button-text": false,
+        "add-button-arrow-icon": true,
+        "button-background-color": "",
+        "button-text-color": "",
+        "email-field-background-color": "",
+        "subheading-text-color": "#424242",
+        "newsletter-label-color": ""
+      }
     }
   },
   "order": [
+    "image_banner_KX9HyU",
     "image_banner",
-    "featured_collection"
+    "featured_collection",
+    "best_sellers_custom_bXtPLL",
+    "featured_product_YrQjbj",
+    "newsletter_H6EHYn"
   ]
 }

@@ -3,16 +3,21 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "vendor": {
+        "text_rXXHbb": {
           "type": "text",
           "settings": {
-            "text": "{{ product.vendor }}",
-            "text_style": "uppercase"
+            "text": "Text block",
+            "show-pre-text": false,
+            "mid_text": "Best Seller",
+            "post_text": "Staff Pick",
+            "text_style": "body"
           }
         },
         "title": {
           "type": "title",
           "settings": {
+            "stars_image": "shopify:\/\/shop_images\/5-star-rating.png",
+            "rating_text_coffee_lovers": "4.9\/5.00  ( 117 Reviews )"
           }
         },
         "price": {
@@ -20,84 +25,214 @@
           "settings": {
           }
         },
+        "text_TLPhcL": {
+          "type": "text",
+          "settings": {
+            "text": "Pure Vitamin C easily dissolvable in liquids for gentle ingestion and improved absorption. Rigorously tested to ensure freedom from GMOs, corn, and other impurities.",
+            "show-pre-text": true,
+            "mid_text": "",
+            "post_text": "",
+            "text_style": "body"
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
-            "picker_type": "button",
+            "picker_type": "dropdown",
             "swatch_shape": "circle"
           }
         },
         "quantity_selector": {
           "type": "quantity_selector",
           "settings": {
+            "show-quantity-cart-label": false
           }
         },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": true,
+            "add-checkbox-below-button": true,
+            "checkbox-1-label": "Secure Checkout",
+            "checkbox-1-image": "shopify:\/\/shop_images\/lets-icons_check-fill.svg",
+            "checkbox-2-image": "shopify:\/\/shop_images\/lets-icons_check-fill.svg",
+            "checkbox-3-image": "shopify:\/\/shop_images\/lets-icons_check-fill.svg",
+            "checkbox-2-label": "Secure Shipping",
+            "checkbox-3-label": "Satisfaction Guarantee"
           }
         },
-        "description": {
-          "type": "description",
+        "accordion_ygcq8j": {
+          "type": "accordion",
           "settings": {
+            "accordion_heading": "About Product:",
+            "accordion_text": "The Manual Coffee Grinder by JavaPresse Coffee Company was built with a professional grade ceramic conical burr to heighten flavors of the most exquisite coffees in the world. It was born out of pure necessity, to provide an incredibly consistent grind for a variety of brews while making as little noise as possible. Combined with an impeccable stainless steel frame and convenient size, this grinder is at the pinnacle of travel gadgets. Who said you can’t have it all?"
           }
         },
-        "share": {
-          "type": "share",
+        "accordion_LgEaAV": {
+          "type": "accordion",
           "settings": {
-            "share_label": "Share"
+            "accordion_heading": "Ingredients:",
+            "accordion_text": "Chocolate honey..."
+          }
+        },
+        "collapsible_tab_ALhPJT": {
+          "type": "collapsible_tab",
+          "disabled": true,
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "content": "<p>{{ block.settings.page.title }}<\/p>",
+            "page": ""
           }
         }
       },
       "block_order": [
-        "vendor",
+        "text_rXXHbb",
         "title",
         "price",
+        "text_TLPhcL",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "description",
-        "share"
+        "accordion_ygcq8j",
+        "accordion_LgEaAV",
+        "collapsible_tab_ALhPJT"
       ],
       "settings": {
         "enable_sticky_info": true,
         "color_scheme": "scheme-1",
-        "media_size": "large",
+        "media_size": "medium",
         "constrain_to_viewport": true,
-        "media_fit": "contain",
-        "gallery_layout": "stacked",
+        "media_fit": "cover",
+        "gallery_layout": "thumbnail_slider",
         "media_position": "left",
-        "image_zoom": "lightbox",
-        "mobile_thumbnails": "hide",
+        "image_zoom": "none",
+        "mobile_thumbnails": "show",
         "hide_variants": true,
         "enable_video_looping": false,
         "padding_top": 36,
-        "padding_bottom": 12
+        "padding_bottom": 12,
+        "post-background-color": "#424242",
+        "mid-background-color": "#ece03a",
+        "mid-text-color": "#434343",
+        "post-text-color": "#ffffff",
+        "show-custom-styling": true,
+        "main-product-information-color": "#424242",
+        "price-sale-text-color": "#ef4444",
+        "price-regular-text-color": "#929292",
+        "featured-product-submit-button-background-color": "#ef4444",
+        "featured-product-submit-button-text-color": "#ffffff",
+        "quantity-button-custom-style": true,
+        "about-box-background-color": "#f2f2f2",
+        "quanity-buttons-color": "#f2f2f2",
+        "checkbox-label-color": "#075d57"
+      }
+    },
+    "product_custom_information_NyCHRb": {
+      "type": "product-custom-information",
+      "blocks": {
+        "heading_Fpntgf": {
+          "type": "heading",
+          "settings": {
+            "heading_text": "Why 100,000 Coffee Drinkers Have Switched To OrganicCoffee"
+          }
+        },
+        "information_Fna4pk": {
+          "type": "information",
+          "settings": {
+            "info_image": "shopify:\/\/shop_images\/Mask_group.png",
+            "info_title": "Top 1% of the world’s coffee",
+            "info_description": "Specialty grade, single origin, and hand-picked at peak ripeness for the highest quality."
+          }
+        },
+        "information_zVL6DA": {
+          "type": "information",
+          "settings": {
+            "info_image": "shopify:\/\/shop_images\/Mask_group_1.png",
+            "info_title": "A new coffee each month",
+            "info_description": "These coffees aren’t on the shelves, from Malawi to Myanmar, India to Ecuador, and more."
+          }
+        },
+        "information_LLqtnQ": {
+          "type": "information",
+          "settings": {
+            "info_image": "shopify:\/\/shop_images\/Mask_group_2.png",
+            "info_title": "Roasted fresh to order",
+            "info_description": "And always roasted to your preference. Maximum freshness, maximum flavor."
+          }
+        },
+        "information_XcrK3h": {
+          "type": "information",
+          "settings": {
+            "info_image": "shopify:\/\/shop_images\/Mask_group_3.png",
+            "info_title": "Delivered on your schedule",
+            "info_description": "Skip or change your delivery date at any time, and set a schedule that works for you."
+          }
+        }
+      },
+      "block_order": [
+        "heading_Fpntgf",
+        "information_Fna4pk",
+        "information_zVL6DA",
+        "information_LLqtnQ",
+        "information_XcrK3h"
+      ],
+      "settings": {
+        "custom-section-background-color": "#075d57",
+        "show-custom-styling": true,
+        "custom-section-heading-color": "#ffffff",
+        "informtaion-block-text-color": "#eaeaea"
+      }
+    },
+    "17279434676f6cb296": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_jyW9xk": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_jyW9xk"
+      ],
+      "settings": {
+        "include_margins": true
       }
     },
     "related-products": {
       "type": "related-products",
       "settings": {
-        "heading": "You may also like",
-        "heading_size": "h2",
+        "heading": "Recommended For You",
+        "heading_size": "h1",
         "products_to_show": 4,
         "columns_desktop": 4,
         "color_scheme": "scheme-1",
-        "image_ratio": "square",
+        "image_ratio": "portrait",
         "image_shape": "default",
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
         "columns_mobile": "2",
         "padding_top": 36,
-        "padding_bottom": 28
+        "padding_bottom": 28,
+        "include-custom-style": true,
+        "add-to-cart-button": true,
+        "recommendation-background-color": "#e3e3e3",
+        "product-information-text-color": "#424242",
+        "sale-price-cut-color": "#929292",
+        "review-text": "( 1171 Reviews )",
+        "review-image": "shopify:\/\/shop_images\/5-star-rating.svg",
+        "add-to-cart-button-background-color": "#ef4444",
+        "add-to-cart-button-text-color": "#ffffff"
       }
     }
   },
   "order": [
     "main",
+    "product_custom_information_NyCHRb",
+    "17279434676f6cb296",
     "related-products"
   ]
 }

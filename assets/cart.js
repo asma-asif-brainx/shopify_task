@@ -85,12 +85,13 @@ class CartItems extends HTMLElement {
   onChange(event) {
     this.validateQuantity(event);
   }
-
+  
   onCartUpdate() {
     if (this.tagName === 'CART-DRAWER-ITEMS') {
       fetch(`${routes.cart_url}?section_id=cart-drawer`)
         .then((response) => response.text())
         .then((responseText) => {
+
           const html = new DOMParser().parseFromString(responseText, 'text/html');
           const selectors = ['cart-drawer-items', '.cart-drawer__footer'];
           for (const selector of selectors) {
@@ -100,7 +101,7 @@ class CartItems extends HTMLElement {
               targetElement.replaceWith(sourceElement);
             }
           }
-        })
+      })
         .catch((e) => {
           console.error(e);
         });
@@ -194,7 +195,6 @@ class CartItems extends HTMLElement {
           }
         }
         this.updateLiveRegions(line, message);
-
         const lineItem =
           document.getElementById(`CartItem-${line}`) || document.getElementById(`CartDrawer-Item-${line}`);
         if (lineItem && lineItem.querySelector(`[name="${name}"]`)) {
@@ -217,9 +217,12 @@ class CartItems extends HTMLElement {
       .finally(() => {
         this.disableLoading(line);
       });
+
   }
 
   updateLiveRegions(line, message) {
+    console.log('From live regions')
+
     const lineItemError =
       document.getElementById(`Line-item-error-${line}`) || document.getElementById(`CartDrawer-LineItemError-${line}`);
     if (lineItemError) lineItemError.querySelector('.cart-item__error-text').textContent = message;

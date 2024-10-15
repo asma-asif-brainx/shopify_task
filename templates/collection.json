@@ -5,7 +5,9 @@
       "settings": {
         "show_collection_description": true,
         "show_collection_image": false,
-        "color_scheme": "scheme-1"
+        "color_scheme": "scheme-1",
+        "collection-banner-text-color": "#424242",
+        "include-custom-style": true
       }
     },
     "product-grid": {
@@ -25,7 +27,20 @@
         "enable_sorting": true,
         "columns_mobile": "2",
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 36,
+        "add-to-cart-button": true,
+        "include-custom-style": true,
+        "add-to-cart-button-text-color": "#ffffff",
+        "add-to-cart-button-background-color": "#ef4444",
+        "review-text": "( 1171 Reviews )",
+        "review-image": "shopify:\/\/shop_images\/5-star-rating.svg",
+        "price-sale-text-color": "#424242",
+        "price-regular-text-color": "#929292",
+        "product-card-heading-color": "#424242",
+        "facet-filter-text-color": "#424242",
+        "facet-sort-border-color": "#c4d1d0",
+        "facet-mobile-footer-apply-button-bg-color": "#ef4444",
+        "facet-mobile-footer-apply-button-text-color": "#ffffff"
       }
     }
   },

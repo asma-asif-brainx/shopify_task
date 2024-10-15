@@ -1,0 +1,25 @@
+<div class="header-icons-cart-button">
+    {%- if section.settings.enable_cart_icon -%}
+      <a href="{{ routes.cart_url }}" class="custom-header-icon header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
+        <img src="{{ section.settings.cart_image | image_url }}" alt="{{ 'templates.cart.cart' | t }}" width="28" height="28" />
+        <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span> 
+
+        {%- if cart != empty -%}
+          <div class="cart-count-bubble">
+            {%- if cart.item_count < 100 -%}
+              <span aria-hidden="true">{{ cart.item_count }}</span>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+      </a>
+    {%- endif -%}
+    
+    <a href="{{ routes.collections_url }}" class="btn btn--shop-now shop-now-menu header-nav-list-items desktop-shop-btn">
+      <!-- Button text for desktop -->
+      {{ section.settings.desktop_button_text }}
+    </a>
+      <a href="{{ routes.collections_url }}" class="btn btn--shop-now shop-now-menu header-nav-list-items mobile-shop-btn">
+      <!-- Button text for mobile -->
+      {{ section.settings.mobile_button_text }}
+    </a>
+</div>

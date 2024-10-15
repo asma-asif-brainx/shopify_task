@@ -2,11 +2,152 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
+    "newsletter_XqkMnE": {
+      "type": "newsletter",
+      "blocks": {
+        "title_h9qJyM": {
+          "type": "title",
+          "settings": {
+            "title-text": "Newsletter subscripion",
+            "title-image": "shopify:\/\/shop_images\/Group_44.svg"
+          }
+        },
+        "heading_D7yhtp": {
+          "type": "heading",
+          "settings": {
+            "heading": "Join Our Newsletter And Get Updates On\u2028Promotions And Coupons.",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph_ULKHD7": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Get “$20 discount” for your first order<\/p>",
+            "text-1": "Get",
+            "text-2": "“$20 discount”",
+            "text-3": "for your first order",
+            "show-default-paragraph": false,
+            "show-custom-paragraphs": true
+          }
+        },
+        "email_form_t8wzdM": {
+          "type": "email_form",
+          "settings": {
+            "email-form-placeholder-text": "Your Email Address",
+            "email-form-placeholder-image": "shopify:\/\/shop_images\/Message.svg",
+            "show-default-email-placeholder": false,
+            "show-custom-email-placeholder": true
+          }
+        }
+      },
+      "block_order": [
+        "title_h9qJyM",
+        "heading_D7yhtp",
+        "paragraph_ULKHD7",
+        "email_form_t8wzdM"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "full_width": true,
+        "add-newsletter-background": true,
+        "newsletter-background-color": "#f2f2f2",
+        "newsletter-title-color": "#035d57",
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "include-custom-style": true,
+        "newsletter-button-text": "Subscribe Now →",
+        "add-button-text": true,
+        "add-button-arrow-icon": false,
+        "button-background-color": "#ef4444",
+        "button-text-color": "#ffffff",
+        "email-field-background-color": "#d9d9d9",
+        "subheading-text-color": "#424242",
+        "newsletter-label-color": "#888a8c"
+      }
+    },
     "footer": {
       "type": "footer",
+      "blocks": {
+        "text_Yp9Aeq": {
+          "type": "text",
+          "settings": {
+            "heading": "",
+            "add-footer-logo-image": "shopify:\/\/shop_images\/Group_3.svg",
+            "subtext": "<p>Our journey into coffee started in 2015 with a passion for developing the best entry level burr coffee grinder on the market.<\/p>",
+            "image1": "shopify:\/\/shop_images\/Group_431.svg",
+            "image2": "shopify:\/\/shop_images\/Group_164734.svg",
+            "image3": "shopify:\/\/shop_images\/Group_164733.svg",
+            "link1": "shopify:\/\/collections",
+            "link2": "shopify:\/\/collections",
+            "link3": "shopify:\/\/collections",
+            "stars_image": "shopify:\/\/shop_images\/5-star-rating.png",
+            "rating_text_coffee_lovers": "4.9\/5.00  (Serviced 6,000,000+ Coffee Lovers)"
+          }
+        },
+        "link_list_aK6gJn": {
+          "type": "link_list",
+          "settings": {
+            "heading": "About",
+            "menu": "about",
+            "add-text-field-below-links": ""
+          }
+        },
+        "link_list_qnWCe4": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Company",
+            "menu": "company",
+            "add-text-field-below-links": ""
+          }
+        },
+        "link_list_XCrUNc": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Contact",
+            "menu": "contact",
+            "add-text-field-below-links": "Phone: (+971 1234 567)"
+          }
+        },
+        "brand_information_FUwhRE": {
+          "type": "brand_information",
+          "disabled": true,
+          "settings": {
+            "show_social": true
+          }
+        },
+        "image_CPWBHa": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image_width": 100,
+            "alignment": "center"
+          }
+        },
+        "text_ynXnxk": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "heading": "Heading",
+            "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>",
+            "link1": "",
+            "link2": "",
+            "link3": "",
+            "rating_text_coffee_lovers": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_Yp9Aeq",
+        "link_list_aK6gJn",
+        "link_list_qnWCe4",
+        "link_list_XCrUNc",
+        "brand_information_FUwhRE",
+        "image_CPWBHa",
+        "text_ynXnxk"
+      ],
       "settings": {
         "color_scheme": "scheme-1",
-        "newsletter_enable": true,
+        "newsletter_enable": false,
         "newsletter_heading": "Subscribe to our emails",
         "enable_follow_on_shop": true,
         "show_social": true,
@@ -16,11 +157,24 @@
         "show_policy": true,
         "margin_top": 0,
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 36,
+        "footer-background-color": "#075d57",
+        "add-custom-footer-caption": true,
+        "add-built-in-footer-caption": false,
+        "add-custom-footer-caption-text": "Copyright © 2023 JavaPresse. All Rights Reserved",
+        "include-custom-style": true,
+        "footer-text-color": "#ffffff",
+        "add-footer-logo": true,
+        "add-rating": true,
+        "add-images": true,
+        "footer-logo-main-div": true,
+        "add-footer-break": true,
+        "footer-line-break-color": "#ffffff"
       }
     }
   },
   "order": [
+    "newsletter_XqkMnE",
     "footer"
   ]
 }

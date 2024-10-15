@@ -1,0 +1,114 @@
+.newsletter-title-text{
+    font-family: 'Bold_Font';
+}
+.newsletter-button-email{
+    width: 100% !important;
+    max-width: 30% !important;
+    min-width: 30%;
+    font-size: 16px;
+    font-family: 'Bold_Font';
+}
+.newslteter-heading{
+    width: 650px;
+    font-family: 'Bold_Font';
+    font-size: 30px;
+}
+.input-field-label{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: all 0.2s ease;
+}
+.field__input:focus + .field__label,
+.field__input:not(:placeholder-shown) + .field__label {
+  top: 30%;  
+}
+.newsletter-wrapper-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.newsletter-wrapper-main .newletter-form-main{
+    max-width: 900px;
+    width: 100%;
+    margin-bottom: 20px !important;
+}
+.newletter-form-main .newsletter-form{
+    max-width: 80% !important;
+    width: 100% !important;
+}
+.newsletter-field-wrapper{
+    max-width: 100%;
+    width: 100%;
+}
+.newsletter-email-form, .newsletter-email-form .newsletter-form__field-wrapper, .field .field__input{
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 80%;
+}
+.email-label-placeholder-main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.email-field::after{
+    box-shadow: none !important;
+}
+.subhead-text-one, .subhead-text-two, .subhead-text-three{
+    font-size: 16px;
+    font-family: 'Normal_Font';
+}
+.subhead-text-two{
+    font-family: 'Bold_Font';
+}
+.email-input-main-field:focus{
+    box-shadow: none !important;
+}
+@media screen and (max-width:1280px){
+    .newsletter-wrapper-main .newletter-form-main{
+        max-width: 77%;
+        width: 100%;
+    }
+}
+@media screen and (max-width:1024px){
+    .newsletter-email-form, .newsletter-email-form .newsletter-form__field-wrapper, .field .field__input{
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 100%;
+    }
+    .newslteter-heading {
+        font-size: 26px;
+    }
+}
+
+@media screen and (max-width:980px){
+    .newslteter-heading {
+        font-size: 18px;
+        width: 260px;
+    }
+}
+@media screen and (max-width:767px){
+    .newsletter-wrapper-main .newletter-form-main{
+        max-width: 100%;
+        width: 100%;
+    }
+    .newletter-form-main .newsletter-form{
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+    .newsletter-wrapper-main{
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+    .newsletter-button-email{
+        max-width: 40% !important;
+        font-size: 14px;
+    }
+    .input-field-label{
+        font-size: 12px;
+        padding-top: 4px;
+    }
+}

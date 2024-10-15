@@ -1,3 +1,28 @@
+
+<!--  Access custom stylesheet-->
+{% if section.settings.include-custom-style  %}
+  {{ 'related-product-custom.css' | asset_url | stylesheet_tag }}
+{% endif %}
+<style>
+  #shopify-section-{{ section.id }} .recommendation-gradient{
+      background-color: {{ section.settings.recommendation-background-color }};
+  }
+  #shopify-section-{{ section.id }} .recommendation-main .recommendation-heading{
+    color:{{ section.settings.product-information-text-color }};
+  }
+  #shopify-section-{{ section.id }} .price__sale .price-sale-text{
+      color:{{ section.settings.product-information-text-color }};
+  }
+  #shopify-section-{{ section.id }} .price__sale .price-regular-text {
+    color: {{ section.settings.sale-price-cut-color }} !important; 
+  }
+  #shopify-section-{{ section.id }} .add-to-cart-button
+  {
+      color: {{ section.settings.add-to-cart-button-text-color }};
+      background-color:{{ section.settings.add-to-cart-button-background-color }};
+  }
+</style>
+
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
 {{ 'section-related-products.css' | asset_url | stylesheet_tag }}
@@ -20,24 +45,24 @@
   }
 {%- endstyle -%}
 
-<div class="color-{{ section.settings.color_scheme }} gradient">
+<div class="color-{{ section.settings.color_scheme }} gradient recommendation-gradient">
   <product-recommendations
-    class="related-products page-width section-{{ section.id }}-padding isolate{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+    class="recommendation-main elated-products page-width section-{{ section.id }}-padding isolate{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
     data-url="{{ routes.product_recommendations_url }}?limit={{ section.settings.products_to_show }}"
     data-section-id="{{ section.id }}"
     data-product-id="{{ product.id }}"
   >
     {% if recommendations.performed and recommendations.products_count > 0 %}
-      <h2 class="related-products__heading inline-richtext {{ section.settings.heading_size }}">
+      <h2 class="recommendation-heading related-products__heading inline-richtext {{ section.settings.heading_size }}">
         {{ section.settings.heading }}
       </h2>
       <ul
-        class="grid product-grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down"
+        class="recommendation-product-grid-main grid product-grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down"
         role="list"
       >
         {% assign skip_card_product_styles = false %}
         {% for recommendation in recommendations.products %}
-          <li class="grid__item">
+          <li class="grid__item recommendation-product-card-grid">
             {% render 'card-product',
               card_product: recommendation,
               media_aspect_ratio: section.settings.image_ratio,
@@ -45,7 +70,10 @@
               show_secondary_image: section.settings.show_secondary_image,
               show_vendor: section.settings.show_vendor,
               show_rating: section.settings.show_rating,
-              skip_styles: skip_card_product_styles
+              skip_styles: skip_card_product_styles,
+              show_text_below_title: section.settings.review-text,
+              show_image_below_title : section.settings.review-image,
+              show_add_to_cart_button: section.settings.add-to-cart-button
             %}
           </li>
           {%- assign skip_card_product_styles = true -%}
@@ -254,7 +282,55 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
-    }
+    },
+    {
+      "type": "checkbox",
+      "id": "include-custom-style",
+      "default": false,
+      "label": "Apply custom style",
+    },
+    {
+      "type": "checkbox",
+      "id": "add-to-cart-button",
+      "label": "Show add to cart button",
+      "default" : false
+  },
+    {
+      "type": "color",
+      "id": "recommendation-background-color",
+      "label": "Recommendation background color",
+    },
+    {
+      "type": "color",
+      "id": "product-information-text-color",
+      "label": "product information text color",
+    },
+    {
+      "type": "color",
+      "id": "sale-price-cut-color",
+      "label": "sale price cut color",
+    },
+    {
+      "type": "text",
+      "id": "review-text",
+      "label": "Add text below the product title",
+  }, 
+  {
+    "type": "image_picker",
+    "id": "review-image",
+    "label": "Add image below the product title",
+  },
+  {
+    "type": "color",
+    "id": "add-to-cart-button-background-color",
+      "label": "Add to cart button background color"
+  },
+  {
+    "type": "color",
+    "id": "add-to-cart-button-text-color",
+    "label": "Add to cart button text color "
+  }
+     
   ]
 }
 {% endschema %}

@@ -1,0 +1,131 @@
+{% if section.settings.show-custom-styling  %}
+    {{ 'product-custom-information.css' | asset_url | stylesheet_tag }}
+{% endif %}
+
+<style>
+  #shopify-section-{{ section.id }} .product-custom-section{
+    background-color: {{ section.settings.custom-section-background-color }}
+  }
+  #shopify-section-{{ section.id }} .heading-block .custom-head{
+    color: {{ section.settings.custom-section-heading-color }}
+  }
+  #shopify-section-{{ section.id }} .information-block .info-text .information-title,  .information-block .info-text .information-text{
+    color: {{ section.settings.informtaion-block-text-color }};
+  } 
+</style>
+
+<section id="custom-section" class="product-custom-section">
+    <div class="container">
+    
+      <!-- Heading and Information Block Loop -->
+      {% assign info_blocks = false %}
+      
+      {% for block in section.blocks %}
+        {% case block.type %}
+        
+          <!-- Heading Block -->
+          {% when 'heading' %}
+          <div class="heading-block">
+            <h2 class="custom-head">{{ block.settings.heading_text }}</h2>
+          </div>
+          
+          <!-- Information Block -->
+          {% when 'information' %}
+          {% unless info_blocks %}
+          <!-- Start the information blocks wrapper once we detect an information block -->
+          <div class="information-blocks-wrapper">
+          {% assign info_blocks = true %}
+          {% endunless %}
+          
+          <div class="information-block">
+            <div class="info-image">
+                {{  block.settings.info_image  | img_url: '100x100' | img_tag }}
+
+            </div>
+            <div class="info-text">
+              <h3 class="information-title">{{ block.settings.info_title }}</h3>
+              <p class="information-text">{{ block.settings.info_description }}</p>
+            </div>
+          </div>
+          
+        {% endcase %}
+      {% endfor %}
+      
+      {% if info_blocks %}
+      <!-- Close the information blocks wrapper -->
+      </div>
+      {% endif %}
+    
+    </div>
+  </section>
+  
+
+  {% schema %}
+  {
+    "name": "Custom Section",
+    "settings": [
+        {
+            "type": "color",
+            "id": "custom-section-background-color",
+            "label": "Custom section background color"
+        },
+        {    
+            "type": "checkbox",       
+            "id": "show-custom-styling",      
+            "label": "Include custom styling",      
+            "default": false    
+          },
+          {    
+            "type": "color",       
+            "id": "custom-section-heading-color",      
+            "label": "Custom section heading color"    
+          },
+          {    
+            "type": "color",       
+            "id": "informtaion-block-text-color",      
+            "label": "Information block text color"    
+          }
+         
+    ],
+    "blocks": [
+      {
+        "type": "heading",
+        "name": "Heading Block",
+        "settings": [
+          {
+            "type": "text",
+            "id": "heading_text",
+            "label": "Heading"
+          }
+        ]
+      },
+      {
+        "type": "information",
+        "name": "Information Block",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "info_image",
+            "label": "Select Image"
+          },
+          {
+            "type": "text",
+            "id": "info_title",
+            "label": "Title"
+          },
+          {
+            "type": "textarea",
+            "id": "info_description",
+            "label": "Description"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Custom Section with Heading and Information",
+        "category": "Custom"
+      }
+    ]
+  }
+  {% endschema %}
