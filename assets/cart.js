@@ -87,6 +87,8 @@ class CartItems extends HTMLElement {
   }
   
   onCartUpdate() {
+    console.log('cart updating');
+    checkCartTotal();
     if (this.tagName === 'CART-DRAWER-ITEMS') {
       fetch(`${routes.cart_url}?section_id=cart-drawer`)
         .then((response) => response.text())
@@ -221,7 +223,9 @@ class CartItems extends HTMLElement {
   }
 
   updateLiveRegions(line, message) {
-    console.log('From live regions')
+    checkCartTotal();
+
+    console.log('From live regions');
 
     const lineItemError =
       document.getElementById(`Line-item-error-${line}`) || document.getElementById(`CartDrawer-LineItemError-${line}`);
@@ -236,6 +240,7 @@ class CartItems extends HTMLElement {
     setTimeout(() => {
       cartStatus.setAttribute('aria-hidden', true);
     }, 1000);
+
   }
 
   getSectionInnerHTML(html, selector) {

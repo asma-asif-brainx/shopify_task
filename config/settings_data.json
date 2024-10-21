@@ -129,6 +129,7 @@
     "add-built-in-cart-title": false,
     "show-cart-product-table-header": false,
     "quanity-buttons-color": "#f2f2f2",
+    "special-product-variant-id": 50459715338529,
     "sections": {
       "main-password-header": {
         "type": "main-password-header",

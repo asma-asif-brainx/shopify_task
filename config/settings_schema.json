@@ -1523,6 +1523,12 @@
         "id": "quanity-buttons-color",
         "label": "Quanity buttons color cart drawer"
       }
+      ,
+      {
+        "type": "number",
+        "id": "special-product-variant-id",
+        "label": "Special product variant id"
+      }
     ]
   }
 ]
